@@ -34,7 +34,7 @@ function Hero() {
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
             Apply / Attend
           </Link>
-          <Link to="/nominate" className="bg-white hover:bg-cream text-navy font-bold text-base px-9 py-4 rounded-lg transition">
+          <Link to="/nominate" className="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold text-sm px-7 py-3 rounded-lg transition">
             Nominate a Student
           </Link>
           <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-base px-9 py-4 rounded-lg transition">
