@@ -9,7 +9,7 @@ const days = [
   { day: 'Tuesday', title: 'Primary Elections & Legislature', desc: 'Primary elections narrow the field. The legislature convenes for the first time. Bills are introduced and committee work begins.' },
   { day: 'Wednesday', title: 'General Elections & Court', desc: 'General elections determine all offices from city council to governor. The Supreme Court hears its first cases.' },
   { day: 'Thursday', title: 'Inauguration & Governance', desc: 'The governor is inaugurated. The legislature passes bills, the court issues rulings, and the executive signs or vetoes legislation.' },
-  { day: 'Friday', title: 'Boys Nation Selection & Awards', desc: 'Two delegates are selected to represent Missouri at Boys Nation in Washington, D.C. Awards ceremony celebrates outstanding delegates.' },
+  { day: 'Friday', title: 'Boys Nation Selection & Awards', desc: 'Two citizens are selected to represent Missouri at Boys Nation in Washington, D.C. Awards ceremony celebrates outstanding citizens.' },
   { day: 'Saturday', title: 'Departure', desc: 'Say goodbye to your city-mates and new friends. Head home changed \u2014 with memories, skills, and connections that last a lifetime.' },
 ]
 

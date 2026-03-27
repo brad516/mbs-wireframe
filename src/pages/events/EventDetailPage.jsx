@@ -7,11 +7,11 @@ const eventData = {
   trivia: {
     tag: 'Fundraiser',
     title: 'Spring Trivia Night',
-    description: 'Test your knowledge and sponsor future Missouri Boys State delegates.',
+    description: 'Test your knowledge and sponsor future Missouri Boys State citizens.',
     date: 'Saturday, April 18, 2026',
     time: '6:00 PM \u2013 10:00 PM',
     location: 'The Coliseum, St. Louis, MO',
-    details: 'Join us for our annual trivia fundraiser! Assemble a team of up to 8 players and compete for prizes while helping sponsor future MBS delegates. The evening includes dinner, a silent auction, and plenty of fun. All proceeds directly fund delegate sponsorships for the 2026 session.',
+    details: 'Join us for our annual trivia fundraiser! Assemble a team of up to 8 players and compete for prizes while helping sponsor future MBS citizens. The evening includes dinner, a silent auction, and plenty of fun. All proceeds directly fund citizen sponsorships for the 2026 session.',
     price: '$30 per person / $200 per table of 8',
     cta: 'Get Tickets',
   },

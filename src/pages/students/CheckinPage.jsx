@@ -9,7 +9,7 @@ const timeline = [
   { time: '1:00\u20132:00 PM', title: 'Move In', desc: 'Find your dorm room, meet your roommate, and get settled. Staff and counselors are available to help.' },
   { time: '2:00\u20133:00 PM', title: 'City Assembly', desc: 'Meet your city-mates and city counselors. Introductions, icebreakers, and overview of the week.' },
   { time: '3:00 PM', title: 'Parents Depart', desc: 'Say goodbye to family. The Boys State experience officially begins.' },
-  { time: '5:00 PM', title: 'Opening Ceremony', desc: 'All delegates assemble for the official opening ceremony, welcome address, and program orientation.' },
+  { time: '5:00 PM', title: 'Opening Ceremony', desc: 'All citizens assemble for the official opening ceremony, welcome address, and program orientation.' },
 ]
 
 const toBring = [

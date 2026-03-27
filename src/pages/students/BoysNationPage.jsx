@@ -23,7 +23,7 @@ export default function BoysNationPage() {
       <PageHero
         tag="Boys Nation"
         title="From Missouri to Washington, D.C."
-        description="Each year, two outstanding Missouri Boys State delegates are selected to represent our state at Boys Nation in the nation's capital."
+        description="Each year, two outstanding Missouri Boys State citizens are selected to represent our state at Boys Nation in the nation's capital."
       />
 
       {/* What Is Boys Nation */}
@@ -34,7 +34,7 @@ export default function BoysNationPage() {
               <Tag>The Program</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">What Is Boys Nation?</h2>
               <p className="text-lg text-gray-500 leading-relaxed mb-4">
-                Boys Nation is The American Legion&rsquo;s premier youth program at the national level. Each summer, two delegates from every state&rsquo;s Boys State program convene in Washington, D.C. for a week of government simulation at the federal level.
+                Boys Nation is The American Legion&rsquo;s premier youth program at the national level. Each summer, two representatives from every state&rsquo;s Boys State program convene in Washington, D.C. for a week of government simulation at the federal level.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
                 Boys Nation senators draft and debate legislation, elect a president and vice president, and hear from national leaders including senators, Supreme Court justices, and cabinet members.
@@ -53,8 +53,8 @@ export default function BoysNationPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <Tag>Selection</Tag>
-            <h2 className="font-serif font-bold text-navy text-3xl mb-6">How Delegates Are Selected</h2>
-            <p className="text-gray-500 mb-8">On the final day of Missouri Boys State, a selection committee identifies two outstanding delegates to represent Missouri at Boys Nation. Selection is based on:</p>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-6">How Citizens Are Selected</h2>
+            <p className="text-gray-500 mb-8">On the final day of Missouri Boys State, a selection committee identifies two outstanding citizens to represent Missouri at Boys Nation. Selection is based on:</p>
             <ul className="space-y-3">
               {selectionCriteria.map((c, i) => (
                 <li key={i} className="flex gap-3 items-start">
@@ -98,7 +98,7 @@ export default function BoysNationPage() {
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif font-bold text-white text-2xl mb-4">It all starts at Boys State</h2>
-          <p className="text-white/70 mb-6">Every Boys Nation senator began as a Boys State delegate. Your journey starts with one application.</p>
+          <p className="text-white/70 mb-6">Every Boys Nation senator began as a Boys State citizen. Your journey starts with one application.</p>
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Apply Now
           </Link>

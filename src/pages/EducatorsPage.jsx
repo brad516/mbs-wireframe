@@ -5,7 +5,7 @@ import FAQAccordion from '../components/FAQAccordion'
 
 const benefits = [
   { title: 'Leadership Development', desc: 'Students return with stronger communication, decision-making, and teamwork skills that benefit the entire school community.' },
-  { title: 'College Readiness', desc: 'Boys State is widely recognized by admissions officers. Delegates earn a prestigious credential and often receive college credit.' },
+  { title: 'College Readiness', desc: 'Boys State is widely recognized by admissions officers. Citizens earn a prestigious credential and often receive college credit.' },
   { title: 'Civic Engagement', desc: 'Students gain firsthand understanding of government and democratic participation \u2014 knowledge they carry into adulthood.' },
 ]
 
@@ -13,14 +13,14 @@ const steps = [
   { step: '1', title: 'Identify Candidates', desc: 'Look for juniors who demonstrate leadership, character, academic achievement, and civic interest.' },
   { step: '2', title: 'Submit Nominations', desc: 'Complete the online nomination form for each student. You can nominate as many qualified students as you wish.' },
   { step: '3', title: 'Support Applications', desc: 'Encourage nominated students to complete their applications before the May 1 deadline.' },
-  { step: '4', title: 'Celebrate Delegates', desc: 'Recognized your delegates\u2019 achievement! Many schools announce Boys State selections publicly.' },
+  { step: '4', title: 'Celebrate Citizens', desc: 'Recognized your citizens\u2019 achievement! Many schools announce Boys State selections publicly.' },
 ]
 
 const faqItems = [
   { question: 'How many students can our school nominate?', answer: 'There is no limit. We encourage schools to nominate every qualified student who demonstrates the leadership qualities and civic interest that Boys State develops.' },
   { question: 'Can we request a school visit or presentation?', answer: 'Absolutely. Missouri Boys State offers informational presentations lasting approximately 30\u201345 minutes. Use the form below to request a visit to your school.' },
-  { question: 'Do students need to be nominated by a Legion post?', answer: 'Not necessarily. While many delegates are nominated by their local American Legion post, school counselors and educators can also submit nominations directly.' },
-  { question: 'Is there a cost to the school or student?', answer: 'No. There is no cost to the school, the student, or their family. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
+  { question: 'Do students need to be nominated by a Legion post?', answer: 'Not necessarily. While many citizens are nominated by their local American Legion post, school counselors and educators can also submit nominations directly.' },
+  { question: 'Is there a cost to the school or student?', answer: 'No. There is no cost to the school, the student, or their family. Every citizen is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
 ]
 
 export default function EducatorsPage() {

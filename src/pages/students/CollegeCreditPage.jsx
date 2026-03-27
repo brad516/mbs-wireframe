@@ -3,10 +3,10 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const scholarships = [
-  { title: 'Samsung American Legion Scholarship', desc: 'National scholarship available to Boys State and Boys Nation delegates for college tuition.', amount: 'Up to $10,000' },
+  { title: 'Samsung American Legion Scholarship', desc: 'National scholarship available to Boys State and Boys Nation citizens for college tuition.', amount: 'Up to $10,000' },
   { title: 'Partner University Scholarships', desc: 'Several Missouri universities offer scholarships specifically for Boys State alumni.', amount: 'Varies by institution' },
   { title: 'MBS Memorial Trust College Scholarships', desc: 'Merit-based college scholarships funded by the Missouri Boys State Memorial Trust and generous donors.', amount: 'Varies' },
-  { title: 'Boys Nation Scholarships', desc: 'Additional scholarship opportunities for delegates selected to represent Missouri at Boys Nation in Washington, D.C.', amount: 'Varies' },
+  { title: 'Boys Nation Scholarships', desc: 'Additional scholarship opportunities for citizens selected to represent Missouri at Boys Nation in Washington, D.C.', amount: 'Varies' },
 ]
 
 export default function CollegeCreditPage() {
@@ -29,7 +29,7 @@ export default function CollegeCreditPage() {
                 Missouri Boys State partners with accredited institutions to offer college credit for your participation. The program&rsquo;s curriculum in government, leadership, and civic engagement qualifies for credit at participating universities.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                Details about credit eligibility, partner institutions, and the enrollment process are provided to all accepted delegates. Credits may be transferable to the college or university of your choice.
+                Details about credit eligibility, partner institutions, and the enrollment process are provided to all accepted citizens. Credits may be transferable to the college or university of your choice.
               </p>
             </div>
             <div className="bg-cream border border-gray-200 rounded-xl p-12 text-center">
@@ -68,7 +68,7 @@ export default function CollegeCreditPage() {
           <Tag>Application Advantage</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-4">Stand Out on Every Application</h2>
           <p className="text-gray-500 leading-relaxed mb-4">
-            Admissions officers at top universities recognize Missouri Boys State as one of the premier leadership programs in the country. Delegates consistently report that their Boys State experience was the most-discussed topic in college interviews.
+            Admissions officers at top universities recognize Missouri Boys State as one of the premier leadership programs in the country. Citizens consistently report that their Boys State experience was the most-discussed topic in college interviews.
           </p>
           <p className="text-gray-400 leading-relaxed">
             Whether you&rsquo;re applying to colleges, scholarship programs, or internships \u2014 Boys State on your resume signals leadership, civic engagement, and initiative.

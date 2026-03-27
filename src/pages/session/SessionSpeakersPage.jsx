@@ -33,7 +33,7 @@ export default function SessionSpeakersPage() {
       <PageHero
         tag={`Session ${year}`}
         title={`${year} Keynote Speakers`}
-        description={`The leaders and voices who inspired delegates during the ${year} Missouri Boys State session.`}
+        description={`The leaders and voices who inspired citizens during the ${year} Missouri Boys State session.`}
       />
       <SessionSubNav year={year} />
 

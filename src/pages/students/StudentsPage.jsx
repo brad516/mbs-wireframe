@@ -5,15 +5,15 @@ import Tag from '../../components/Tag'
 const subPages = [
   { to: '/students/what-is-boys-state', title: 'What Is Boys State?', desc: 'A deep dive into the program, how it works, and what makes it unlike anything else.', color: 'border-t-red' },
   { to: '/students/week-in-the-life', title: 'A Week in the Life', desc: 'Day-by-day breakdown of what you\u2019ll experience from Sunday check-in to Saturday departure.', color: 'border-t-navy' },
-  { to: '/students/boys-nation', title: 'Boys Nation', desc: 'The top two delegates represent Missouri in Washington, D.C. Learn how selection works.', color: 'border-t-gold' },
+  { to: '/students/boys-nation', title: 'Boys Nation', desc: 'The top two citizens represent Missouri in Washington, D.C. Learn how selection works.', color: 'border-t-gold' },
   { to: '/students/college-credit', title: 'College Credit & Scholarships', desc: 'Earn college credit and strengthen your application. See available scholarship opportunities.', color: 'border-t-[#2b82c9]' },
-  { to: '/students/testimonials', title: 'Student Voices', desc: 'Hear from recent delegates about the week that changed everything.', color: 'border-t-[#1aaa7a]' },
+  { to: '/students/testimonials', title: 'Student Voices', desc: 'Hear from recent citizens about the week that changed everything.', color: 'border-t-[#1aaa7a]' },
   { to: '/students/orientation', title: 'Orientation & Preparation', desc: 'Pre-session meetings, what to expect, and how to prepare for your week.', color: 'border-t-red' },
 ]
 
 const stats = [
   { number: '85+', label: 'Years of Leadership' },
-  { number: '1,600', label: 'Delegates Each Summer' },
+  { number: '1,600', label: 'Citizens Each Summer' },
   { number: '50,000+', label: 'Alumni Nationwide' },
   { number: '2', label: 'Boys Nation Senators Annually' },
 ]

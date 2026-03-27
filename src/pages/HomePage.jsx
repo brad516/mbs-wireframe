@@ -48,7 +48,7 @@ function Hero() {
    ══════════════════════════════════════════════════ */
 const stats = [
   { number: '85+', label: 'Years of Leadership' },
-  { number: '1,600', label: 'Delegates Each Summer' },
+  { number: '1,600', label: 'Citizens Each Summer' },
   { number: '50,000+', label: 'Alumni Nationwide' },
   { number: '2', label: 'Boys Nation Senators Annually' },
 ]
@@ -103,7 +103,7 @@ function UrgencyBanner() {
    MISSION & VALUES
    ══════════════════════════════════════════════════ */
 const values = [
-  { title: 'Leadership by Doing', desc: 'Delegates don\u2019t study government \u2014 they build one. Every role is earned, every decision is real.' },
+  { title: 'Leadership by Doing', desc: 'Citizens don\u2019t study government \u2014 they build one. Every role is earned, every decision is real.' },
   { title: 'Character & Integrity', desc: 'We develop young men of principle who lead with honesty, courage, and accountability.' },
   { title: 'Civic Responsibility', desc: 'Understanding how government works \u2014 and why participation matters \u2014 is foundational to democracy.' },
   { title: 'Brotherhood & Service', desc: 'Lifelong bonds are forged through shared challenge. Alumni carry a commitment to serve their communities.' },
@@ -157,7 +157,7 @@ function LegionConnection() {
           <div className="text-center md:text-left">
             <h3 className="font-serif font-bold text-navy text-xl mb-2">Proud Program of The American Legion</h3>
             <p className="text-sm text-gray-500 leading-relaxed max-w-2xl">
-              Since 1935, Missouri Boys State has been sponsored by The American Legion, Department of Missouri. Local Legion posts across the state nominate and sponsor delegates, ensuring that outstanding young men from every corner of Missouri have access to this life-changing program. The Legion&rsquo;s commitment to youth development, patriotism, and civic education is the foundation on which Boys State was built.
+              Since 1935, Missouri Boys State has been sponsored by The American Legion, Department of Missouri. Local Legion posts across the state nominate and sponsor citizens, ensuring that outstanding young men from every corner of Missouri have access to this life-changing program. The Legion&rsquo;s commitment to youth development, patriotism, and civic education is the foundation on which Boys State was built.
             </p>
           </div>
           <div className="shrink-0">
@@ -189,7 +189,7 @@ function WhatIsMBS() {
               Each summer, approximately 1,600 of Missouri&rsquo;s most promising young men gather at Lindenwood University to build a functioning 51st state from the ground up — complete with cities, counties, political parties, a legislature, and a judiciary.
             </p>
             <p className="text-gray-500 leading-relaxed">
-              Delegates campaign for office, draft legislation, argue cases, and learn firsthand how government works — not from a textbook, but by doing it.
+              Citizens campaign for office, draft legislation, argue cases, and learn firsthand how government works — not from a textbook, but by doing it.
             </p>
             <Link to="/students/what-is-boys-state" className="inline-block mt-6 bg-navy hover:bg-navy-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
               Learn More
@@ -207,9 +207,9 @@ function WhatIsMBS() {
    ══════════════════════════════════════════════════ */
 const steps = [
   { step: '1', title: 'Get Nominated', desc: 'Your local American Legion post, school counselor, or educator nominates you based on leadership, character, and academic achievement.', color: 'bg-navy' },
-  { step: '2', title: 'Apply & Register', desc: 'Complete your application online. Every delegate is fully sponsored \u2014 there is no cost to attend.', color: 'bg-red' },
+  { step: '2', title: 'Apply & Register', desc: 'Complete your application online. Every citizen is fully sponsored \u2014 there is no cost to attend.', color: 'bg-red' },
   { step: '3', title: 'Attend Boys State', desc: 'Spend one transformative week at Lindenwood University building a government, running for office, and forging lifelong friendships.', color: 'bg-gold' },
-  { step: '4', title: 'Join the Alumni Network', desc: 'Become part of a 50,000+ strong alumni community. Top delegates are selected to represent Missouri at Boys Nation in Washington, D.C.', color: 'bg-navy-light' },
+  { step: '4', title: 'Join the Alumni Network', desc: 'Become part of a 50,000+ strong alumni community. Top citizens are selected to represent Missouri at Boys Nation in Washington, D.C.', color: 'bg-navy-light' },
 ]
 
 function HowItWorks() {
@@ -254,9 +254,9 @@ function HowItWorks() {
    COST & SAFETY (PARENT TRUST SIGNALS)
    ══════════════════════════════════════════════════ */
 const trustPoints = [
-  { title: 'No Cost to Families', desc: 'Every delegate is fully sponsored by alumni, local businesses, and community organizations. There is no fee for families \u2014 finances are never a barrier.', icon: '$' },
-  { title: 'Safe & Supervised', desc: 'Delegates are supervised 24/7 by trained adult counselors on the secure Lindenwood University campus. Medical staff are on-site at all times.', icon: '\u2713' },
-  { title: 'Proven Outcomes', desc: 'Alumni report stronger college applications, increased confidence, and a deeper understanding of civic duty. Delegates regularly earn Boys Nation selection.', icon: '\u2605' },
+  { title: 'No Cost to Families', desc: 'Every citizen is fully sponsored by alumni, local businesses, and community organizations. There is no fee for families \u2014 finances are never a barrier.', icon: '$' },
+  { title: 'Safe & Supervised', desc: 'Citizens are supervised 24/7 by trained adult counselors on the secure Lindenwood University campus. Medical staff are on-site at all times.', icon: '\u2713' },
+  { title: 'Proven Outcomes', desc: 'Alumni report stronger college applications, increased confidence, and a deeper understanding of civic duty. Citizens regularly earn Boys Nation selection.', icon: '\u2605' },
 ]
 
 function CostAndSafety() {
@@ -296,17 +296,17 @@ const testimonials = [
   {
     quote: "Boys State taught me that leadership isn't about titles — it's about showing up and making things happen.",
     name: 'Student Name',
-    detail: '2024 Delegate, City of [Name]',
+    detail: '2024 Citizen, City of [Name]',
   },
   {
     quote: "I went in knowing nobody and left with 30 guys I'll be friends with for life. And I got elected county sheriff.",
     name: 'Student Name',
-    detail: '2024 Delegate, City of [Name]',
+    detail: '2024 Citizen, City of [Name]',
   },
   {
     quote: "My college interviewer asked me about Boys State more than anything else on my application. It was the thing that set me apart.",
     name: 'Student Name',
-    detail: '2023 Delegate, Boys Nation Senator',
+    detail: '2023 Citizen, Boys Nation Representative',
   },
 ]
 
@@ -317,7 +317,7 @@ function StudentVoices() {
         <div className="text-center max-w-xl mx-auto mb-12">
           <Tag>In Their Own Words</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-2">Student Voices</h2>
-          <p className="text-gray-400">Hear directly from recent delegates about the week that changed everything.</p>
+          <p className="text-gray-400">Hear directly from recent citizens about the week that changed everything.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
@@ -352,7 +352,7 @@ const highlights = [
   { title: 'Campaign & Elections', desc: 'Run for office from city council to governor. Write speeches, build coalitions, debate opponents, and face the voters.', img: 'Mock Elections Photo' },
   { title: 'Legislature & Law', desc: 'Draft real bills, debate in committee, and pass legislation through both chambers of the Boys State legislature.', img: 'Legislature Photo' },
   { title: 'City Life & Competition', desc: 'Build your city from scratch. Compete in athletics, talent shows, and city challenges. Bond with your city-mates for life.', img: 'Campus Life Photo' },
-  { title: 'Keynote Speakers', desc: 'Hear from governors, generals, CEOs, and civic leaders who share their journeys and challenge delegates to lead.', img: 'Leadership Moment Photo' },
+  { title: 'Keynote Speakers', desc: 'Hear from governors, generals, CEOs, and civic leaders who share their journeys and challenge citizens to lead.', img: 'Leadership Moment Photo' },
 ]
 
 function ProgramHighlights() {
@@ -474,7 +474,7 @@ function DonateStrip() {
             <Tag light>Support the Mission</Tag>
             <h2 className="font-serif font-bold text-white text-3xl lg:text-4xl mb-4">Every Dollar Sends a Future Leader</h2>
             <p className="text-white/80 text-base leading-relaxed">
-              It costs approximately <strong className="text-gold-light">$500 to sponsor one delegate</strong> for the full Boys State experience. Every dollar you give directly sponsors a future citizen \u2014 ensuring no young man is ever limited by finances.
+              It costs approximately <strong className="text-gold-light">$500 to sponsor one citizen</strong> for the full Boys State experience. Every dollar you give directly sponsors a future citizen \u2014 ensuring no young man is ever limited by finances.
             </p>
           </div>
           <div className="shrink-0 flex flex-col items-center gap-3">
@@ -533,9 +533,9 @@ function Partners() {
    NEWS & EVENTS
    ══════════════════════════════════════════════════ */
 const newsItems = [
-  { date: 'Mar 15, 2026', title: '2026 Session Dates Announced: June 13–19 at Lindenwood University', desc: 'Registration opens April 1 for all sponsored delegates.' },
+  { date: 'Mar 15, 2026', title: '2026 Session Dates Announced: June 13–19 at Lindenwood University', desc: 'Registration opens April 1 for all sponsored citizens.' },
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'The tradition of civic leadership continues at the highest levels.' },
-  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every delegate is fully sponsored for the upcoming session.' },
+  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every citizen is fully sponsored for the upcoming session.' },
 ]
 
 const events = [

@@ -31,7 +31,7 @@ export default function SessionsPage() {
               <span className="text-white/60 text-xs font-bold tracking-[0.15em] uppercase">Upcoming</span>
               <h2 className="font-serif font-bold text-3xl mt-2 mb-4">2026 Session</h2>
               <p className="text-white/80 leading-relaxed mb-2">June 13&ndash;19 at Lindenwood University, St. Charles</p>
-              <p className="text-white/80 leading-relaxed mb-6">~1,600 delegates expected</p>
+              <p className="text-white/80 leading-relaxed mb-6">~1,600 citizens expected</p>
               <Link to="/apply" className="bg-white text-red font-bold text-sm px-7 py-3 rounded-lg hover:bg-cream transition">
                 Apply Now
               </Link>
@@ -57,7 +57,7 @@ export default function SessionsPage() {
                 <div className="p-5">
                   <h3 className="font-serif font-bold text-navy text-2xl">{s.year}</h3>
                   <p className="text-sm text-gray-400">Governor: {s.governor}</p>
-                  <p className="text-sm text-gray-400">{s.delegates} delegates</p>
+                  <p className="text-sm text-gray-400">{s.delegates} citizens</p>
                   {s.year !== '2020' && (
                     <span className="inline-block mt-3 text-sm font-bold text-red">View Session &rarr;</span>
                   )}
