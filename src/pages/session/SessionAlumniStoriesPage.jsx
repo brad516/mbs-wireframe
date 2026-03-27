@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
+import SessionSubNav from '../../components/SessionSubNav'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import Tag from '../../components/Tag'
 
@@ -22,6 +23,7 @@ export default function SessionAlumniStoriesPage() {
         title={`${year} Alumni Stories`}
         description={`Hear from the delegates of the ${year} Missouri Boys State session in their own words.`}
       />
+      <SessionSubNav year={year} />
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -42,9 +44,6 @@ export default function SessionAlumniStoriesPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-cream border-t border-gray-200 text-center">
-        <Link to={`/session/${year}`} className="text-sm font-bold text-navy hover:text-red transition">&larr; Back to {year} Session</Link>
-      </section>
     </>
   )
 }
