@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
+import SessionSubNav from '../../components/SessionSubNav'
 import Tag from '../../components/Tag'
 
 const defaultCitizens = [
@@ -20,6 +21,7 @@ export default function SessionCitizensPage() {
         title={`${year} Citizens of the Week`}
         description="Delegates recognized for outstanding leadership, character, and contributions during their Boys State session."
       />
+      <SessionSubNav year={year} />
 
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6">
@@ -42,9 +44,6 @@ export default function SessionCitizensPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-cream border-t border-gray-200 text-center">
-        <Link to={`/session/${year}`} className="text-sm font-bold text-navy hover:text-red transition">&larr; Back to {year} Session</Link>
-      </section>
     </>
   )
 }
