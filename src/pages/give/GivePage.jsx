@@ -3,10 +3,10 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const levels = [
-  { name: 'Friend', amount: '$50', desc: 'Provides program materials for one delegate', color: 'border-t-navy' },
-  { name: 'Advocate', amount: '$100', desc: 'Funds a partial scholarship for one delegate', color: 'border-t-[#2b82c9]' },
-  { name: 'Champion', amount: '$250', desc: 'Covers meals and housing for one delegate', color: 'border-t-gold' },
-  { name: 'Benefactor', amount: '$500+', desc: 'Fully sponsors a delegate\u2019s Boys State experience', color: 'border-t-red' },
+  { name: 'Friend', amount: '$50', desc: 'Contributes toward sponsoring a future citizen', color: 'border-t-navy' },
+  { name: 'Advocate', amount: '$100', desc: 'Funds program materials and meals for one delegate', color: 'border-t-[#2b82c9]' },
+  { name: 'Champion', amount: '$250', desc: 'Covers half the cost to sponsor one delegate', color: 'border-t-gold' },
+  { name: 'Sponsor', amount: '$500', desc: 'Fully sponsors one delegate\u2019s entire Boys State experience', color: 'border-t-red' },
 ]
 
 const otherWays = [
@@ -21,7 +21,7 @@ export default function GivePage() {
       <PageHero
         tag="Give"
         title="Invest in Missouri&rsquo;s Future Leaders"
-        description="Your tax-deductible gift directly funds scholarships, program operations, and the next generation of civic leaders."
+        description="Every delegate is fully sponsored. Your tax-deductible gift directly funds delegate sponsorships and ensures no young man is limited by finances."
       />
 
       {/* Impact */}
@@ -30,10 +30,10 @@ export default function GivePage() {
           <div className="max-w-2xl mx-auto mb-16">
             <Tag>Your Impact</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">
-              <span className="text-red">$375</span> Sends One Future Leader
+              <span className="text-red">$500</span> Sponsors One Future Citizen
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              That&rsquo;s the approximate cost to deliver the full Missouri Boys State experience to one delegate \u2014 one week of housing, meals, materials, speakers, and life-changing civic education. Your gift at any level makes a direct difference.
+              Every delegate is fully sponsored \u2014 we never charge parents or families. A $500 sponsorship covers one delegate&rsquo;s entire week: housing, meals, materials, speakers, and life-changing civic education. Your gift at any level helps send Missouri&rsquo;s next generation of leaders to Boys State.
             </p>
           </div>
 

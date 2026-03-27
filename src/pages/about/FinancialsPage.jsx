@@ -5,14 +5,14 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const metrics = [
   { number: '1,600', label: 'Delegates Served (2025)' },
-  { number: '$200K+', label: 'Scholarships Awarded (2025)' },
-  { number: '500+', label: 'Delegates Received Financial Aid' },
+  { number: '$800K+', label: 'In Sponsorships Raised (2025)' },
+  { number: '100%', label: 'of Delegates Fully Sponsored' },
   { number: '100%', label: 'of Donations Go to Programs' },
 ]
 
 const breakdown = [
   { category: 'Program Operations', pct: '45%', desc: 'Housing, meals, materials, campus rental, and logistics' },
-  { category: 'Scholarships & Aid', pct: '25%', desc: 'Direct financial assistance to delegates and their families' },
+  { category: 'Delegate Sponsorships', pct: '25%', desc: 'Funding the $500-per-delegate sponsorship that ensures every nominated young man can attend' },
   { category: 'Staff & Volunteers', pct: '15%', desc: 'Counselor training, support, and program coordination' },
   { category: 'Outreach & Recruitment', pct: '10%', desc: 'School visits, orientation meetings, and marketing' },
   { category: 'Administration', pct: '5%', desc: 'Overhead, insurance, and organizational support' },

@@ -65,7 +65,7 @@ export default function JoinPage() {
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif font-bold text-white text-2xl mb-4">Want to give back too?</h2>
-          <p className="text-white/70 mb-6">Your gift funds scholarships for the next generation of Boys State delegates.</p>
+          <p className="text-white/70 mb-6">Pay it forward \u2014 your $500 gift fully sponsors a future citizen to attend Boys State.</p>
           <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Make a Gift
           </Link>

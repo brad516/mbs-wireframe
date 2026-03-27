@@ -6,12 +6,12 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 const featured = {
   date: 'Mar 15, 2026',
   title: '2026 Session Dates Announced: June 13\u201319 at Lindenwood University',
-  desc: 'Missouri Boys State will return to Lindenwood University in St. Charles for its annual session. Registration opens April 1 for all sponsored delegates. This year\u2019s program promises expanded activities, new keynote speakers, and enhanced scholarship support thanks to record-setting donor contributions.',
+  desc: 'Missouri Boys State will return to Lindenwood University in St. Charles for its annual session. Registration opens April 1 for all sponsored delegates. This year\u2019s program promises expanded activities, new keynote speakers, and record-setting community sponsorship contributions.',
 }
 
 const articles = [
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'The tradition of civic leadership continues at the highest levels of Missouri government.' },
-  { date: 'Feb 10, 2026', title: 'Scholarship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures no delegate misses out due to cost. The MBS Memorial Trust has exceeded its fundraising target.' },
+  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every delegate is fully sponsored. The MBS Memorial Trust has exceeded its fundraising target.' },
   { date: 'Jan 25, 2026', title: 'Nominations Now Open for 2026 Session', desc: 'American Legion posts, schools, and community leaders can begin nominating outstanding high school juniors.' },
   { date: 'Dec 15, 2025', title: 'MBS Governor Earns Full Scholarship to Mizzou', desc: 'The 2025 Boys State governor has been awarded a prestigious leadership scholarship to the University of Missouri.' },
   { date: 'Nov 20, 2025', title: 'Annual Golf Tournament Raises $45,000', desc: 'The fall fundraiser at Old Warson Country Club drew record participation and exceeded its goal.' },

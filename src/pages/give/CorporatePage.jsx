@@ -5,8 +5,8 @@ import Tag from '../../components/Tag'
 const tiers = [
   { name: 'Bronze', amount: '$1,000', benefits: ['Logo on event materials', 'Social media recognition', 'Certificate of partnership'] },
   { name: 'Silver', amount: '$2,500', benefits: ['All Bronze benefits', 'Logo on MBS website', 'Branded signage at session', '2 event tickets'] },
-  { name: 'Gold', amount: '$5,000', benefits: ['All Silver benefits', 'Speaking opportunity at event', 'Named scholarship (1 delegate)', '4 event tickets'] },
-  { name: 'Platinum', amount: '$10,000+', benefits: ['All Gold benefits', 'Premier logo placement', 'Named scholarship (3 delegates)', 'VIP access to session activities', 'Custom partnership opportunities'] },
+  { name: 'Gold', amount: '$5,000', benefits: ['All Silver benefits', 'Speaking opportunity at event', 'Named sponsorship (10 delegates)', '4 event tickets'] },
+  { name: 'Platinum', amount: '$10,000+', benefits: ['All Gold benefits', 'Premier logo placement', 'Named sponsorship (20+ delegates)', 'VIP access to session activities', 'Custom partnership opportunities'] },
 ]
 
 const sponsors = ['The American Legion', 'Lindenwood University', 'Edward Jones', 'Missouri Farm Bureau', 'Veterans United', 'Commerce Bank']
@@ -28,7 +28,7 @@ export default function CorporatePage() {
               <Tag>Why Sponsor</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">A Partnership That Matters</h2>
               <p className="text-lg text-gray-500 leading-relaxed mb-4">
-                Corporate sponsorship of Missouri Boys State is an investment in civic education, youth leadership, and the future of Missouri. Your partnership directly funds scholarships, program operations, and the experiences that shape tomorrow&rsquo;s leaders.
+                Corporate sponsorship of Missouri Boys State is an investment in civic education, youth leadership, and the future of Missouri. Your partnership directly funds delegate sponsorships, program operations, and the experiences that shape tomorrow&rsquo;s leaders. Every delegate attends at no cost to their family \u2014 made possible by sponsors like you.
               </p>
               <div className="space-y-3 mt-6">
                 {['Reach 1,600+ high-achieving students and their families', 'Association with Missouri\u2019s most prestigious youth leadership program', 'Visibility across events, digital channels, and on-campus signage', 'Tax-deductible contribution to a 501(c)(3) organization'].map((item, i) => (

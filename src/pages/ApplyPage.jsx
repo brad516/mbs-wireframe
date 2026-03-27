@@ -21,7 +21,7 @@ const keyDates = [
 
 const faqItems = [
   { question: 'Do I need to be nominated before I can apply?', answer: 'Yes. You must be nominated by an American Legion post, school counselor, or community leader before submitting your application. If you haven\u2019t been nominated yet, ask your school counselor or contact your local Legion post.' },
-  { question: 'What does it cost to attend?', answer: 'The program fee is approximately $375, which covers housing, meals, materials, and all activities for the week. Scholarships and financial aid are available \u2014 no student is ever turned away due to inability to pay.' },
+  { question: 'What does it cost to attend?', answer: 'There is no cost to families. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations. We do not accept payment from parents or families \u2014 finances are never a barrier to attending Boys State.' },
   { question: 'Can out-of-state students apply?', answer: 'Missouri Boys State is primarily for Missouri residents. Out-of-state students should contact their own state\u2019s Boys State program through The American Legion. In rare cases, exceptions may be considered \u2014 contact headquarters for guidance.' },
   { question: 'When will I hear back about my application?', answer: 'Applicants are typically notified within 2\u20133 weeks of submitting a complete application. You\u2019ll receive information about orientation meetings and session preparation after acceptance.' },
 ]
@@ -101,22 +101,22 @@ export default function ApplyPage() {
         </div>
       </section>
 
-      {/* Scholarship & Cost */}
+      {/* Sponsorship & What's Included */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 rounded-xl p-7">
               <div className="w-10 h-10 bg-gold text-white rounded-lg flex items-center justify-center mb-4 font-bold text-lg">$</div>
-              <h3 className="font-serif font-bold text-navy text-lg mb-2">Program Fee</h3>
+              <h3 className="font-serif font-bold text-navy text-lg mb-2">No Cost to Families</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                The fee is approximately <strong className="text-navy">$375</strong>, covering housing, meals, materials, and all activities for the full week.
+                Every delegate is <strong className="text-navy">fully sponsored</strong>. We do not accept payment from parents or families. Finances are never a barrier to attending Boys State.
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-7">
               <div className="w-10 h-10 bg-navy text-white rounded-lg flex items-center justify-center mb-4 font-bold text-lg">{'\u2605'}</div>
-              <h3 className="font-serif font-bold text-navy text-lg mb-2">Scholarships Available</h3>
+              <h3 className="font-serif font-bold text-navy text-lg mb-2">Community Sponsored</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
-                Financial aid and scholarships are available through sponsoring Legion posts, the MBS Trust, and community donors. No student is ever turned away for inability to pay.
+                Each delegate&rsquo;s $500 sponsorship is funded by MBS alumni, local businesses, American Legion posts, and community organizations who believe in investing in Missouri&rsquo;s future leaders.
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-7">

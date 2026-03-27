@@ -207,7 +207,7 @@ function WhatIsMBS() {
    ══════════════════════════════════════════════════ */
 const steps = [
   { step: '1', title: 'Get Nominated', desc: 'Your local American Legion post, school counselor, or educator nominates you based on leadership, character, and academic achievement.', color: 'bg-navy' },
-  { step: '2', title: 'Apply & Register', desc: 'Complete your application online. Scholarships and financial aid are available \u2014 no student is turned away for inability to pay.', color: 'bg-red' },
+  { step: '2', title: 'Apply & Register', desc: 'Complete your application online. Every delegate is fully sponsored \u2014 there is no cost to attend.', color: 'bg-red' },
   { step: '3', title: 'Attend Boys State', desc: 'Spend one transformative week at Lindenwood University building a government, running for office, and forging lifelong friendships.', color: 'bg-gold' },
   { step: '4', title: 'Join the Alumni Network', desc: 'Become part of a 50,000+ strong alumni community. Top delegates are selected to represent Missouri at Boys Nation in Washington, D.C.', color: 'bg-navy-light' },
 ]
@@ -254,7 +254,7 @@ function HowItWorks() {
    COST & SAFETY (PARENT TRUST SIGNALS)
    ══════════════════════════════════════════════════ */
 const trustPoints = [
-  { title: 'Affordable for Everyone', desc: 'The program fee is approximately $375, with scholarships and financial aid available. No student is ever turned away due to cost.', icon: '$' },
+  { title: 'No Cost to Families', desc: 'Every delegate is fully sponsored by alumni, local businesses, and community organizations. There is no fee for families \u2014 finances are never a barrier.', icon: '$' },
   { title: 'Safe & Supervised', desc: 'Delegates are supervised 24/7 by trained adult counselors on the secure Lindenwood University campus. Medical staff are on-site at all times.', icon: '\u2713' },
   { title: 'Proven Outcomes', desc: 'Alumni report stronger college applications, increased confidence, and a deeper understanding of civic duty. Delegates regularly earn Boys Nation selection.', icon: '\u2605' },
 ]
@@ -430,7 +430,7 @@ function AlumniImpact() {
    ══════════════════════════════════════════════════ */
 const paths = [
   { to: '/students', icon: '\u{1F393}', title: 'Student', desc: 'Discover what Boys State is, what the week looks like, and how to get nominated.', color: 'border-t-red' },
-  { to: '/parents', icon: '\u{1F468}\u200D\u{1F469}\u200D\u{1F466}', title: 'Parent', desc: 'Everything you need to know about safety, cost, outcomes, and the nomination process.', color: 'border-t-[#2b82c9]' },
+  { to: '/parents', icon: '\u{1F468}\u200D\u{1F469}\u200D\u{1F466}', title: 'Parent', desc: 'Everything you need to know about safety, sponsorship, outcomes, and the nomination process.', color: 'border-t-[#2b82c9]' },
   { to: '/educators', icon: '\u{1F3EB}', title: 'Educator', desc: 'Tools, resources, and a nomination toolkit to help you send your best students.', color: 'border-t-[#1aaa7a]' },
   { to: '/alumni', icon: '\u2B50', title: 'Alumni', desc: 'Reconnect, give back, and stay involved with the program that shaped you.', color: 'border-t-gold' },
 ]
@@ -474,7 +474,7 @@ function DonateStrip() {
             <Tag light>Support the Mission</Tag>
             <h2 className="font-serif font-bold text-white text-3xl lg:text-4xl mb-4">Every Dollar Sends a Future Leader</h2>
             <p className="text-white/80 text-base leading-relaxed">
-              It costs approximately <strong className="text-gold-light">$375 per delegate</strong> to deliver the Boys State experience. Your gift — at any level — directly funds scholarships, program operations, and the next generation of Missouri&rsquo;s civic leaders.
+              It costs approximately <strong className="text-gold-light">$500 to sponsor one delegate</strong> for the full Boys State experience. Every dollar you give directly sponsors a future citizen \u2014 ensuring no young man is ever limited by finances.
             </p>
           </div>
           <div className="shrink-0 flex flex-col items-center gap-3">
@@ -535,7 +535,7 @@ function Partners() {
 const newsItems = [
   { date: 'Mar 15, 2026', title: '2026 Session Dates Announced: June 13–19 at Lindenwood University', desc: 'Registration opens April 1 for all sponsored delegates.' },
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'The tradition of civic leadership continues at the highest levels.' },
-  { date: 'Feb 10, 2026', title: 'Scholarship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures no delegate misses out due to cost.' },
+  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every delegate is fully sponsored for the upcoming session.' },
 ]
 
 const events = [

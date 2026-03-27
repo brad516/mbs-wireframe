@@ -5,7 +5,7 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const getInvolved = [
   { to: '/alumni/join', title: 'Join the Alumni Association', desc: 'Connect with 50,000+ fellow alumni. Access events, networking, and ways to give back.', cta: 'Join Now', color: 'bg-red' },
-  { to: '/give', title: 'Give Back', desc: 'Your tax-deductible gift funds scholarships and ensures every qualified student can attend.', cta: 'Donate', color: 'bg-gold' },
+  { to: '/give', title: 'Sponsor a Future Citizen', desc: 'Your tax-deductible gift of $500 fully sponsors a delegate. Pay it forward and send the next generation to Boys State.', cta: 'Donate', color: 'bg-gold' },
   { to: '/events', title: 'Attend Events', desc: 'Trivia nights, golf tournaments, homecoming \u2014 stay connected with the MBS community.', cta: 'See Events', color: 'bg-navy' },
 ]
 
