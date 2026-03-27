@@ -48,6 +48,7 @@ const navItems = [
           heading: 'Learn More',
           links: [
             { label: 'Our Story', to: '/about' },
+            { label: 'Program Structure', to: '/about/program-structure' },
             { label: 'The American Legion', to: '/about/american-legion' },
             { label: 'Financials & Transparency', to: '/about/financials' },
             { label: 'Staff & Board', to: '/about/staff' },
@@ -152,6 +153,7 @@ const mobileItems = [
     to: '/about',
     children: [
       { label: 'Our Story', to: '/about' },
+      { label: 'Program Structure', to: '/about/program-structure' },
       { label: 'The American Legion', to: '/about/american-legion' },
       { label: 'Financials', to: '/about/financials' },
       { label: 'Staff & Board', to: '/about/staff' },

@@ -5,7 +5,7 @@ import FAQAccordion from '../components/FAQAccordion'
 
 const atAGlance = [
   { icon: '\u{1F6E1}\uFE0F', title: 'Safe & Supervised', desc: 'Citizens are supervised 24/7 by trained adult counselors. Medical staff are on-site at all times on the secure Lindenwood University campus.' },
-  { icon: '$', title: 'No Cost to Families', desc: 'Every citizen is fully sponsored. There is no fee for parents or families \u2014 finances are never a barrier to attendance.' },
+  { icon: '$', title: 'No Cost to Families', desc: 'Every citizen is fully sponsored. There is no fee for parents or families — finances are never a barrier to attendance.' },
   { icon: '\u{1F4C5}', title: 'One Week', desc: 'The 2026 session runs June 13\u201319 at Lindenwood University in St. Charles, MO. Pre-session orientation meetings are held statewide.' },
   { icon: '\u{1F3AF}', title: 'Proven Outcomes', desc: 'Alumni report stronger college applications, increased confidence, lifelong friendships, and a deeper understanding of civic responsibility.' },
 ]
@@ -68,6 +68,67 @@ export default function ParentsPage() {
               <div className="text-5xl mb-4">{'\u{1F3EB}'}</div>
               <p className="text-sm text-gray-400">Lindenwood University Campus Photo</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What He'll Learn — Program Highlights for Parents */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <Tag>Academics</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-3">What Your Son Will Learn</h2>
+            <p className="text-gray-400">This isn't summer camp. Missouri Boys State is an accredited academic program taught by practicing professionals — attorneys, judges, Highway Patrol troopers, journalists, business executives, and university professors.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'Government & Civics', desc: 'Citizens build a three-branch government at city, county, and state levels — complete with elections, legislation, and courts. They don\u2019t study government; they run one.' },
+              { title: 'Leadership & Public Speaking', desc: 'Whether campaigning for office, arguing a case in court, or debating legislation, your son will develop real confidence speaking in front of peers and authority figures.' },
+              { title: 'Critical Thinking & Debate', desc: 'From drafting bills to resolving legal disputes, the program demands analytical thinking, persuasion, and the ability to see multiple sides of an issue.' },
+              { title: 'Journalism & Media Literacy', desc: 'Citizens run a newspaper, radio station, and TV news show — learning firsthand how media works and why an informed citizenry matters.' },
+              { title: 'Business & Economics', desc: 'Citizens start businesses, manage budgets, pay taxes, and navigate the intersection of commerce and government.' },
+              { title: 'College Credit', desc: 'The program is accredited by Lindenwood University. Citizens who pass the final exam with 70%+ can apply for 2\u20133 hours of college credit.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-white border border-gray-200 rounded-xl p-6">
+                <h3 className="font-serif font-bold text-navy text-base mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/about/program-structure" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold text-sm px-7 py-3 rounded-lg transition">
+              See Full Program Structure &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Scholarships for Parents */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-xl mx-auto mb-12">
+            <Tag>Scholarships</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-3">Real Scholarship Dollars</h2>
+            <p className="text-gray-400">Boys State isn't just a line on a resume. It comes with real financial opportunities for college.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { amount: '$100,000', label: 'Vogel Family Man in the Arena Scholarship', note: '1 citizen per year' },
+              { amount: '$10,000', label: 'Wayne S. Gregory Citizen of the Week', note: 'Plus $5K and $2.5K runners-up' },
+              { amount: 'Full Tuition', label: 'Lindenwood Citizen Leadership Scholarship', note: '4-year full tuition' },
+              { amount: '$2M+', label: 'Harley Wyatt Memorial Program', note: 'From MO colleges & universities' },
+            ].map((s, i) => (
+              <div key={i} className="bg-cream border border-gray-200 rounded-xl p-6 text-center">
+                <span className="block font-serif font-bold text-red text-2xl mb-1">{s.amount}</span>
+                <span className="block text-sm font-bold text-navy mb-1">{s.label}</span>
+                <span className="block text-xs text-gray-400">{s.note}</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/students/college-credit" className="text-sm font-bold text-red hover:underline">
+              Full Scholarship & College Credit Details &rarr;
+            </Link>
           </div>
         </div>
       </section>

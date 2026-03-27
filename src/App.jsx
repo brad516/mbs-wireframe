@@ -19,6 +19,7 @@ import AboutPage from './pages/about/AboutPage'
 import AmericanLegionPage from './pages/about/AmericanLegionPage'
 import FinancialsPage from './pages/about/FinancialsPage'
 import StaffPage from './pages/about/StaffPage'
+import ProgramStructurePage from './pages/about/ProgramStructurePage'
 import AlumniPage from './pages/alumni/AlumniPage'
 import NotableAlumniPage from './pages/alumni/NotableAlumniPage'
 import JoinPage from './pages/alumni/JoinPage'
@@ -70,6 +71,7 @@ export default function App() {
           <Route path="/about/american-legion" element={<AmericanLegionPage />} />
           <Route path="/about/financials" element={<FinancialsPage />} />
           <Route path="/about/staff" element={<StaffPage />} />
+          <Route path="/about/program-structure" element={<ProgramStructurePage />} />
           <Route path="/alumni" element={<AlumniPage />} />
           <Route path="/alumni/notable" element={<NotableAlumniPage />} />
           <Route path="/alumni/join" element={<JoinPage />} />

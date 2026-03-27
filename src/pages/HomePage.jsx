@@ -195,7 +195,15 @@ function WhatIsMBS() {
               Learn More
             </Link>
           </div>
-          <MediaPlaceholder label="Program Overview Photo or 30-sec Explainer Video" size="tall" showPlay />
+          <div className="relative rounded-xl overflow-hidden shadow-lg aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/VNV6nnKb138"
+              title="What is Missouri Boys State?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -346,40 +354,58 @@ function StudentVoices() {
 }
 
 /* ══════════════════════════════════════════════════
-   PROGRAM HIGHLIGHTS
+   WEEK CAROUSEL
    ══════════════════════════════════════════════════ */
-const highlights = [
-  { title: 'Campaign & Elections', desc: 'Run for office from city council to governor. Write speeches, build coalitions, debate opponents, and face the voters.', img: 'Mock Elections Photo' },
-  { title: 'Legislature & Law', desc: 'Draft real bills, debate in committee, and pass legislation through both chambers of the Boys State legislature.', img: 'Legislature Photo' },
-  { title: 'City Life & Competition', desc: 'Build your city from scratch. Compete in athletics, talent shows, and city challenges. Bond with your city-mates for life.', img: 'Campus Life Photo' },
-  { title: 'Keynote Speakers', desc: 'Hear from governors, generals, CEOs, and civic leaders who share their journeys and challenge citizens to lead.', img: 'Leadership Moment Photo' },
+const carouselPhases = [
+  { day: 'Saturday', title: 'Arrival & City Formation', desc: 'You arrive at Lindenwood, meet your city of ~50 citizens, get assigned to the Federalist or Nationalist party, and start organizing from scratch. By midnight, platforms are being debated and alliances are forming.', img: 'Arrival — Checking in, meeting the city', accent: 'bg-red' },
+  { day: 'Sunday', title: 'Elections & City Government', desc: 'Caucuses nominate candidates, campaigns launch, speeches echo through the halls. By afternoon your city has a Mayor, City Council, Senators, and Representatives. City government is live before dinner.', img: 'Sunday — Campaigns and city elections', accent: 'bg-red' },
+  { day: 'Mon–Tue', title: 'Legislature, Courts & Counties', desc: 'The General Assembly convenes. Bills are drafted and debated. Attorneys pass the Bar Exam. County elections expand government further — Commissioners, Sheriffs, Judges, and Prosecutors take office.', img: 'Legislature in session — Debates and committee hearings', accent: 'bg-navy' },
+  { day: 'Wednesday', title: 'Statewide Primary & Governor\'s Race', desc: 'The stakes go statewide. Candidates for Governor face off in an open primary. That evening, the nominees debate before the entire state. Campaign war rooms run through the night.', img: 'Gubernatorial debate — Packed auditorium', accent: 'bg-gold' },
+  { day: 'Thursday', title: 'General Election & Inauguration', desc: 'Every citizen votes. The Governor is elected and inaugurated. Cabinet confirmed by the Senate. The full machinery of state government — legislative, executive, judicial — is running. You built this.', img: 'Inauguration — The Governor takes the oath', accent: 'bg-navy' },
+  { day: 'Friday', title: 'Democracy in Action & Brotherhood', desc: 'Citizen of the Week. Model City. Model County. But it\'s the quiet moments that hit hardest — the friendships, the late-night conversations, the realization that this week changed something in you.', img: 'Closing — Awards, brotherhood, lasting bonds', accent: 'bg-red' },
 ]
 
-function ProgramHighlights() {
+function WeekCarousel() {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <Tag>The Experience</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-2">A Week Like No Other</h2>
-          <p className="text-gray-400">From campaign speeches to courtroom arguments, every day at Boys State is designed to challenge, inspire, and transform.</p>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-3">A Week Like No Other</h2>
+          <p className="text-gray-400">Scroll through the week that changes everything.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          {highlights.map((h, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-              <MediaPlaceholder label={h.img} size="landscape" />
-              <div className="p-5">
-                <h3 className="font-serif font-bold text-navy text-lg mb-1">{h.title}</h3>
-                <p className="text-sm text-gray-400">{h.desc}</p>
+      </div>
+      {/* Full-bleed scroll container */}
+      <div className="relative">
+        <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth px-6 lg:px-[calc((100vw-1200px)/2+24px)] pb-6 -mb-6" style={{ scrollbarWidth: 'thin' }}>
+          {carouselPhases.map((phase, i) => (
+            <div
+              key={i}
+              className="snap-start shrink-0 w-[85vw] sm:w-[420px] lg:w-[480px] bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col"
+            >
+              <div className="relative">
+                <MediaPlaceholder label={phase.img} size="landscape" />
+                <span className={`absolute top-3 left-3 ${phase.accent} text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-md`}>
+                  {phase.day}
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="font-serif font-bold text-navy text-lg mb-2">{phase.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed flex-1">{phase.desc}</p>
               </div>
             </div>
           ))}
+          {/* Final CTA card */}
+          <div className="snap-start shrink-0 w-[85vw] sm:w-[420px] lg:w-[480px] bg-navy rounded-xl flex flex-col items-center justify-center p-12 text-center">
+            <h3 className="font-serif font-bold text-white text-2xl mb-4">Ready to Start<br />Your Week?</h3>
+            <p className="text-white/70 text-sm mb-6 max-w-xs">Join 850 citizens this summer for the experience of a lifetime.</p>
+            <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
+              Apply Now
+            </Link>
+          </div>
         </div>
-        <div className="text-center mt-10">
-          <Link to="/students/week-in-the-life" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
-            See the Full Week
-          </Link>
-        </div>
+        {/* Scroll hint gradient */}
+        <div className="hidden lg:block absolute right-0 top-0 bottom-6 w-24 bg-gradient-to-l from-cream to-transparent pointer-events-none" />
       </div>
     </section>
   )
@@ -635,7 +661,7 @@ export default function HomePage() {
       <LegionConnection />
       <WhatIsMBS />
       <HowItWorks />
-      <ProgramHighlights />
+      <WeekCarousel />
       <CostAndSafety />
       <StudentVoices />
       <AlumniImpact />
