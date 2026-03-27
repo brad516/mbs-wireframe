@@ -38,6 +38,40 @@ export default function StaffPage() {
         </div>
       </section>
 
+      {/* Board of Directors */}
+      <section className="py-24 bg-cream">
+        <div className="max-w-7xl mx-auto px-6">
+          <Tag>Governance</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl mb-8">Board of Directors</h2>
+          <p className="text-gray-500 leading-relaxed mb-8 max-w-2xl">
+            Missouri Boys State is governed by a volunteer board of directors composed of American Legion leaders, MBS alumni, and community members dedicated to the program&rsquo;s mission.
+          </p>
+          <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <div className="grid grid-cols-3 bg-navy text-white text-sm font-bold px-6 py-3">
+              <span>Name</span>
+              <span>Title</span>
+              <span>Affiliation</span>
+            </div>
+            {[
+              { name: 'Board Chair Name', title: 'Chair', affiliation: 'American Legion Dept. of Missouri' },
+              { name: 'Vice Chair Name', title: 'Vice Chair', affiliation: 'MBS Alumnus, Class of 19XX' },
+              { name: 'Treasurer Name', title: 'Treasurer', affiliation: 'MBS Memorial Trust' },
+              { name: 'Secretary Name', title: 'Secretary', affiliation: 'American Legion Post XXX' },
+              { name: 'Director Name', title: 'Director', affiliation: 'Community Leader' },
+              { name: 'Director Name', title: 'Director', affiliation: 'MBS Alumnus, Class of 20XX' },
+              { name: 'Director Name', title: 'Director', affiliation: 'American Legion Post XXX' },
+              { name: 'Director Name', title: 'Director, Ex Officio', affiliation: 'MBS Executive Director' },
+            ].map((d, i) => (
+              <div key={i} className={`grid grid-cols-3 px-6 py-3 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} border-t border-gray-200`}>
+                <span className="font-bold text-navy">{d.name}</span>
+                <span className="text-gray-500">{d.title}</span>
+                <span className="text-gray-400">{d.affiliation}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-cream border-t border-gray-200 text-center">
         <div className="max-w-7xl mx-auto px-6">
           <Tag>Contact</Tag>

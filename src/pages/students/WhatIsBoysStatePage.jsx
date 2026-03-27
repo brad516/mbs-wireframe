@@ -4,10 +4,12 @@ import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const structure = [
-  { title: 'Cities', desc: 'Delegates are assigned to one of dozens of cities. Each city elects its own mayor, council, and officials.' },
-  { title: 'Counties', desc: 'Cities are grouped into counties with their own elected officials and governance structure.' },
-  { title: 'Political Parties', desc: 'Two parties are formed. Delegates join a party, attend conventions, and campaign for office.' },
-  { title: 'Three Branches', desc: 'A full legislature, executive branch, and judiciary \u2014 all elected and operated by delegates.' },
+  { title: 'Cities', desc: 'Delegates are assigned to one of dozens of cities \u2014 each with its own mayor, city council, police chief, and municipal judges. Cities compete for the overall city championship.' },
+  { title: 'Counties', desc: 'Cities are grouped into counties with elected county officials including sheriffs, assessors, and commissioners. County government mirrors real Missouri structure.' },
+  { title: 'Political Parties', desc: 'Two parties \u2014 Nationalists and Federalists \u2014 hold conventions, draft platforms, select candidates, and campaign for statewide office.' },
+  { title: 'Three Branches', desc: 'A full legislature drafts and passes bills, an executive branch governs, and a judiciary hears cases \u2014 all elected and run by delegates.' },
+  { title: 'Schools of Instruction', desc: 'Expert-led sessions teach delegates about each branch of government, parliamentary procedure, and the legislative process before they take office.' },
+  { title: 'Athletics & Activities', desc: 'Competitive sports, talent shows, band, chorus, and newspaper \u2014 city pride extends well beyond the statehouse.' },
 ]
 
 const outcomes = [
@@ -56,7 +58,7 @@ export default function WhatIsBoysStatePage() {
             <h2 className="font-serif font-bold text-navy text-3xl">The 51st State</h2>
             <p className="text-gray-400">Missouri Boys State replicates the full structure of state government.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {structure.map((s, i) => (
               <div key={i} className="bg-cream border border-gray-200 rounded-xl p-7">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{s.title}</h3>

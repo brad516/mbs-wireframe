@@ -51,6 +51,49 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Values & Constitution */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <Tag>Our Values</Tag>
+              <h2 className="font-serif font-bold text-navy text-3xl mb-6">What We Stand For</h2>
+              <div className="space-y-4">
+                {[
+                  { title: 'Service', desc: 'A commitment to something greater than ourselves, rooted in the American Legion tradition of selfless service.' },
+                  { title: 'Leadership', desc: 'The courage to step forward, make decisions, and inspire others toward a common purpose.' },
+                  { title: 'Integrity', desc: 'Doing what is right even when no one is watching. Character is the foundation of effective citizenship.' },
+                  { title: 'Civic Engagement', desc: 'An informed, active citizenry is essential to democracy. Boys State cultivates lifelong participants in the democratic process.' },
+                ].map((v, i) => (
+                  <div key={i} className="flex gap-4 items-start">
+                    <div className="w-8 h-8 bg-red/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-2 h-2 bg-red rounded-full" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-navy text-sm">{v.title}</h3>
+                      <p className="text-sm text-gray-400">{v.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <Tag>The MBS Constitution</Tag>
+              <h2 className="font-serif font-bold text-navy text-3xl mb-6">A Government by Delegates</h2>
+              <p className="text-gray-500 leading-relaxed mb-4">
+                Missouri Boys State operates under its own constitution, drafted and ratified by delegates. The constitution establishes the structure of the 51st state&rsquo;s government, including the powers of each branch, the rights of citizens, and the election process.
+              </p>
+              <p className="text-gray-500 leading-relaxed mb-4">
+                Each year, delegates propose amendments through the legislative process &mdash; debating, voting, and enacting constitutional changes just as real legislators do. The constitution is a living document that evolves with each session.
+              </p>
+              <p className="text-sm text-gray-400 italic">
+                The full MBS Constitution is provided to all delegates during orientation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="bg-cream border-y border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-6">
