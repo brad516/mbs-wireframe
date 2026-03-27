@@ -23,6 +23,7 @@ const cols = [
     title: 'Resources',
     links: [
       { label: 'News & Media', to: '/news' },
+      { label: 'FAQ', to: '/faq' },
       { label: 'Annual Report', to: '/about/financials' },
       { label: 'Press Room', to: '/news/press' },
       { label: 'Contact Us', to: '/contact' },
@@ -70,7 +71,7 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Donate */}
+          {/* Donate & Contact */}
           <div>
             <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/40 mb-4">Support Boys State</h5>
             <p className="text-[13px] text-white/50 mb-4">Your tax-deductible gift changes lives.</p>
@@ -80,6 +81,22 @@ export default function Footer() {
             >
               Donate Now
             </Link>
+            <a
+              href="https://store.moboysstate.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm text-white/50 hover:text-white mt-4 transition"
+            >
+              Shop MBS Store &rarr;
+            </a>
+            <div className="mt-6 pt-4 border-t border-white/10">
+              <p className="text-[11px] text-white/35 leading-relaxed">
+                P.O. Box 667<br />
+                Warrensburg, MO 64093<br />
+                660.429.2761<br />
+                headquarters@moboysstate.org
+              </p>
+            </div>
           </div>
         </div>
 
@@ -89,6 +106,7 @@ export default function Footer() {
           <div className="flex gap-5">
             <Link to="/privacy" className="text-xs text-white/35 hover:text-white/60">Privacy Policy</Link>
             <Link to="/terms" className="text-xs text-white/35 hover:text-white/60">Terms of Use</Link>
+            <a href="https://staff.moboysstate.org" target="_blank" rel="noopener noreferrer" className="text-xs text-white/20 hover:text-white/40">Staff Login</a>
           </div>
         </div>
       </div>
