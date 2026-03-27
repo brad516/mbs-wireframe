@@ -130,6 +130,28 @@ export default function ApplyPage() {
         </div>
       </section>
 
+      {/* Out-of-State & OCONUS */}
+      <section className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <Tag>Special Circumstances</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl mb-6">Out-of-State &amp; OCONUS Applicants</h2>
+          <div className="space-y-6">
+            <div className="bg-cream border border-gray-200 rounded-xl p-7">
+              <h3 className="font-serif font-bold text-navy text-lg mb-2">Out-of-Country (OCONUS) Students</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Sons of military personnel stationed outside the continental United States (OCONUS) may be eligible to attend Missouri Boys State if they have a Missouri connection (e.g., home of record). Contact headquarters with your situation and we will work to find a path for your student.
+              </p>
+            </div>
+            <div className="bg-cream border border-gray-200 rounded-xl p-7">
+              <h3 className="font-serif font-bold text-navy text-lg mb-2">Students from Other States</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Each state operates its own Boys State program through The American Legion. If you live outside Missouri, visit <strong className="text-navy">legion.org</strong> to find your state&rsquo;s program. In rare circumstances, students with strong Missouri ties may be considered &mdash; reach out to our registrar for guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 bg-cream">
         <div className="max-w-3xl mx-auto px-6">
