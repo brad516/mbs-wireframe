@@ -29,6 +29,13 @@ import PressPage from './pages/news/PressPage'
 import EventsPage from './pages/events/EventsPage'
 import EventDetailPage from './pages/events/EventDetailPage'
 import SessionsPage from './pages/SessionsPage'
+import SessionYearPage from './pages/session/SessionYearPage'
+import SessionSpeakersPage from './pages/session/SessionSpeakersPage'
+import SessionElectionResultsPage from './pages/session/SessionElectionResultsPage'
+import SessionCitizensPage from './pages/session/SessionCitizensPage'
+import SessionAlumniStoriesPage from './pages/session/SessionAlumniStoriesPage'
+import SessionClosingPage from './pages/session/SessionClosingPage'
+import HallOfFamePage from './pages/alumni/HallOfFamePage'
 import FAQPage from './pages/FAQPage'
 import ContactPage from './pages/ContactPage'
 import PrivacyPage from './pages/PrivacyPage'
@@ -67,6 +74,13 @@ export default function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:slug" element={<EventDetailPage />} />
           <Route path="/sessions" element={<SessionsPage />} />
+          <Route path="/session/:year" element={<SessionYearPage />} />
+          <Route path="/session/:year/speakers" element={<SessionSpeakersPage />} />
+          <Route path="/session/:year/election-results" element={<SessionElectionResultsPage />} />
+          <Route path="/session/:year/citizens-of-the-week" element={<SessionCitizensPage />} />
+          <Route path="/session/:year/alumni-stories" element={<SessionAlumniStoriesPage />} />
+          <Route path="/session/:year/closing" element={<SessionClosingPage />} />
+          <Route path="/alumni/hall-of-fame" element={<HallOfFamePage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
