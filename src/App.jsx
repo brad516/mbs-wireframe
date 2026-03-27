@@ -24,6 +24,9 @@ import NotableAlumniPage from './pages/alumni/NotableAlumniPage'
 import JoinPage from './pages/alumni/JoinPage'
 import GivePage from './pages/give/GivePage'
 import CorporatePage from './pages/give/CorporatePage'
+import PlannedGivingPage from './pages/give/PlannedGivingPage'
+import MatchingGiftsPage from './pages/give/MatchingGiftsPage'
+import MemorialGiftsPage from './pages/give/MemorialGiftsPage'
 import NewsPage from './pages/news/NewsPage'
 import PressPage from './pages/news/PressPage'
 import EventsPage from './pages/events/EventsPage'
@@ -69,6 +72,9 @@ export default function App() {
           <Route path="/alumni/join" element={<JoinPage />} />
           <Route path="/give" element={<GivePage />} />
           <Route path="/give/corporate" element={<CorporatePage />} />
+          <Route path="/give/planned" element={<PlannedGivingPage />} />
+          <Route path="/give/matching" element={<MatchingGiftsPage />} />
+          <Route path="/give/memorial" element={<MemorialGiftsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/press" element={<PressPage />} />
           <Route path="/events" element={<EventsPage />} />
