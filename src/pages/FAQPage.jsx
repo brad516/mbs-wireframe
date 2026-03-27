@@ -30,7 +30,7 @@ const tabs = [
     label: 'Parents',
     items: [
       { question: 'Is Boys State safe?', answer: 'Yes. Delegates are supervised 24/7 by trained adult counselors on the secure Lindenwood University campus. Medical staff are on-site at all times. All staff are background-checked.' },
-      { question: 'How much does it cost?', answer: 'The program fee is approximately $375, covering housing, meals, materials, and all activities. Scholarships and financial aid are widely available. No student is ever turned away for inability to pay.' },
+      { question: 'How much does it cost?', answer: 'There is no cost to families. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations. We do not accept payment from parents or families. If you\u2019d like to give back, you can pay it forward by sponsoring a future citizen.' },
       { question: 'Can parents visit?', answer: 'Parents are welcome at the inauguration ceremony and designated events. Day-to-day visits are limited to preserve the immersive experience.' },
       { question: 'What about dietary restrictions or medical needs?', answer: 'We accommodate dietary restrictions and medical needs. Note any requirements on the application and contact headquarters to discuss specifics.' },
     ],
@@ -40,7 +40,7 @@ const tabs = [
     items: [
       { question: 'How do I nominate students?', answer: 'Use the online nomination form at moboysstate.org/nominate. There\u2019s no limit to how many students you can nominate.' },
       { question: 'Can you visit our school?', answer: 'Yes. We offer 30\u201345 minute informational presentations. Request a visit through our educator page or contact headquarters.' },
-      { question: 'Is there a cost to the school?', answer: 'No. There is no cost to the school for nominations. The program fee is the delegate\u2019s responsibility, with sponsorships and scholarships widely available.' },
+      { question: 'Is there a cost to the school?', answer: 'No. There is no cost to the school or the student\u2019s family. Every delegate is fully sponsored by alumni, businesses, and community organizations.' },
       { question: 'What makes a good Boys State candidate?', answer: 'We look for students who demonstrate leadership, character, academic achievement, and civic interest. The program thrives on diversity of thought and background.' },
     ],
   },

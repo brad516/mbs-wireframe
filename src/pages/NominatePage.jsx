@@ -21,7 +21,7 @@ const qualities = [
 const faqItems = [
   { question: 'How many students can I nominate?', answer: 'There is no limit to the number of students you can nominate. We encourage nominators to identify all qualified young men in their community.' },
   { question: 'Does the nominee need to know they\u2019re being nominated?', answer: 'We recommend informing the student and their family before submitting a nomination, as they\u2019ll need to complete an application after being nominated.' },
-  { question: 'Is there a fee to nominate?', answer: 'No. Nominating a student is free. The program fee of approximately $375 is the responsibility of the delegate, though many are sponsored by their nominating Legion post or receive scholarship assistance.' },
+  { question: 'Is there a fee to nominate or attend?', answer: 'No. Nominating a student is free, and there is no cost to the delegate or their family. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
   { question: 'What happens after I submit a nomination?', answer: 'The nominee and their family will receive information about completing an application. Once accepted, they\u2019ll be invited to attend a pre-session orientation meeting.' },
 ]
 

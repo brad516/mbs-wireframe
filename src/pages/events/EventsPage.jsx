@@ -3,7 +3,7 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const upcoming = [
-  { month: 'APR', day: '18', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. All proceeds support MBS scholarships.', slug: 'trivia', cta: 'Get Tickets' },
+  { month: 'APR', day: '18', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. All proceeds sponsor future MBS delegates.', slug: 'trivia', cta: 'Get Tickets' },
   { month: 'MAY', day: '10', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', desc: 'Four-person scramble format. Includes lunch, prizes, and networking with MBS alumni and supporters.', slug: 'golf', cta: 'Register' },
   { month: 'JUN', day: '13', title: '2026 Boys State Session', loc: 'Lindenwood University, St. Charles', desc: 'The main event. 1,600 delegates convene for a week of leadership, government, and brotherhood.', slug: null, cta: 'Learn More' },
   { month: 'OCT', day: 'TBD', title: 'Alumni Homecoming Weekend', loc: 'Lindenwood University, St. Charles', desc: 'Alumni from all years gather for a weekend of reconnection, tours, and celebration.', slug: null, cta: 'Coming Soon' },

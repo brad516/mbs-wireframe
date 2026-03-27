@@ -77,7 +77,7 @@ export default function AmericanLegionPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: 'Nominate Delegates', desc: 'Identify outstanding young men in your community and submit nominations for Boys State.' },
-              { title: 'Sponsor Delegates', desc: 'Cover the $375 program fee so cost is never a barrier for talented students.' },
+              { title: 'Sponsor Delegates', desc: 'Fund $500 sponsorships so every nominated young man can attend, regardless of financial circumstances.' },
               { title: 'Volunteer & Mentor', desc: 'Serve as counselors, speakers, or mentors during the session. Share your experience with the next generation.' },
             ].map((item, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7">

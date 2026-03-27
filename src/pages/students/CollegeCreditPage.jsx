@@ -3,10 +3,10 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const scholarships = [
-  { title: 'MBS Memorial Trust Scholarships', desc: 'Need-based and merit-based scholarships funded by the Missouri Boys State Memorial Trust and generous donors.', amount: 'Varies' },
-  { title: 'American Legion Post Sponsorships', desc: 'Many local Legion posts cover part or all of the program fee for delegates they nominate.', amount: 'Up to $375' },
   { title: 'Samsung American Legion Scholarship', desc: 'National scholarship available to Boys State and Boys Nation delegates for college tuition.', amount: 'Up to $10,000' },
   { title: 'Partner University Scholarships', desc: 'Several Missouri universities offer scholarships specifically for Boys State alumni.', amount: 'Varies by institution' },
+  { title: 'MBS Memorial Trust College Scholarships', desc: 'Merit-based college scholarships funded by the Missouri Boys State Memorial Trust and generous donors.', amount: 'Varies' },
+  { title: 'Boys Nation Scholarships', desc: 'Additional scholarship opportunities for delegates selected to represent Missouri at Boys Nation in Washington, D.C.', amount: 'Varies' },
 ]
 
 export default function CollegeCreditPage() {

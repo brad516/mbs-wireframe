@@ -20,7 +20,7 @@ const faqItems = [
   { question: 'How many students can our school nominate?', answer: 'There is no limit. We encourage schools to nominate every qualified student who demonstrates the leadership qualities and civic interest that Boys State develops.' },
   { question: 'Can we request a school visit or presentation?', answer: 'Absolutely. Missouri Boys State offers informational presentations lasting approximately 30\u201345 minutes. Use the form below to request a visit to your school.' },
   { question: 'Do students need to be nominated by a Legion post?', answer: 'Not necessarily. While many delegates are nominated by their local American Legion post, school counselors and educators can also submit nominations directly.' },
-  { question: 'Is there a cost to the school?', answer: 'No. There is no cost to the school for nominations. The program fee of ~$375 is the delegate\u2019s responsibility, with scholarships and sponsorships widely available.' },
+  { question: 'Is there a cost to the school or student?', answer: 'No. There is no cost to the school, the student, or their family. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
 ]
 
 export default function EducatorsPage() {
