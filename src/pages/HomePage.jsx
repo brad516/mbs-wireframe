@@ -84,6 +84,102 @@ function StatsBar() {
 }
 
 /* ══════════════════════════════════════════════════
+   URGENCY BANNER
+   ══════════════════════════════════════════════════ */
+function UrgencyBanner() {
+  return (
+    <section className="bg-red py-3">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
+          <p className="text-white text-sm font-bold">
+            2026 Session: June 13&ndash;19 at Lindenwood University
+          </p>
+          <span className="hidden sm:inline text-white/40">|</span>
+          <p className="text-white/90 text-sm">
+            Applications close <strong>May 1</strong>
+          </p>
+          <Link to="/apply" className="bg-white text-red font-bold text-xs px-4 py-1.5 rounded-md hover:bg-cream transition ml-1">
+            Apply Now
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   MISSION & VALUES
+   ══════════════════════════════════════════════════ */
+const values = [
+  { title: 'Leadership by Doing', desc: 'Delegates don\u2019t study government \u2014 they build one. Every role is earned, every decision is real.' },
+  { title: 'Character & Integrity', desc: 'We develop young men of principle who lead with honesty, courage, and accountability.' },
+  { title: 'Civic Responsibility', desc: 'Understanding how government works \u2014 and why participation matters \u2014 is foundational to democracy.' },
+  { title: 'Brotherhood & Service', desc: 'Lifelong bonds are forged through shared challenge. Alumni carry a commitment to serve their communities.' },
+]
+
+function MissionValues() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <Tag>Our Mission</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-5">
+            Developing Civic Leaders for a Stronger Missouri
+          </h2>
+          <p className="text-lg text-gray-500 leading-relaxed mb-4">
+            Missouri Boys State exists to inspire and educate the next generation of civic leaders through hands-on participation in the democratic process. We believe that when young people experience government firsthand, they become better citizens, stronger leaders, and more engaged members of their communities.
+          </p>
+          <p className="text-gray-400 leading-relaxed">
+            Our vision is a Missouri where every community benefits from leaders shaped by the values of service, integrity, and informed civic participation.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((v, i) => (
+            <div key={i} className="text-center">
+              <div className="w-12 h-12 bg-navy/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-2.5 h-2.5 bg-red rounded-full" />
+              </div>
+              <h3 className="font-serif font-bold text-navy text-base mb-2">{v.title}</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   AMERICAN LEGION CONNECTION
+   ══════════════════════════════════════════════════ */
+function LegionConnection() {
+  return (
+    <section className="border-y border-gray-200 py-12 bg-cream">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="shrink-0">
+            <div className="w-24 h-24 bg-navy/10 rounded-xl flex items-center justify-center">
+              <span className="text-[11px] font-bold text-navy/40 text-center leading-tight">American<br />Legion<br />Emblem</span>
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <h3 className="font-serif font-bold text-navy text-xl mb-2">Proud Program of The American Legion</h3>
+            <p className="text-sm text-gray-500 leading-relaxed max-w-2xl">
+              Since 1935, Missouri Boys State has been sponsored by The American Legion, Department of Missouri. Local Legion posts across the state nominate and sponsor delegates, ensuring that outstanding young men from every corner of Missouri have access to this life-changing program. The Legion&rsquo;s commitment to youth development, patriotism, and civic education is the foundation on which Boys State was built.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <Link to="/about/american-legion" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold text-[13px] px-5 py-2 rounded-lg transition whitespace-nowrap">
+              Our History
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
    WHAT IS MBS?
    ══════════════════════════════════════════════════ */
 function WhatIsMBS() {
@@ -108,6 +204,93 @@ function WhatIsMBS() {
             </Link>
           </div>
           <MediaPlaceholder label="Program Overview Photo or 30-sec Explainer Video" size="tall" showPlay />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   HOW IT WORKS
+   ══════════════════════════════════════════════════ */
+const steps = [
+  { step: '1', title: 'Get Nominated', desc: 'Your local American Legion post, school counselor, or educator nominates you based on leadership, character, and academic achievement.', color: 'bg-navy' },
+  { step: '2', title: 'Apply & Register', desc: 'Complete your application online. Scholarships and financial aid are available \u2014 no student is turned away for inability to pay.', color: 'bg-red' },
+  { step: '3', title: 'Attend Boys State', desc: 'Spend one transformative week at Lindenwood University building a government, running for office, and forging lifelong friendships.', color: 'bg-gold' },
+  { step: '4', title: 'Join the Alumni Network', desc: 'Become part of a 50,000+ strong alumni community. Top delegates are selected to represent Missouri at Boys Nation in Washington, D.C.', color: 'bg-navy-light' },
+]
+
+function HowItWorks() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-xl mx-auto mb-14">
+          <Tag>Getting Started</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-2">How It Works</h2>
+          <p className="text-gray-400">From nomination to alumni \u2014 here&rsquo;s the path to Boys State.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((s, i) => (
+            <div key={i} className="relative">
+              {i < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-8 left-[calc(50%+40px)] right-[calc(-50%+40px)] h-px border-t-2 border-dashed border-gray-300" />
+              )}
+              <div className="text-center relative">
+                <div className={`${s.color} text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5`}>
+                  <span className="font-serif font-bold text-2xl">{s.step}</span>
+                </div>
+                <h3 className="font-serif font-bold text-navy text-lg mb-2">{s.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center mt-12">
+          <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition text-center">
+            Start Your Application
+          </Link>
+          <Link to="/nominate" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold text-sm px-7 py-3 rounded-lg transition text-center">
+            Nominate a Student
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   COST & SAFETY (PARENT TRUST SIGNALS)
+   ══════════════════════════════════════════════════ */
+const trustPoints = [
+  { title: 'Affordable for Everyone', desc: 'The program fee is approximately $375, with scholarships and financial aid available. No student is ever turned away due to cost.', icon: '$' },
+  { title: 'Safe & Supervised', desc: 'Delegates are supervised 24/7 by trained adult counselors on the secure Lindenwood University campus. Medical staff are on-site at all times.', icon: '\u2713' },
+  { title: 'Proven Outcomes', desc: 'Alumni report stronger college applications, increased confidence, and a deeper understanding of civic duty. Delegates regularly earn Boys Nation selection.', icon: '\u2605' },
+]
+
+function CostAndSafety() {
+  return (
+    <section className="py-24 bg-cream">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-xl mx-auto mb-12">
+          <Tag>For Parents</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-2">Your Questions, Answered</h2>
+          <p className="text-gray-400">We know sending your son to a week-long program is a big decision. Here&rsquo;s what you should know.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {trustPoints.map((t, i) => (
+            <div key={i} className="bg-white border border-gray-200 rounded-xl p-7">
+              <div className="w-10 h-10 bg-navy text-white rounded-lg flex items-center justify-center mb-4 font-bold text-lg">
+                {t.icon}
+              </div>
+              <h3 className="font-serif font-bold text-navy text-lg mb-2">{t.title}</h3>
+              <p className="text-sm text-gray-400 leading-relaxed">{t.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <Link to="/parents" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold text-sm px-7 py-3 rounded-lg transition">
+            Parent Resource Center
+          </Link>
         </div>
       </div>
     </section>
@@ -318,6 +501,43 @@ function DonateStrip() {
 }
 
 /* ══════════════════════════════════════════════════
+   PARTNERS & SPONSORS
+   ══════════════════════════════════════════════════ */
+const sponsors = [
+  'The American Legion',
+  'Lindenwood University',
+  'Edward Jones',
+  'Missouri Farm Bureau',
+  'Veterans United',
+  'Commerce Bank',
+]
+
+function Partners() {
+  return (
+    <section className="py-16 bg-white border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-10">
+          <Tag>Our Partners</Tag>
+          <p className="text-sm text-gray-400">Missouri Boys State is made possible by the generous support of these organizations.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+          {sponsors.map((s, i) => (
+            <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg h-20 flex items-center justify-center px-4">
+              <span className="text-[11px] font-bold text-gray-300 text-center leading-tight">{s}<br />Logo</span>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link to="/give/corporate" className="text-sm font-bold text-navy hover:text-red transition">
+            Become a Sponsor &rarr;
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
    NEWS & EVENTS
    ══════════════════════════════════════════════════ */
 const newsItems = [
@@ -417,13 +637,19 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <UrgencyBanner />
       <StatsBar />
+      <MissionValues />
+      <LegionConnection />
       <WhatIsMBS />
-      <StudentVoices />
+      <HowItWorks />
       <ProgramHighlights />
+      <CostAndSafety />
+      <StudentVoices />
       <AlumniImpact />
       <AudiencePaths />
       <DonateStrip />
+      <Partners />
       <NewsEvents />
     </>
   )
