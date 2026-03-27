@@ -42,11 +42,14 @@ import HallOfFamePage from './pages/alumni/HallOfFamePage'
 import FAQPage from './pages/FAQPage'
 import ContactPage from './pages/ContactPage'
 import PrivacyPage from './pages/PrivacyPage'
+import NotFoundPage from './pages/NotFoundPage'
 import TermsPage from './pages/TermsPage'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Routes>
@@ -91,6 +94,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
