@@ -4,9 +4,9 @@ import Tag from '../../components/Tag'
 
 const levels = [
   { name: 'Friend', amount: '$50', desc: 'Contributes toward sponsoring a future citizen', color: 'border-t-navy' },
-  { name: 'Advocate', amount: '$100', desc: 'Funds program materials and meals for one delegate', color: 'border-t-[#2b82c9]' },
-  { name: 'Champion', amount: '$250', desc: 'Covers half the cost to sponsor one delegate', color: 'border-t-gold' },
-  { name: 'Sponsor', amount: '$500', desc: 'Fully sponsors one delegate\u2019s entire Boys State experience', color: 'border-t-red' },
+  { name: 'Advocate', amount: '$100', desc: 'Funds program materials and meals for one citizen', color: 'border-t-[#2b82c9]' },
+  { name: 'Champion', amount: '$250', desc: 'Covers half the cost to sponsor one citizen', color: 'border-t-gold' },
+  { name: 'Sponsor', amount: '$500', desc: 'Fully sponsors one citizen\u2019s entire Boys State experience', color: 'border-t-red' },
 ]
 
 const otherWays = [
@@ -21,7 +21,7 @@ export default function GivePage() {
       <PageHero
         tag="Give"
         title="Invest in Missouri&rsquo;s Future Leaders"
-        description="Every delegate is fully sponsored. Your tax-deductible gift directly funds delegate sponsorships and ensures no young man is limited by finances."
+        description="Every citizen is fully sponsored. Your tax-deductible gift directly funds citizen sponsorships and ensures no young man is limited by finances."
       />
 
       {/* Impact */}
@@ -33,7 +33,7 @@ export default function GivePage() {
               <span className="text-red">$500</span> Sponsors One Future Citizen
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              Every delegate is fully sponsored \u2014 we never charge parents or families. A $500 sponsorship covers one delegate&rsquo;s entire week: housing, meals, materials, speakers, and life-changing civic education. Your gift at any level helps send Missouri&rsquo;s next generation of leaders to Boys State.
+              Every citizen is fully sponsored \u2014 we never charge parents or families. A $500 sponsorship covers one citizen&rsquo;s entire week: housing, meals, materials, speakers, and life-changing civic education. Your gift at any level helps send Missouri&rsquo;s next generation of leaders to Boys State.
             </p>
           </div>
 

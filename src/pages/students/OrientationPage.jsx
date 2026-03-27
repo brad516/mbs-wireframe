@@ -57,7 +57,7 @@ export default function OrientationPage() {
           <Tag>What to Expect</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-6">What Orientation Covers</h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            {['Overview of the program schedule', 'What to bring and what to leave at home', 'How cities, parties, and elections work', 'Meet fellow delegates from your area', 'Q&A with staff and returning counselors', 'Parent information session'].map((item, i) => (
+            {['Overview of the program schedule', 'What to bring and what to leave at home', 'How cities, parties, and elections work', 'Meet fellow citizens from your area', 'Q&A with staff and returning counselors', 'Parent information session'].map((item, i) => (
               <div key={i} className="flex gap-3 items-start">
                 <span className="mt-0.5 w-6 h-6 bg-navy/10 rounded-md flex items-center justify-center shrink-0">
                   <span className="text-navy text-xs font-bold">{i + 1}</span>

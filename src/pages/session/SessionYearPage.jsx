@@ -15,10 +15,10 @@ const sessionData = {
 }
 
 const subPages = [
-  { slug: 'speakers', title: 'Keynote Speakers', desc: 'The leaders who addressed delegates during the session.' },
+  { slug: 'speakers', title: 'Keynote Speakers', desc: 'The leaders who addressed citizens during the session.' },
   { slug: 'election-results', title: 'Election Results', desc: 'Governor, state officers, and key election outcomes.' },
-  { slug: 'citizens-of-the-week', title: 'Citizens of the Week', desc: 'Delegates recognized for outstanding leadership and character.' },
-  { slug: 'alumni-stories', title: 'Alumni Stories', desc: 'Hear from delegates about their experience in their own words.' },
+  { slug: 'citizens-of-the-week', title: 'Citizens of the Week', desc: 'Citizens recognized for outstanding leadership and character.' },
+  { slug: 'alumni-stories', title: 'Alumni Stories', desc: 'Hear from citizens about their experience in their own words.' },
   { slug: 'closing', title: 'Closing Ceremony', desc: 'Highlights from the final ceremony and Boys Nation selection.' },
 ]
 
@@ -55,7 +55,7 @@ export default function SessionYearPage() {
                 {[
                   { label: 'Dates', value: session.dates },
                   { label: 'Location', value: session.location },
-                  { label: 'Delegates', value: session.delegates },
+                  { label: 'Citizens', value: session.delegates },
                   { label: 'Governor', value: session.governor },
                   { label: 'Boys Nation Senators', value: 'Senator Name, Senator Name' },
                 ].map((item, i) => (

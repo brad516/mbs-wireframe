@@ -5,7 +5,7 @@ import Tag from '../../components/Tag'
 const benefits = [
   { title: 'Network', desc: 'Connect with 50,000+ alumni across Missouri and beyond. Find mentors, colleagues, and lifelong friends.' },
   { title: 'Events', desc: 'Access to alumni-exclusive events including homecoming weekend, golf tournaments, and regional gatherings.' },
-  { title: 'Give Back', desc: 'Volunteer as a counselor, mentor, or speaker. Help shape the next generation of Boys State delegates.' },
+  { title: 'Give Back', desc: 'Volunteer as a counselor, mentor, or speaker. Help shape the next generation of Boys State citizens.' },
 ]
 
 export default function JoinPage() {

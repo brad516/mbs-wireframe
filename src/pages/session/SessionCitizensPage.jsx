@@ -5,7 +5,7 @@ import Tag from '../../components/Tag'
 
 const defaultCitizens = [
   { name: 'Citizen Name', city: 'City Name', reason: 'Outstanding leadership during city elections and legislative sessions. Demonstrated exceptional character throughout the week.' },
-  { name: 'Citizen Name', city: 'City Name', reason: 'Exemplary civic engagement, including authoring key legislation and mentoring fellow delegates.' },
+  { name: 'Citizen Name', city: 'City Name', reason: 'Exemplary civic engagement, including authoring key legislation and mentoring fellow citizens.' },
   { name: 'Citizen Name', city: 'City Name', reason: 'Led his city to the overall city competition championship while serving as mayor with distinction.' },
   { name: 'Citizen Name', city: 'City Name', reason: 'Recognized for outstanding sportsmanship, leadership in athletics, and contributions to city spirit.' },
   { name: 'Citizen Name', city: 'City Name', reason: 'Demonstrated tireless service to his city and county, going above and beyond in every activity.' },
@@ -19,14 +19,14 @@ export default function SessionCitizensPage() {
       <PageHero
         tag={`Session ${year}`}
         title={`${year} Citizens of the Week`}
-        description="Delegates recognized for outstanding leadership, character, and contributions during their Boys State session."
+        description="Citizens recognized for outstanding leadership, character, and contributions during their Boys State session."
       />
       <SessionSubNav year={year} />
 
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6">
           <Tag>Honorees</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl mb-8">Recognized Delegates</h2>
+          <h2 className="font-serif font-bold text-navy text-3xl mb-8">Recognized Citizens</h2>
           <div className="space-y-6">
             {defaultCitizens.map((c, i) => (
               <div key={i} className="flex gap-5 items-start bg-white border border-gray-200 rounded-xl p-6">

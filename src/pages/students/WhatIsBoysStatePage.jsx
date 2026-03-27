@@ -4,11 +4,11 @@ import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const structure = [
-  { title: 'Cities', desc: 'Delegates are assigned to one of dozens of cities \u2014 each with its own mayor, city council, police chief, and municipal judges. Cities compete for the overall city championship.' },
+  { title: 'Cities', desc: 'Citizens are assigned to one of dozens of cities \u2014 each with its own mayor, city council, police chief, and municipal judges. Cities compete for the overall city championship.' },
   { title: 'Counties', desc: 'Cities are grouped into counties with elected county officials including sheriffs, assessors, and commissioners. County government mirrors real Missouri structure.' },
   { title: 'Political Parties', desc: 'Two parties \u2014 Nationalists and Federalists \u2014 hold conventions, draft platforms, select candidates, and campaign for statewide office.' },
-  { title: 'Three Branches', desc: 'A full legislature drafts and passes bills, an executive branch governs, and a judiciary hears cases \u2014 all elected and run by delegates.' },
-  { title: 'Schools of Instruction', desc: 'Expert-led sessions teach delegates about each branch of government, parliamentary procedure, and the legislative process before they take office.' },
+  { title: 'Three Branches', desc: 'A full legislature drafts and passes bills, an executive branch governs, and a judiciary hears cases \u2014 all elected and run by citizens.' },
+  { title: 'Schools of Instruction', desc: 'Expert-led sessions teach citizens about each branch of government, parliamentary procedure, and the legislative process before they take office.' },
   { title: 'Athletics & Activities', desc: 'Competitive sports, talent shows, band, chorus, and newspaper \u2014 city pride extends well beyond the statehouse.' },
 ]
 
@@ -16,7 +16,7 @@ const outcomes = [
   { title: 'Leadership Skills', desc: 'Public speaking, decision-making, negotiation, and the confidence to lead in any setting.' },
   { title: 'Lifelong Friendships', desc: 'Bonds forged through shared challenge, late-night strategy sessions, and city pride.' },
   { title: 'College Applications', desc: 'Boys State is one of the most recognized credentials on a college application. Admissions officers know what it means.' },
-  { title: 'Boys Nation', desc: 'The top two delegates represent Missouri in Washington, D.C. at the national Boys Nation program.' },
+  { title: 'Boys Nation', desc: 'The top two citizens represent Missouri in Washington, D.C. at the national Boys Nation program.' },
 ]
 
 export default function WhatIsBoysStatePage() {
@@ -39,7 +39,7 @@ export default function WhatIsBoysStatePage() {
                 Every summer, approximately 1,600 of Missouri&rsquo;s most promising high school juniors gather at Lindenwood University to create a functioning 51st state from the ground up.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Delegates form cities, organize into political parties, campaign for office, draft legislation, argue court cases, and govern \u2014 all in one transformative week. There are no spectators at Boys State. Everyone participates, everyone leads, everyone learns.
+                Citizens form cities, organize into political parties, campaign for office, draft legislation, argue court cases, and govern \u2014 all in one transformative week. There are no spectators at Boys State. Everyone participates, everyone leads, everyone learns.
               </p>
               <p className="text-gray-500 leading-relaxed">
                 The program is sponsored by The American Legion, Department of Missouri, and has been developing civic leaders since 1938.

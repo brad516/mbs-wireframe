@@ -5,11 +5,11 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 import Tag from '../../components/Tag'
 
 const defaultStories = [
-  { name: 'Student Name', city: 'City Name', quote: "Boys State taught me that leadership isn't about titles \u2014 it's about showing up and making things happen.", role: 'Delegate' },
+  { name: 'Student Name', city: 'City Name', quote: "Boys State taught me that leadership isn't about titles \u2014 it's about showing up and making things happen.", role: 'Citizen' },
   { name: 'Student Name', city: 'City Name', quote: "I went in knowing nobody and left with 30 guys I'll be friends with for life. And I got elected county sheriff.", role: 'County Sheriff' },
   { name: 'Student Name', city: 'City Name', quote: "My college interviewer asked me about Boys State more than anything else on my application.", role: 'Boys Nation Senator' },
   { name: 'Student Name', city: 'City Name', quote: "I never thought I\u2019d run for office, but Boys State showed me I could. I won governor and I\u2019ll never forget that feeling.", role: 'Governor' },
-  { name: 'Student Name', city: 'City Name', quote: "The debates were intense, the friendships were real, and the experience was unforgettable.", role: 'Delegate' },
+  { name: 'Student Name', city: 'City Name', quote: "The debates were intense, the friendships were real, and the experience was unforgettable.", role: 'Citizen' },
   { name: 'Student Name', city: 'City Name', quote: "Boys State didn\u2019t just teach me about government \u2014 it taught me about myself.", role: 'State Representative' },
 ]
 
@@ -21,7 +21,7 @@ export default function SessionAlumniStoriesPage() {
       <PageHero
         tag={`Session ${year}`}
         title={`${year} Alumni Stories`}
-        description={`Hear from the delegates of the ${year} Missouri Boys State session in their own words.`}
+        description={`Hear from the citizens of the ${year} Missouri Boys State session in their own words.`}
       />
       <SessionSubNav year={year} />
 

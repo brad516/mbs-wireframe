@@ -3,11 +3,11 @@ import Tag from '../../components/Tag'
 
 const staff = [
   { name: 'Executive Director Name', title: 'Executive Director', bio: 'Leads the overall direction and strategy of Missouri Boys State. MBS alumnus, Class of 19XX.' },
-  { name: 'Program Director Name', title: 'Program Director', bio: 'Oversees session programming, curriculum development, and delegate experience.' },
+  { name: 'Program Director Name', title: 'Program Director', bio: 'Oversees session programming, curriculum development, and citizen experience.' },
   { name: 'Director of Development Name', title: 'Director of Development', bio: 'Manages fundraising, corporate partnerships, and the MBS Memorial Trust.' },
   { name: 'Director of Operations Name', title: 'Director of Operations', bio: 'Coordinates logistics, campus operations, and volunteer management.' },
   { name: 'Communications Director Name', title: 'Communications Director', bio: 'Manages media relations, digital presence, and alumni communications.' },
-  { name: 'Registrar Name', title: 'Registrar', bio: 'Handles delegate registration, nominations, and application processing.' },
+  { name: 'Registrar Name', title: 'Registrar', bio: 'Handles citizen registration, nominations, and application processing.' },
 ]
 
 export default function StaffPage() {

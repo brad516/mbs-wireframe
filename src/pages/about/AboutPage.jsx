@@ -12,7 +12,7 @@ const leadership = [
 
 const stats = [
   { number: '85+', label: 'Years Running' },
-  { number: '1,600', label: 'Delegates per Session' },
+  { number: '1,600', label: 'Citizens per Session' },
   { number: '50,000+', label: 'Lifetime Alumni' },
   { number: '49', label: 'States with Programs' },
 ]
@@ -79,15 +79,15 @@ export default function AboutPage() {
             </div>
             <div>
               <Tag>The MBS Constitution</Tag>
-              <h2 className="font-serif font-bold text-navy text-3xl mb-6">A Government by Delegates</h2>
+              <h2 className="font-serif font-bold text-navy text-3xl mb-6">A Government by Citizens</h2>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Missouri Boys State operates under its own constitution, drafted and ratified by delegates. The constitution establishes the structure of the 51st state&rsquo;s government, including the powers of each branch, the rights of citizens, and the election process.
+                Missouri Boys State operates under its own constitution, drafted and ratified by citizens. The constitution establishes the structure of the 51st state&rsquo;s government, including the powers of each branch, the rights of citizens, and the election process.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Each year, delegates propose amendments through the legislative process &mdash; debating, voting, and enacting constitutional changes just as real legislators do. The constitution is a living document that evolves with each session.
+                Each year, citizens propose amendments through the legislative process &mdash; debating, voting, and enacting constitutional changes just as real legislators do. The constitution is a living document that evolves with each session.
               </p>
               <p className="text-sm text-gray-400 italic">
-                The full MBS Constitution is provided to all delegates during orientation.
+                The full MBS Constitution is provided to all citizens during orientation.
               </p>
             </div>
           </div>

@@ -4,7 +4,7 @@ import Tag from '../components/Tag'
 import FAQAccordion from '../components/FAQAccordion'
 
 const nominators = [
-  { title: 'American Legion Posts', desc: 'Local posts are the backbone of the nomination process. Each post can nominate multiple delegates from their community.', icon: '\u2605' },
+  { title: 'American Legion Posts', desc: 'Local posts are the backbone of the nomination process. Each post can nominate multiple citizens from their community.', icon: '\u2605' },
   { title: 'Educators & Counselors', desc: 'Teachers, principals, and school counselors can nominate students who demonstrate leadership and civic interest.', icon: '\u{1F3EB}' },
   { title: 'Community Leaders', desc: 'Coaches, pastors, civic leaders, and other community members who know a standout young man can submit a nomination.', icon: '\u{1F91D}' },
 ]
@@ -21,7 +21,7 @@ const qualities = [
 const faqItems = [
   { question: 'How many students can I nominate?', answer: 'There is no limit to the number of students you can nominate. We encourage nominators to identify all qualified young men in their community.' },
   { question: 'Does the nominee need to know they\u2019re being nominated?', answer: 'We recommend informing the student and their family before submitting a nomination, as they\u2019ll need to complete an application after being nominated.' },
-  { question: 'Is there a fee to nominate or attend?', answer: 'No. Nominating a student is free, and there is no cost to the delegate or their family. Every delegate is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
+  { question: 'Is there a fee to nominate or attend?', answer: 'No. Nominating a student is free, and there is no cost to the citizen or their family. Every citizen is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
   { question: 'What happens after I submit a nomination?', answer: 'The nominee and their family will receive information about completing an application. Once accepted, they\u2019ll be invited to attend a pre-session orientation meeting.' },
 ]
 
