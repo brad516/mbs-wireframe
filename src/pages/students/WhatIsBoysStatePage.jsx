@@ -36,7 +36,7 @@ export default function WhatIsBoysStatePage() {
               <Tag>The Experience</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">Build a State from Scratch</h2>
               <p className="text-lg text-gray-500 leading-relaxed mb-4">
-                Every summer, approximately 1,600 of Missouri&rsquo;s most promising high school juniors gather at Lindenwood University to create a functioning 51st state from the ground up.
+                Every summer, approximately 1,600 of Missouri&rsquo;s most promising high school juniors gather at Lindenwood University to create a functioning state government from the ground up.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
                 Citizens form cities, organize into political parties, campaign for office, draft legislation, argue court cases, and govern \u2014 all in one transformative week. There are no spectators at Boys State. Everyone participates, everyone leads, everyone learns.
@@ -55,7 +55,7 @@ export default function WhatIsBoysStatePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-12">
             <Tag>How It Works</Tag>
-            <h2 className="font-serif font-bold text-navy text-3xl">The 51st State</h2>
+            <h2 className="font-serif font-bold text-navy text-3xl">How It Works</h2>
             <p className="text-gray-400">Missouri Boys State replicates the full structure of state government.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

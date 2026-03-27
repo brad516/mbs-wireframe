@@ -186,7 +186,7 @@ function WhatIsMBS() {
               Missouri Boys State is a week-long immersive leadership and civic education program for high school juniors, sponsored by The American Legion.
             </p>
             <p className="text-gray-500 leading-relaxed mb-4">
-              Each summer, approximately 1,600 of Missouri&rsquo;s most promising young men gather at Lindenwood University to build a functioning 51st state from the ground up — complete with cities, counties, political parties, a legislature, and a judiciary.
+              Each summer, approximately 1,600 of Missouri&rsquo;s most promising young men gather at Lindenwood University to build a functioning state government from the ground up — complete with cities, counties, political parties, a legislature, and a judiciary.
             </p>
             <p className="text-gray-500 leading-relaxed">
               Citizens campaign for office, draft legislation, argue cases, and learn firsthand how government works — not from a textbook, but by doing it.

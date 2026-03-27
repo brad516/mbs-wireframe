@@ -81,7 +81,7 @@ export default function AboutPage() {
               <Tag>The MBS Constitution</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-6">A Government by Citizens</h2>
               <p className="text-gray-500 leading-relaxed mb-4">
-                Missouri Boys State operates under its own constitution, drafted and ratified by citizens. The constitution establishes the structure of the 51st state&rsquo;s government, including the powers of each branch, the rights of citizens, and the election process.
+                Missouri Boys State operates under its own constitution, drafted and ratified by citizens. The constitution establishes the structure of government, including the powers of each branch, the rights of citizens, and the election process.
               </p>
               <p className="text-gray-500 leading-relaxed mb-4">
                 Each year, citizens propose amendments through the legislative process &mdash; debating, voting, and enacting constitutional changes just as real legislators do. The constitution is a living document that evolves with each session.
