@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SectionNav from './components/SectionNav'
 
 import HomePage from './pages/HomePage'
 import ApplyPage from './pages/ApplyPage'
@@ -56,6 +57,7 @@ export default function App() {
       <ScrollToTop />
       <ScrollReveal />
       <Navbar />
+      <SectionNav />
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<HomePage />} />
