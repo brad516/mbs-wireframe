@@ -83,7 +83,7 @@ export default function SessionLivePage() {
       </section>
 
       {/* Day rail */}
-      <nav aria-label="Days of the session" className="bg-white border-b border-gray-200 sticky top-16 z-40 shadow-sm">
+      <nav aria-label="Days of the session" className="bg-white border-b border-gray-200 sticky top-[72px] z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
           <ol className="flex lg:grid lg:grid-cols-8 gap-1 overflow-x-auto py-3 -mx-1 px-1">
             {days.map((d, i) => {

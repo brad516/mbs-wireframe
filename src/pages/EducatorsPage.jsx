@@ -49,41 +49,41 @@ const educatorTestimonials = [
    ══════════════════════════════════════════════════ */
 function EducatorHero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center bg-navy overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-end lg:items-center bg-navy-dark overflow-hidden">
       <HeroBackground slot="hero.educators" />
 
-      <div className="relative z-[2] text-center max-w-3xl px-6 py-10">
-        <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5">
+      <div className="relative z-[2] w-full max-w-7xl mx-auto px-6 pt-48 pb-14 lg:py-24">
+        <p className="inline-flex items-center gap-3 text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-6 before:h-px before:w-8 before:bg-gold-light motion-safe:animate-rise">
           For Educators & Counselors
         </p>
-        <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
+        <h1 className="font-serif font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.04] mb-6 max-w-3xl motion-safe:animate-rise [animation-delay:100ms]">
           You&rsquo;re the Pipeline
         </h1>
-        <p className="text-white/80 text-lg leading-relaxed max-w-xl mx-auto mb-8">
+        <p className="text-white/90 text-lg lg:text-xl leading-relaxed max-w-xl mb-10 motion-safe:animate-rise [animation-delay:200ms]">
           One counselor can change dozens of lives. Every year, educators like you identify the students who become Missouri Boys State citizens &mdash; and come back transformed. Help us find your next one.
         </p>
 
-        <div className="flex items-center justify-center gap-8 sm:gap-12 mb-10">
+        <div className="flex flex-wrap items-start gap-x-8 gap-y-4 sm:gap-x-12 mb-10 pt-8 border-t border-white/20 max-w-2xl motion-safe:animate-rise [animation-delay:300ms]">
           {[
             { number: '$0', label: 'Cost to Schools or Families', highlight: true },
             { number: '500+', label: 'MO Schools Represented' },
             { number: 'No Limit', label: 'On Nominations Per School' },
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-8 sm:gap-12">
-              <div className="text-center">
+              <div>
                 <span className={`block font-serif text-2xl sm:text-3xl font-bold leading-none ${s.highlight ? 'text-gold-light' : 'text-white'}`}>{s.number}</span>
-                <span className="block text-[11px] font-medium text-white/50 mt-1 max-w-[120px]">{s.label}</span>
+                <span className="block text-[11px] font-medium text-white/80 mt-1 max-w-[120px]">{s.label}</span>
               </div>
-              {i < 2 && <div className="hidden sm:block w-px h-8 bg-white/20" />}
+              {i < 2 && <div className="hidden sm:block w-px h-8 bg-white/20 self-center" />}
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to="/nominate" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 motion-safe:animate-rise [animation-delay:400ms]">
+          <Link to="/nominate" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition text-center">
             Nominate a Student
           </Link>
-          <a href="#why-nominate" className="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold text-sm px-7 py-3 rounded-lg transition">
+          <a href="#why-nominate" className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold text-base px-9 py-[14px] rounded-lg transition text-center">
             Why Nominate &darr;
           </a>
         </div>

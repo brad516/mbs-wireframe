@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import SponsorLogo from '../components/SponsorLogo'
+import HeroBackground from '../components/HeroBackground'
 import CountUp from '../components/CountUp'
 import { AudienceRouter, Selection, DistinguishedAlumni, Endorsements, SampleBadge, outcomes, givingLevels } from './home/PrestigeSections'
 import { getPhoto } from '../lib/photos'
@@ -10,60 +11,35 @@ import Tag from '../components/Tag'
    HERO
    ══════════════════════════════════════════════════ */
 function Hero() {
-  const hero = getPhoto('home.hero')
-
   return (
-    <section className={`relative min-h-[85vh] flex justify-center bg-navy overflow-hidden ${hero ? 'items-end lg:min-h-[92vh]' : 'items-center'}`}>
-      {hero ? (
-        <>
-          <img
-            src={hero.src}
-            srcSet={hero.srcSet}
-            sizes="100vw"
-            width={hero.width}
-            height={hero.height}
-            alt={hero.alt}
-            fetchPriority="high"
-            className="absolute inset-0 w-full h-full object-cover object-top motion-safe:animate-hero-zoom"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-navy/70 via-50% to-navy z-[1]" />
-        </>
-      ) : (
-        <>
-          {/* Background placeholder */}
-          <div className="absolute inset-0 bg-gradient-to-br from-navy-light via-navy to-navy-lighter" />
-          <div className="absolute inset-0 bg-gradient-to-br from-navy/85 to-navy/60 z-[1]" />
-        </>
-      )}
+    <section className="relative min-h-[88vh] flex items-end lg:items-center bg-navy-dark overflow-hidden">
+      <HeroBackground slot="home.hero" position="object-[70%_top]" />
 
-      <div className={`relative z-[2] text-center max-w-3xl px-6 ${hero ? 'pt-56 pb-14' : 'py-10'}`}>
-        <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5 [text-shadow:0_1px_8px_rgb(8_21_41/0.9)] motion-safe:animate-rise">
-          Est. 1938 &middot; By Nomination &middot; A Program of The American Legion
+      <div className="relative z-[2] w-full max-w-7xl mx-auto px-6 pt-56 pb-14 lg:py-28">
+        <p className="inline-flex items-center gap-3 text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-6 before:h-px before:w-8 before:bg-gold-light motion-safe:animate-rise">
+          Est. 1938 &middot; By Nomination
         </p>
-        <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 [text-shadow:0_2px_16px_rgb(8_21_41/0.6)] motion-safe:animate-rise [animation-delay:120ms]">
-          Missouri&rsquo;s Premier<br />Civic Leadership Program
+        <h1 className="font-serif font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.04] mb-6 max-w-3xl motion-safe:animate-rise [animation-delay:100ms]">
+          Missouri&rsquo;s Premier Civic Leadership Program
         </h1>
-        <p className="text-white/90 text-lg leading-relaxed max-w-xl mx-auto mb-9 motion-safe:animate-rise [animation-delay:240ms]">
+        <p className="text-white/90 text-lg lg:text-xl leading-relaxed max-w-xl mb-10 motion-safe:animate-rise [animation-delay:200ms]">
           Each June, 1,600 of Missouri&rsquo;s most promising juniors are chosen by their schools to build and run a state of their own. It is an honor they carry for life.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center motion-safe:animate-rise [animation-delay:360ms]">
-          <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 motion-safe:animate-rise [animation-delay:300ms]">
+          <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition text-center">
             Apply / Attend
           </Link>
-          <Link to="/nominate" className="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white font-semibold text-sm px-7 py-3 rounded-lg transition">
+          <Link to="/nominate" className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold text-base px-9 py-[14px] rounded-lg transition text-center">
             Nominate a Student
           </Link>
-          <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-base px-9 py-4 rounded-lg transition">
-            Invest in a Citizen
+          <Link to="/give" className="text-gold-light hover:text-white font-bold text-base px-4 py-3 transition text-center">
+            Invest in a citizen &rarr;
           </Link>
         </div>
+        <p className="text-white/60 text-xs font-semibold tracking-[0.15em] uppercase mt-12">
+          A program of The American Legion, Department of Missouri
+        </p>
       </div>
-
-      {!hero && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[2] text-white/25 text-sm">
-          Hero Video / Full-Screen Photo Background
-        </div>
-      )}
     </section>
   )
 }

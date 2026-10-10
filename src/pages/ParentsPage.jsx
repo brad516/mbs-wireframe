@@ -35,42 +35,42 @@ const parentTestimonials = [
    ══════════════════════════════════════════════════ */
 function ParentHero() {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center bg-navy overflow-hidden">
+    <section className="relative min-h-[70vh] flex items-end lg:items-center bg-navy-dark overflow-hidden">
       <HeroBackground slot="hero.parents" position="object-[center_25%]" />
 
-      <div className="relative z-[2] text-center max-w-3xl px-6 py-10">
-        <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5">
+      <div className="relative z-[2] w-full max-w-7xl mx-auto px-6 pt-48 pb-14 lg:py-24">
+        <p className="inline-flex items-center gap-3 text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-6 before:h-px before:w-8 before:bg-gold-light motion-safe:animate-rise">
           For Parents & Guardians
         </p>
-        <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
+        <h1 className="font-serif font-bold text-white text-5xl sm:text-6xl lg:text-7xl leading-[1.04] mb-6 max-w-3xl motion-safe:animate-rise [animation-delay:100ms]">
           The Week That<br />Changes Everything
         </h1>
-        <p className="text-white/80 text-lg leading-relaxed max-w-xl mx-auto mb-8">
+        <p className="text-white/90 text-lg lg:text-xl leading-relaxed max-w-xl mb-10 motion-safe:animate-rise [animation-delay:200ms]">
           Your son has been identified as a leader. Missouri Boys State is where that potential becomes real &mdash; in a safe, supervised, fully sponsored program that&rsquo;s transformed tens of thousands of young men since 1938.
         </p>
 
         {/* Key parent stats */}
-        <div className="flex items-center justify-center gap-8 sm:gap-12 mb-10">
+        <div className="flex flex-wrap items-start gap-x-8 gap-y-4 sm:gap-x-12 mb-10 pt-8 border-t border-white/20 max-w-xl motion-safe:animate-rise [animation-delay:300ms]">
           {[
             { number: '$0', label: 'Cost to Your Family', highlight: true },
             { number: '24/7', label: 'Adult Supervision' },
             { number: '85+', label: 'Years Running' },
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-8 sm:gap-12">
-              <div className="text-center">
+              <div>
                 <span className={`block font-serif text-3xl sm:text-4xl font-bold leading-none ${s.highlight ? 'text-gold-light' : 'text-white'}`}>{s.number}</span>
                 <span className="block text-[12px] font-medium text-white/80 mt-1">{s.label}</span>
               </div>
-              {i < 2 && <div className="hidden sm:block w-px h-8 bg-white/20" />}
+              {i < 2 && <div className="hidden sm:block w-px h-8 bg-white/20 self-center" />}
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 motion-safe:animate-rise [animation-delay:400ms]">
+          <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition text-center">
             Apply Now
           </Link>
-          <a href="#what-to-know" className="border-2 border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold text-sm px-7 py-3 rounded-lg transition">
+          <a href="#what-to-know" className="border-2 border-white/50 hover:border-white hover:bg-white/10 text-white font-bold text-base px-9 py-[14px] rounded-lg transition text-center">
             What You Need to Know &darr;
           </a>
         </div>

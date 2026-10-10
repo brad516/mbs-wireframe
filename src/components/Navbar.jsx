@@ -221,8 +221,8 @@ export default function Navbar() {
     <>
       {/* Top utility bar */}
       <div className="bg-navy-dark border-b border-white/10 hidden lg:block">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-9">
-          <span className="text-white/50 text-[11px] tracking-wide">
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-8">
+          <span className="text-white/70 text-[11px] font-semibold tracking-[0.12em] uppercase">
             A Program of The American Legion
           </span>
           <div className="flex items-center gap-1">
@@ -230,41 +230,28 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-white/60 text-[11px] font-medium px-2.5 py-1 hover:text-white transition"
+                className="text-white/75 text-[11px] font-medium px-2.5 py-1 hover:text-white transition"
               >
                 {link.label}
               </Link>
             ))}
-            <span className="text-white/50 mx-1">|</span>
-            <Link
-              to="/nominate"
-              className="text-white/70 text-[11px] font-bold px-2.5 py-1 hover:text-white transition"
-            >
-              Nominate
-            </Link>
             <Link
               to="/give"
-              className="text-gold text-[11px] font-bold px-2.5 py-1 hover:text-gold-light transition"
+              className="text-gold-light text-[11px] font-bold px-2.5 py-1 hover:text-white transition"
             >
               Give
-            </Link>
-            <Link
-              to="/apply"
-              className="bg-red hover:bg-red-dark text-white text-[11px] font-bold px-3.5 py-1 rounded ml-1 transition"
-            >
-              Apply Now
             </Link>
           </div>
         </div>
       </div>
 
       {/* Main nav bar */}
-      <nav className="bg-navy/90 backdrop-blur-md sticky top-0 z-50 shadow-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
+      <nav className="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 shadow-[0_1px_12px_rgb(12_31_63/0.08)]">
+        <div className="max-w-7xl mx-auto px-6 flex items-center h-[72px] gap-8">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/logos/missouri-boys-state.svg" alt="" width="50" height="40" className="h-11 w-auto bg-white rounded-lg p-1 shadow-sm" />
-            <span className="text-white font-serif font-bold text-[15px] whitespace-nowrap hidden sm:block">
+          <Link to="/" className="flex items-center gap-3 shrink-0">
+            <img src="/logos/missouri-boys-state.svg" alt="" width="50" height="40" className="h-12 w-auto" />
+            <span className="text-navy font-serif font-bold text-[17px] leading-none whitespace-nowrap hidden sm:block">
               Missouri Boys State
             </span>
           </Link>
@@ -279,10 +266,10 @@ export default function Navbar() {
               >
                 <Link
                   to={item.to}
-                  className={`text-[13px] font-medium px-3.5 py-2 rounded-md transition whitespace-nowrap inline-flex items-center gap-1.5 ${
+                  className={`text-[14px] font-semibold px-3 py-2 rounded-md transition whitespace-nowrap inline-flex items-center gap-1.5 ${
                     activeDropdown === item.label
-                      ? 'text-white bg-white/10'
-                      : 'text-white/75 hover:text-white hover:bg-white/10'
+                      ? 'text-red bg-cream'
+                      : 'text-navy hover:text-red hover:bg-cream'
                   }`}
                 >
                   {item.label}
@@ -300,13 +287,13 @@ export default function Navbar() {
           <div className="hidden lg:flex gap-2 shrink-0">
             <Link
               to="/nominate"
-              className="border border-white/40 hover:border-white hover:bg-white/10 text-white text-[13px] font-bold px-5 py-2 rounded-lg transition"
+              className="border border-navy/25 hover:border-navy hover:bg-cream text-navy text-[13px] font-bold px-5 py-2.5 rounded-lg transition"
             >
               Nominate
             </Link>
             <Link
               to="/apply"
-              className="bg-red hover:bg-red-dark text-white text-[13px] font-bold px-5 py-2 rounded-lg transition"
+              className="bg-red hover:bg-red-dark text-white text-[13px] font-bold px-5 py-2.5 rounded-lg transition"
             >
               Apply Now
             </Link>
@@ -318,9 +305,9 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
-            <span className="block w-[22px] h-[2px] bg-white rounded-sm" />
-            <span className="block w-[22px] h-[2px] bg-white rounded-sm" />
-            <span className="block w-[22px] h-[2px] bg-white rounded-sm" />
+            <span className="block w-[22px] h-[2px] bg-navy rounded-sm" />
+            <span className="block w-[22px] h-[2px] bg-navy rounded-sm" />
+            <span className="block w-[22px] h-[2px] bg-navy rounded-sm" />
           </button>
         </div>
 
@@ -329,7 +316,7 @@ export default function Navbar() {
           item.mega && activeDropdown === item.label ? (
             <div
               key={item.label}
-              className="absolute left-0 right-0 bg-white border-t-4 border-red shadow-2xl z-40"
+              className="absolute left-0 right-0 bg-white border-t border-gray-200 border-b-2 border-b-red shadow-2xl z-40"
               onMouseEnter={() => handleMouseEnter(item.label)}
               onMouseLeave={handleMouseLeave}
             >

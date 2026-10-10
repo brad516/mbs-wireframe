@@ -121,7 +121,7 @@ export default function CasinoNightPage() {
       </section>
 
       {/* In-page navigation */}
-      <nav aria-label="Casino Night sections" className="bg-white border-b border-gray-200 sticky top-16 z-40">
+      <nav aria-label="Casino Night sections" className="bg-white border-b border-gray-200 sticky top-[72px] z-40">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">
           <div className="flex items-center gap-1 overflow-x-auto">
             {sections.map((s) => (
