@@ -16,9 +16,9 @@ export default function SponsorLogo({ name, className = '' }) {
       href={sponsor.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`rounded-lg flex items-center justify-center px-4 py-3 transition hover:shadow-md ${sponsor.dark ? 'bg-navy' : 'bg-white border border-gray-200'} ${className}`}
+      className={`group rounded-lg flex items-center justify-center px-4 py-3 transition duration-300 hover:shadow-md hover:-translate-y-0.5 ${sponsor.dark ? 'bg-navy' : 'bg-white border border-gray-200'} ${className}`}
     >
-      <img src={sponsor.logo} alt={name} loading="lazy" className="h-full w-full object-contain" />
+      <img src={sponsor.logo} alt={name} loading="lazy" className="h-full w-full object-contain grayscale opacity-70 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-focus-visible:grayscale-0 group-focus-visible:opacity-100" />
     </a>
   )
 }

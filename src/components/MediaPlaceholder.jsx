@@ -23,7 +23,7 @@ export default function MediaPlaceholder({ label, size = 'landscape', showPlay =
           alt={photo.alt || label}
           loading="lazy"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:hover:scale-[1.04]"
         />
         {showPlay && <div className="absolute inset-0 flex items-center justify-center">{playButton}</div>}
       </div>

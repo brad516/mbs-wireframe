@@ -46,11 +46,13 @@ import PrivacyPage from './pages/PrivacyPage'
 import NotFoundPage from './pages/NotFoundPage'
 import TermsPage from './pages/TermsPage'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollReveal from './components/ScrollReveal'
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
+      <ScrollReveal />
       <Navbar />
       <main className="flex-1">
         <Routes>

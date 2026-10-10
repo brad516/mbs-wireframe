@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import SponsorLogo from '../components/SponsorLogo'
+import CountUp from '../components/CountUp'
 import { getPhoto } from '../lib/photos'
 import Tag from '../components/Tag'
 
@@ -22,7 +23,7 @@ function Hero() {
             height={hero.height}
             alt={hero.alt}
             fetchPriority="high"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover object-top motion-safe:animate-hero-zoom"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-navy/25 via-navy/70 via-50% to-navy z-[1]" />
         </>
@@ -35,16 +36,16 @@ function Hero() {
       )}
 
       <div className={`relative z-[2] text-center max-w-3xl px-6 ${hero ? 'pt-56 pb-14' : 'py-10'}`}>
-        <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5 [text-shadow:0_1px_8px_rgb(8_21_41/0.9)]">
+        <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5 [text-shadow:0_1px_8px_rgb(8_21_41/0.9)] motion-safe:animate-rise">
           A Program of The American Legion, Department of Missouri
         </p>
-        <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 [text-shadow:0_2px_16px_rgb(8_21_41/0.6)]">
+        <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 [text-shadow:0_2px_16px_rgb(8_21_41/0.6)] motion-safe:animate-rise [animation-delay:120ms]">
           Where Missouri&rsquo;s<br />Next Leaders Begin
         </h1>
-        <p className="text-white/90 text-lg leading-relaxed max-w-xl mx-auto mb-9">
+        <p className="text-white/90 text-lg leading-relaxed max-w-xl mx-auto mb-9 motion-safe:animate-rise [animation-delay:240ms]">
           For 85+ years, Boys State has challenged the best high school juniors in Missouri to lead, compete, and govern — one transformative week at a time.
         </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center motion-safe:animate-rise [animation-delay:360ms]">
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
             Apply / Attend
           </Link>
@@ -78,13 +79,14 @@ const stats = [
 
 function StatsBar() {
   return (
-    <section className="bg-white border-b border-gray-200 py-9">
+    <section className="relative bg-white border-b border-gray-200 py-9">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-light to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
           {stats.map((s, i) => (
             <div key={i} className="flex items-center gap-8 sm:gap-12">
               <div className="text-center">
-                <span className="block font-serif text-4xl font-bold text-navy leading-none">{s.number}</span>
+                <span className="block font-serif text-4xl font-bold text-navy leading-none"><CountUp value={s.number} /></span>
                 <span className="block text-[13px] font-medium text-gray-500 mt-1.5">{s.label}</span>
               </div>
               {i < stats.length - 1 && (
