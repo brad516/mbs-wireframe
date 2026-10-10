@@ -211,6 +211,20 @@ export default function SessionLivePage() {
         </div>
       </section>
 
+      {/* Quiet giving prompt */}
+      <section className="bg-cream border-b border-gray-200 py-10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-5">
+          <p className="font-serif text-navy text-xl leading-snug max-w-3xl">
+            <span className="text-gold" aria-hidden="true">&#9733; </span>
+            Every citizen in these photos is here because someone sponsored him.{' '}
+            <span className="text-gray-600">$500 sends one junior to next year&rsquo;s session.</span>
+          </p>
+          <Link to="/give" className="shrink-0 text-sm font-bold text-red hover:text-red-dark whitespace-nowrap">
+            Sponsor a {Number(session.year) + 1} citizen &rarr;
+          </Link>
+        </div>
+      </section>
+
       {/* Elections */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
