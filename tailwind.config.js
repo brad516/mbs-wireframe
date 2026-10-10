@@ -15,7 +15,7 @@ export default {
           dark: '#a00d24',
         },
         gold: {
-          DEFAULT: '#a07c20',
+          DEFAULT: '#8a6914',
           light: '#c49a2a',
           bg: '#fdf3d8',
         },

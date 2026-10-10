@@ -14,10 +14,10 @@ export default function FAQAccordion({ items }) {
             <span className="font-serif font-bold text-navy text-[15px] pr-4 group-hover:text-red transition">
               {item.question}
             </span>
-            <span className="text-navy/40 text-xl shrink-0">{open === i ? '\u2212' : '+'}</span>
+            <span className="text-navy/40 text-xl shrink-0">{open === i ? '−' : '+'}</span>
           </button>
           {open === i && (
-            <div className="pb-5 text-sm text-gray-500 leading-relaxed">
+            <div className="pb-5 text-sm text-gray-600 leading-relaxed">
               {item.answer}
             </div>
           )}

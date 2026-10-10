@@ -2,10 +2,12 @@ import { useParams, Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import SessionSubNav from '../../components/SessionSubNav'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhotos } from '../../lib/photos'
 import Tag from '../../components/Tag'
 
 export default function SessionClosingPage() {
   const { year } = useParams()
+  const photos = getPhotos(`session.${year}.closing`)
 
   return (
     <>
@@ -23,14 +25,14 @@ export default function SessionClosingPage() {
             <div>
               <Tag>Ceremony</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">A Week Celebrated</h2>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 The {year} closing ceremony brought together all citizens, staff, and families to celebrate a week of leadership, civic engagement, and brotherhood. Awards were presented, Boys Nation senators were announced, and the governor delivered his farewell address.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 The ceremony marks the end of one of the most transformative weeks in the lives of {year}&rsquo;s citizens &mdash; and the beginning of their journey as Missouri Boys State alumni.
               </p>
             </div>
-            <MediaPlaceholder label={`${year} Closing Ceremony Photo`} size="tall" />
+            <MediaPlaceholder label={`${year} Closing Ceremony Photo`} size="tall" photo={photos[0]} />
           </div>
         </div>
       </section>
@@ -43,12 +45,12 @@ export default function SessionClosingPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { title: 'Boys Nation Selection', desc: 'Two outstanding citizens were selected to represent Missouri at Boys Nation in Washington, D.C.' },
-              { title: 'Governor\u2019s Address', desc: 'The elected governor delivered a farewell address reflecting on the week\u2019s achievements and the bonds formed.' },
+              { title: 'Governor’s Address', desc: 'The elected governor delivered a farewell address reflecting on the week’s achievements and the bonds formed.' },
               { title: 'Awards & Recognition', desc: 'Outstanding citizens, cities, and programs were recognized for their exceptional contributions during the session.' },
             ].map((h, i) => (
               <div key={i} className="bg-cream border border-gray-200 rounded-xl p-7">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{h.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{h.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{h.desc}</p>
               </div>
             ))}
           </div>
@@ -63,7 +65,7 @@ export default function SessionClosingPage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3].map((n) => (
-              <MediaPlaceholder key={n} label={`Closing Ceremony Photo ${n}`} size="landscape" />
+              <MediaPlaceholder key={n} label={`Closing Ceremony Photo ${n}`} size="landscape" photo={photos[n]} sizes="(min-width: 1024px) 33vw, 50vw" />
             ))}
           </div>
         </div>

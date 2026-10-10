@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto } from '../../lib/photos'
 import FAQAccordion from '../../components/FAQAccordion'
 
 /* ══════════════════════════════════════════════════
@@ -15,26 +16,26 @@ const heroStats = [
 ]
 
 const weekPhases = [
-  { day: 'Saturday', title: 'Arrival & City Formation', desc: 'You arrive at Lindenwood, meet your city of ~50 citizens, get assigned to the Federalist or Nationalist party, and start organizing from scratch. By midnight, platforms are being debated and alliances are forming.', img: 'Arrival — Checking in, meeting the city', accent: 'bg-red' },
-  { day: 'Sunday', title: 'Elections & City Government', desc: 'Caucuses nominate candidates, campaigns launch, speeches echo through the halls. By afternoon your city has a Mayor, City Council, Senators, and Representatives. City government is live before dinner.', img: 'Sunday — Campaigns and city elections', accent: 'bg-red' },
-  { day: 'Mon\u2013Tue', title: 'Legislature, Courts & Counties', desc: 'The General Assembly convenes. Bills are drafted and debated. Attorneys pass the Bar Exam. County elections expand government further — Commissioners, Sheriffs, Judges, and Prosecutors take office.', img: 'Legislature in session — Debates and committee hearings', accent: 'bg-navy' },
-  { day: 'Wednesday', title: 'Statewide Primary & Governor\u2019s Race', desc: 'The stakes go statewide. Candidates for Governor face off in an open primary. That evening, the nominees debate before the entire state. Campaign war rooms run through the night.', img: 'Gubernatorial debate — Packed auditorium', accent: 'bg-gold' },
-  { day: 'Thursday', title: 'General Election & Inauguration', desc: 'Every citizen votes. The Governor is elected and inaugurated. Cabinet confirmed by the Senate. The full machinery of state government — legislative, executive, judicial — is running. You built this.', img: 'Inauguration — The Governor takes the oath', accent: 'bg-navy' },
-  { day: 'Friday', title: 'Democracy in Action & Brotherhood', desc: 'Citizen of the Week. Model City. Model County. But it\u2019s the quiet moments that hit hardest — the friendships, the late-night conversations, the realization that this week changed something in you.', img: 'Closing — Awards, brotherhood, lasting bonds', accent: 'bg-red' },
+  { day: 'Saturday', slot: 'week.saturday', title: 'Arrival & City Formation', desc: 'You arrive at Lindenwood, meet your city of ~50 citizens, get assigned to the Federalist or Nationalist party, and start organizing from scratch. By midnight, platforms are being debated and alliances are forming.', img: 'Arrival — Checking in, meeting the city', accent: 'bg-red' },
+  { day: 'Sunday', slot: 'week.sunday', title: 'Elections & City Government', desc: 'Caucuses nominate candidates, campaigns launch, speeches echo through the halls. By afternoon your city has a Mayor, City Council, Senators, and Representatives. City government is live before dinner.', img: 'Sunday — Campaigns and city elections', accent: 'bg-red' },
+  { day: 'Mon–Tue', slot: 'week.montue', title: 'Legislature, Courts & Counties', desc: 'The General Assembly convenes. Bills are drafted and debated. Attorneys pass the Bar Exam. County elections expand government further — Commissioners, Sheriffs, Judges, and Prosecutors take office.', img: 'Legislature in session — Debates and committee hearings', accent: 'bg-navy' },
+  { day: 'Wednesday', slot: 'week.wednesday', title: 'Statewide Primary & Governor’s Race', desc: 'The stakes go statewide. Candidates for Governor face off in an open primary. That evening, the nominees debate before the entire state. Campaign war rooms run through the night.', img: 'Gubernatorial debate — Packed auditorium', accent: 'bg-gold' },
+  { day: 'Thursday', slot: 'week.thursday', title: 'General Election & Inauguration', desc: 'Every citizen votes. The Governor is elected and inaugurated. Cabinet confirmed by the Senate. The full machinery of state government — legislative, executive, judicial — is running. You built this.', img: 'Inauguration — The Governor takes the oath', accent: 'bg-navy' },
+  { day: 'Friday', slot: 'week.friday', title: 'Democracy in Action & Brotherhood', desc: 'Citizen of the Week. Model City. Model County. But it’s the quiet moments that hit hardest — the friendships, the late-night conversations, the realization that this week changed something in you.', img: 'Closing — Awards, brotherhood, lasting bonds', accent: 'bg-red' },
 ]
 
 const schoolHighlights = [
-  { name: 'Law', desc: 'Pass the Bar Exam. Try cases. Become a judge.', icon: '\u2696\uFE0F' },
+  { name: 'Law', desc: 'Pass the Bar Exam. Try cases. Become a judge.', icon: '⚖️' },
   { name: 'Journalism & Media', desc: 'Run the newspaper, radio, or TV news show.', icon: '\u{1F4F0}' },
   { name: 'Commerce', desc: 'Launch a business. Hire employees. Compete for Outstanding Business.', icon: '\u{1F4B0}' },
-  { name: 'Law Enforcement', desc: 'Apply for the MBS Highway Patrol \u2014 the most elite unit at Boys State.', icon: '\u{1F6A8}' },
-  { name: 'Legislative & Executive Policy', desc: 'Draft bills, debate legislation, and run the Governor\u2019s office.', icon: '\u{1F3DB}\uFE0F' },
+  { name: 'Law Enforcement', desc: 'Apply for the MBS Highway Patrol — the most elite unit at Boys State.', icon: '\u{1F6A8}' },
+  { name: 'Legislative & Executive Policy', desc: 'Draft bills, debate legislation, and run the Governor’s office.', icon: '\u{1F3DB}️' },
   { name: 'Campaigning', desc: 'Run campaigns, build coalitions, and win elections.', icon: '\u{1F4E3}' },
 ]
 
 const testimonials = [
-  { quote: "Boys State taught me that leadership isn\u2019t about titles \u2014 it\u2019s about showing up and making things happen.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
-  { quote: "I went in knowing nobody and left with 30 guys I\u2019ll be friends with for life. And I got elected county sheriff.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
+  { quote: "Boys State taught me that leadership isn’t about titles — it’s about showing up and making things happen.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
+  { quote: "I went in knowing nobody and left with 30 guys I’ll be friends with for life. And I got elected county sheriff.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
   { quote: "My college interviewer asked me about Boys State more than anything else on my application. It was the thing that set me apart.", name: 'Student Name', detail: '2023 Citizen, Boys Nation Senator' },
 ]
 
@@ -48,10 +49,10 @@ const subPages = [
 ]
 
 const faqItems = [
-  { question: 'What is Missouri Boys State?', answer: 'An 8-day immersive leadership and civic education program for rising high school seniors. You and ~850 other citizens build a functioning state government from scratch \u2014 complete with elections, legislature, courts, media, and businesses.' },
+  { question: 'What is Missouri Boys State?', answer: 'An 8-day immersive leadership and civic education program for rising high school seniors. You and ~850 other citizens build a functioning state government from scratch — complete with elections, legislature, courts, media, and businesses.' },
   { question: 'How much does it cost?', answer: 'Nothing. Every citizen is fully sponsored. There is no fee for you or your family. You may want to bring ~$45 for snacks, toiletries, and the official MBS t-shirt.' },
-  { question: 'What should I expect?', answer: 'A fast-paced, action-packed week. You\u2019ll hit the ground running Saturday night with party organization and caucuses. Elections, legislation, court cases, and campaigns happen every day. You\u2019ll also attend a school of instruction, compete in athletics, and hear from keynote speakers every night.' },
-  { question: 'What are the dates for 2026?', answer: 'The 2026 session runs June 13\u201319 at Lindenwood University in St. Charles, MO.' },
+  { question: 'What should I expect?', answer: 'A fast-paced, action-packed week. You’ll hit the ground running Saturday night with party organization and caucuses. Elections, legislation, court cases, and campaigns happen every day. You’ll also attend a school of instruction, compete in athletics, and hear from keynote speakers every night.' },
+  { question: 'What are the dates for 2026?', answer: 'The 2026 session runs June 13–19 at Lindenwood University in St. Charles, MO.' },
   { question: 'What should I bring?', answer: 'Comfortable clothes for the week, business casual attire if you plan to run for office, personal toiletries, any medications, and a positive attitude. A full packing list is provided after acceptance.' },
   { question: 'Can I bring a musical instrument?', answer: 'Yes! There are often informal jam sessions and talent show opportunities during the week.' },
 ]
@@ -99,7 +100,7 @@ function StudentHero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[2] text-white/20 text-sm">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[2] text-white/50 text-sm">
         Student Hero Photo / Video Background
       </div>
     </section>
@@ -117,13 +118,13 @@ function QuickExplainer() {
           <div>
             <Tag>New Here?</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">What Is Missouri Boys State?</h2>
-            <p className="text-lg text-gray-500 leading-relaxed mb-4">
+            <p className="text-lg text-gray-600 leading-relaxed mb-4">
               Missouri Boys State is a week-long program where you and 850 other rising seniors build an entire state government from the ground up &mdash; with real elections, real legislation, real courts, and real consequences.
             </p>
-            <p className="text-gray-500 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4">
               You&rsquo;re randomly assigned to a city and a political party. From there, everything is up to you. Run for mayor. Draft a bill. Start a business. Join the Highway Patrol. Argue a case before the Supreme Court.
             </p>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               It&rsquo;s held every June at Lindenwood University in St. Charles, and it&rsquo;s completely free &mdash; every citizen is fully sponsored.
             </p>
             <Link to="/students/what-is-boys-state" className="inline-block mt-6 text-sm font-bold text-red hover:underline">
@@ -155,7 +156,7 @@ function WeekCarousel() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Tag>The Experience</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-3">A Week Like No Other</h2>
-          <p className="text-gray-400">Scroll through the week that changes everything.</p>
+          <p className="text-gray-500">Scroll through the week that changes everything.</p>
         </div>
       </div>
       <div className="relative">
@@ -166,14 +167,14 @@ function WeekCarousel() {
               className="snap-start shrink-0 w-[85vw] sm:w-[420px] lg:w-[480px] bg-white border border-gray-200 rounded-xl overflow-hidden flex flex-col"
             >
               <div className="relative">
-                <MediaPlaceholder label={phase.img} size="landscape" />
+                <MediaPlaceholder label={phase.img} size="landscape" photo={getPhoto(phase.slot)} sizes="(min-width: 1024px) 480px, 85vw" />
                 <span className={`absolute top-3 left-3 ${phase.accent} text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-md`}>
                   {phase.day}
                 </span>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{phase.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed flex-1">{phase.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">{phase.desc}</p>
               </div>
             </div>
           ))}
@@ -202,7 +203,7 @@ function SchoolsPreview() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Tag>What Will You Do?</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Pick Your Path</h2>
-          <p className="text-gray-400">Every citizen attends one school of instruction for the week. Your school determines which positions you can hold &mdash; and there are over 100 to choose from.</p>
+          <p className="text-gray-500">Every citizen attends one school of instruction for the week. Your school determines which positions you can hold &mdash; and there are over 100 to choose from.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {schoolHighlights.map((s) => (
@@ -210,7 +211,7 @@ function SchoolsPreview() {
               <span className="text-2xl shrink-0">{s.icon}</span>
               <div>
                 <h3 className="font-bold text-navy text-sm mb-1">{s.name}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{s.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -245,10 +246,10 @@ function Speakers() {
           <div>
             <Tag>Every Night</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">Hear From People Who Changed the World</h2>
-            <p className="text-gray-500 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4">
               Every evening, the entire state gathers for General Assembly &mdash; featuring keynote speakers who are governors, generals, members of Congress, CEOs, and civic leaders. Many of them are Boys State alumni who started right where you are.
             </p>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">
               You won&rsquo;t just listen. You&rsquo;ll ask them questions directly during live Q&amp;A sessions. These aren&rsquo;t distant figures on a screen &mdash; they&rsquo;re in the room with you.
             </p>
             <Link to="/sessions" className="text-sm font-bold text-red hover:underline">
@@ -268,7 +269,7 @@ function Speakers() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <span className="text-sm font-bold text-navy block truncate">{s.name}</span>
-                      <span className="text-xs text-gray-400">{s.role}</span>
+                      <span className="text-xs text-gray-500">{s.role}</span>
                     </div>
                     {s.detail && (
                       <span className="text-[10px] font-bold text-gold bg-gold-bg px-2 py-0.5 rounded shrink-0">{s.detail}</span>
@@ -294,7 +295,7 @@ function AwardsCompetition() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Tag>Compete & Win</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Your Effort Gets Recognized</h2>
-          <p className="text-gray-400">Boys State isn&rsquo;t just about participation &mdash; it&rsquo;s about pushing yourself. The program awards real scholarships and recognition to citizens who go all in.</p>
+          <p className="text-gray-500">Boys State isn&rsquo;t just about participation &mdash; it&rsquo;s about pushing yourself. The program awards real scholarships and recognition to citizens who go all in.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
@@ -307,11 +308,11 @@ function AwardsCompetition() {
               {a.highlight && <span className="text-gold-light font-serif font-bold text-2xl block mb-1">{a.prize}</span>}
               <h3 className={`font-serif font-bold text-base mb-2 ${a.highlight ? 'text-white' : 'text-navy'}`}>{a.award}</h3>
               {!a.highlight && <span className="text-xs font-bold text-red block mb-2">{a.prize}</span>}
-              <p className={`text-sm leading-relaxed ${a.highlight ? 'text-white/70' : 'text-gray-400'}`}>{a.desc}</p>
+              <p className={`text-sm leading-relaxed ${a.highlight ? 'text-white/70' : 'text-gray-500'}`}>{a.desc}</p>
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-gray-400 mt-6">
+        <p className="text-center text-sm text-gray-500 mt-6">
           Plus $5,000 and $2,500 runner-up scholarships, the <strong className="text-navy">$100,000 Vogel Family Scholarship</strong>, and access to $2M+ in college scholarships from Missouri universities.
         </p>
       </div>
@@ -328,12 +329,12 @@ function AthleticsAndFun() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <MediaPlaceholder label="Athletics — Basketball, volleyball, outdoor competitions" size="tall" />
+            <MediaPlaceholder label="Athletics — Basketball, volleyball, outdoor competitions" size="tall" photo={getPhoto('students.athletics')} />
           </div>
           <div className="order-1 lg:order-2">
             <Tag>It&rsquo;s Not All Government</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">Athletics, Talent Shows & More</h2>
-            <p className="text-gray-500 leading-relaxed mb-4">
+            <p className="text-gray-600 leading-relaxed mb-4">
               Every citizen participates in organized athletic competitions throughout the week. It&rsquo;s a chance to blow off steam, represent your city, and have some fun between legislative sessions and campaign rallies.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -341,7 +342,7 @@ function AthleticsAndFun() {
                 <span key={sport} className="bg-white border border-gray-200 text-sm text-navy font-medium px-3 py-1.5 rounded-lg">{sport}</span>
               ))}
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed">
               Athletic performance factors into the Model City and Model County awards &mdash; so your city needs you on the field, not just in the Senate chamber.
             </p>
           </div>
@@ -361,7 +362,7 @@ function AlumniTease() {
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 text-center md:text-left">
           <div className="flex-1">
             <h3 className="font-serif font-bold text-navy text-xl mb-2">You&rsquo;ll Be in Good Company</h3>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-2xl">
+            <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
               Missouri Boys State alumni include <strong className="text-navy">governors</strong>, <strong className="text-navy">U.S. senators</strong>, <strong className="text-navy">military generals</strong>, <strong className="text-navy">Fortune 500 CEOs</strong>, and leaders in every field imaginable. They all started the same way you will &mdash; as a citizen in a city, figuring it out on day one.
             </p>
           </div>
@@ -384,12 +385,12 @@ function Eligibility() {
         <div className="text-center max-w-xl mx-auto mb-12">
           <Tag>Eligibility</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Can You Attend?</h2>
-          <p className="text-gray-400">Three requirements. That&rsquo;s it.</p>
+          <p className="text-gray-500">Three requirements. That&rsquo;s it.</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {[
             { title: 'Junior Year Complete', desc: 'Completed your junior year at a Missouri high school with at least one semester remaining.' },
-            { title: 'Age 15\u201319', desc: 'Between 15 and 19 years old by the first day of the program.' },
+            { title: 'Age 15–19', desc: 'Between 15 and 19 years old by the first day of the program.' },
             { title: 'Nominated', desc: 'Nominated by your school counselor, local American Legion post, or a community leader.' },
           ].map((e, i) => (
             <div key={i} className="bg-white border border-gray-200 rounded-xl p-7 text-center">
@@ -397,11 +398,11 @@ function Eligibility() {
                 <span className="text-white font-serif font-bold text-xl">{i + 1}</span>
               </div>
               <h3 className="font-serif font-bold text-navy text-base mb-2">{e.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{e.desc}</p>
+              <p className="text-sm text-gray-500 leading-relaxed">{e.desc}</p>
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-gray-400 mt-8">
+        <p className="text-center text-sm text-gray-500 mt-8">
           Haven&rsquo;t been nominated yet? <Link to="/contact" className="text-red font-bold hover:underline">Talk to your counselor</Link> or <Link to="/contact" className="text-red font-bold hover:underline">contact us</Link> &mdash; we&rsquo;ll help you get connected.
         </p>
       </div>
@@ -430,7 +431,7 @@ function StudentVoices() {
                 </blockquote>
                 <div>
                   <strong className="text-sm text-navy">{t.name}</strong>
-                  <span className="block text-xs text-gray-400">{t.detail}</span>
+                  <span className="block text-xs text-gray-500">{t.detail}</span>
                 </div>
               </div>
             </div>
@@ -465,7 +466,7 @@ function DigDeeper() {
               className={`bg-white border border-gray-200 ${p.color} border-t-4 rounded-xl p-6 hover:-translate-y-1 hover:shadow-lg transition-all`}
             >
               <h3 className="font-serif font-bold text-navy text-base mb-1">{p.title}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{p.desc}</p>
+              <p className="text-sm text-gray-500 leading-relaxed">{p.desc}</p>
               <span className="inline-block mt-3 text-xs font-bold text-navy">Learn More &rarr;</span>
             </Link>
           ))}

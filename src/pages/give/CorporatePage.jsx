@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import SponsorLogo from '../../components/SponsorLogo'
 
 const featuredPartners = [
   {
@@ -14,13 +15,13 @@ const featuredPartners = [
     name: 'Central Bank',
     role: 'Banking Partner',
     description:
-      'Central Bank sends staff members to work alongside citizens during the session, facilitating the commerce system that drives Boys State\u2019s simulated economy. Citizens open accounts, manage budgets, and experience real-world banking firsthand.',
+      'Central Bank sends staff members to work alongside citizens during the session, facilitating the commerce system that drives Boys State’s simulated economy. Citizens open accounts, manage budgets, and experience real-world banking firsthand.',
   },
   {
     name: "Andy's Frozen Custard",
     role: 'Entrepreneurship Partner',
     description:
-      "Citizens can open and operate their own Andy\u2019s franchise during the session \u2014 managing inventory, staffing, marketing, and sales in a real business environment. Andy\u2019s also provides monetary support for the program.",
+      "Citizens can open and operate their own Andy’s franchise during the session — managing inventory, staffing, marketing, and sales in a real business environment. Andy’s also provides monetary support for the program.",
   },
 ]
 
@@ -28,7 +29,7 @@ const benefits = [
   {
     title: 'Experiential Integration',
     description:
-      'Your products, services, or expertise become part of the Boys State experience \u2014 not just a logo on a banner.',
+      'Your products, services, or expertise become part of the Boys State experience — not just a logo on a banner.',
   },
   {
     title: 'Staff on the Ground',
@@ -38,7 +39,7 @@ const benefits = [
   {
     title: 'Brand Alignment',
     description:
-      'Associate your organization with Missouri\u2019s most prestigious youth civic leadership program and 85+ years of impact.',
+      'Associate your organization with Missouri’s most prestigious youth civic leadership program and 85+ years of impact.',
   },
   {
     title: 'Year-Round Visibility',
@@ -50,7 +51,7 @@ const benefits = [
 const tiers = [
   {
     name: 'Supporting',
-    range: '$1K \u2013 $2.5K',
+    range: '$1K – $2.5K',
     features: [
       'Logo on event materials and website',
       'Social media recognition',
@@ -59,7 +60,7 @@ const tiers = [
   },
   {
     name: 'Program',
-    range: '$2.5K \u2013 $5K',
+    range: '$2.5K – $5K',
     features: [
       'All Supporting benefits',
       'Branded signage at session',
@@ -69,7 +70,7 @@ const tiers = [
   },
   {
     name: 'Experience',
-    range: '$5K \u2013 $15K',
+    range: '$5K – $15K',
     features: [
       'All Program benefits',
       'Experiential integration opportunity',
@@ -122,7 +123,7 @@ export default function CorporatePage() {
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">
                 This Isn&rsquo;t a Logo on a Banner
               </h2>
-              <p className="text-lg text-gray-500 leading-relaxed mb-4">
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
                 Missouri Boys State corporate partnerships are built around
                 experiential integration. Our partners send their people to
                 campus, put their products in citizens&rsquo; hands, and share
@@ -130,7 +131,7 @@ export default function CorporatePage() {
                 deeper connection between your organization and 1,600+ of
                 Missouri&rsquo;s highest-achieving young men.
               </p>
-              <p className="text-lg text-gray-500 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 When citizens run a franchise, manage a bank account, or
                 compete with professional-grade equipment, they remember the
                 organizations that made it possible. That&rsquo;s the kind of
@@ -140,13 +141,13 @@ export default function CorporatePage() {
             <div className="bg-cream border border-gray-200 rounded-xl p-12">
               <div className="text-center mb-8">
                 <span className="font-serif font-bold text-5xl text-navy">1,600+</span>
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-sm text-gray-500 mt-2">
                   Citizens reached every summer
                 </p>
               </div>
               <div className="border-t border-gray-200 pt-8 text-center">
                 <span className="font-serif font-bold text-5xl text-navy">85+</span>
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-sm text-gray-500 mt-2">
                   Years of civic leadership development
                 </p>
               </div>
@@ -163,7 +164,7 @@ export default function CorporatePage() {
             <h2 className="font-serif font-bold text-navy text-3xl">
               Partners Who Show Up
             </h2>
-            <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
               These organizations go beyond financial support — they bring
               their teams, their tools, and their knowledge directly to our
               citizens.
@@ -183,7 +184,7 @@ export default function CorporatePage() {
                   <h3 className="font-serif font-bold text-navy text-xl mb-3">
                     {partner.name}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     {partner.description}
                   </p>
                 </div>
@@ -216,7 +217,7 @@ export default function CorporatePage() {
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -233,7 +234,7 @@ export default function CorporatePage() {
             <h2 className="font-serif font-bold text-navy text-3xl">
               Find Your Level of Engagement
             </h2>
-            <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
               These tiers are starting points. Every partnership is
               custom-tailored to align with your organization&rsquo;s goals
               and capabilities.
@@ -268,7 +269,7 @@ export default function CorporatePage() {
                     <li
                       key={j}
                       className={`text-sm flex gap-2 items-start ${
-                        tier.highlighted ? 'text-white/80' : 'text-gray-400'
+                        tier.highlighted ? 'text-white/80' : 'text-gray-500'
                       }`}
                     >
                       <span
@@ -276,7 +277,7 @@ export default function CorporatePage() {
                           tier.highlighted ? 'text-gold-light' : 'text-red'
                         } font-bold`}
                       >
-                        {'\u2713'}
+                        {'✓'}
                       </span>
                       {feature}
                     </li>
@@ -303,17 +304,11 @@ export default function CorporatePage() {
                 key={i}
                 className="bg-white border border-gray-200 rounded-xl p-6 text-center"
               >
-                <div className="h-16 flex items-center justify-center mb-3">
-                  <span className="text-[11px] font-bold text-gray-300 leading-tight">
-                    {partner.name}
-                    <br />
-                    Logo
-                  </span>
-                </div>
+                <SponsorLogo name={partner.name} className="h-20 mb-4" />
                 <p className="font-serif font-bold text-navy text-sm">
                   {partner.name}
                 </p>
-                <p className="text-[11px] text-gray-400 mt-1">
+                <p className="text-[11px] text-gray-500 mt-1">
                   {partner.role}
                 </p>
               </div>
@@ -329,7 +324,7 @@ export default function CorporatePage() {
           <h2 className="font-serif font-bold text-navy text-3xl mb-2">
             Partnership Inquiry
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-gray-600 mb-8">
             Tell us about your organization and how you&rsquo;d like to be
             involved. We&rsquo;ll follow up to explore a custom partnership.
           </p>

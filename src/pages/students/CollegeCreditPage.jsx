@@ -15,7 +15,7 @@ export default function CollegeCreditPage() {
       <PageHero
         tag="College & Careers"
         title="College Credit & Scholarships"
-        description="Boys State doesn't just build leaders \u2014 it opens doors to college credit, scholarships, and a standout application."
+        description="Boys State doesn't just build leaders — it opens doors to college credit, scholarships, and a standout application."
       />
 
       {/* College Credit */}
@@ -25,17 +25,17 @@ export default function CollegeCreditPage() {
             <div>
               <Tag>College Credit</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">Earn Credit While You Lead</h2>
-              <p className="text-lg text-gray-500 leading-relaxed mb-4">
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
                 Missouri Boys State partners with accredited institutions to offer college credit for your participation. The program&rsquo;s curriculum in government, leadership, and civic engagement qualifies for credit at participating universities.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Details about credit eligibility, partner institutions, and the enrollment process are provided to all accepted citizens. Credits may be transferable to the college or university of your choice.
               </p>
             </div>
             <div className="bg-cream border border-gray-200 rounded-xl p-12 text-center">
               <div className="text-5xl mb-4">{'\u{1F393}'}</div>
               <p className="font-serif font-bold text-navy text-xl mb-2">College Credit Available</p>
-              <p className="text-sm text-gray-400">Through partner institutions</p>
+              <p className="text-sm text-gray-500">Through partner institutions</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function CollegeCreditPage() {
                   <h3 className="font-serif font-bold text-navy text-lg">{s.title}</h3>
                   <span className="text-sm font-bold text-red shrink-0 ml-4">{s.amount}</span>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -67,11 +67,11 @@ export default function CollegeCreditPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Tag>Application Advantage</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-4">Stand Out on Every Application</h2>
-          <p className="text-gray-500 leading-relaxed mb-4">
+          <p className="text-gray-600 leading-relaxed mb-4">
             Admissions officers at top universities recognize Missouri Boys State as one of the premier leadership programs in the country. Citizens consistently report that their Boys State experience was the most-discussed topic in college interviews.
           </p>
-          <p className="text-gray-400 leading-relaxed">
-            Whether you&rsquo;re applying to colleges, scholarship programs, or internships \u2014 Boys State on your resume signals leadership, civic engagement, and initiative.
+          <p className="text-gray-500 leading-relaxed">
+            Whether you&rsquo;re applying to colleges, scholarship programs, or internships — Boys State on your resume signals leadership, civic engagement, and initiative.
           </p>
         </div>
       </section>

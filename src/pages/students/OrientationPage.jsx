@@ -42,12 +42,12 @@ export default function OrientationPage() {
             {meetings.map((m, i) => (
               <div key={i} className={`grid grid-cols-3 px-6 py-4 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} border-t border-gray-200`}>
                 <span className="font-bold text-navy">{m.date}</span>
-                <span className="text-gray-500">{m.location}</span>
-                <span className="text-gray-500">{m.time}</span>
+                <span className="text-gray-600">{m.location}</span>
+                <span className="text-gray-600">{m.time}</span>
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-400 mt-3">Orientation is strongly recommended but not required for attendance.</p>
+          <p className="text-xs text-gray-500 mt-3">Orientation is strongly recommended but not required for attendance.</p>
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function OrientationPage() {
                 <span className="mt-0.5 w-6 h-6 bg-navy/10 rounded-md flex items-center justify-center shrink-0">
                   <span className="text-navy text-xs font-bold">{i + 1}</span>
                 </span>
-                <span className="text-gray-500 text-sm">{item}</span>
+                <span className="text-gray-600 text-sm">{item}</span>
               </div>
             ))}
           </div>
@@ -78,7 +78,7 @@ export default function OrientationPage() {
             {checklist.map((item, i) => (
               <li key={i} className="flex gap-3 items-center bg-white border border-gray-200 rounded-lg px-5 py-3">
                 <span className="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center shrink-0" />
-                <span className="text-gray-500 text-sm">{item}</span>
+                <span className="text-gray-600 text-sm">{item}</span>
               </li>
             ))}
           </ul>

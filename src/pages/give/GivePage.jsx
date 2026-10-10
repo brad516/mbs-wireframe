@@ -6,13 +6,13 @@ const levels = [
   { name: 'Friend', amount: '$50', desc: 'Contributes toward sponsoring a future citizen', color: 'border-t-navy' },
   { name: 'Advocate', amount: '$100', desc: 'Funds program materials and meals for one citizen', color: 'border-t-[#2b82c9]' },
   { name: 'Champion', amount: '$250', desc: 'Covers half the cost to sponsor one citizen', color: 'border-t-gold' },
-  { name: 'Sponsor', amount: '$500', desc: 'Fully sponsors one citizen\u2019s entire Boys State experience', color: 'border-t-red' },
+  { name: 'Sponsor', amount: '$500', desc: 'Fully sponsors one citizen’s entire Boys State experience', color: 'border-t-red' },
 ]
 
 const otherWays = [
   { to: '/give/planned', title: 'Planned Giving', desc: 'Include Missouri Boys State in your estate plan and create a lasting legacy for future generations of leaders.' },
   { to: '/give/matching', title: 'Matching Gifts', desc: 'Many employers match charitable contributions. Check with your HR department to double your impact.' },
-  { to: '/give/memorial', title: 'Memorial & Honor Gifts', desc: 'Make a gift in memory or in honor of a loved one. We\u2019ll send a personalized acknowledgment to the honoree or family.' },
+  { to: '/give/memorial', title: 'Memorial & Honor Gifts', desc: 'Make a gift in memory or in honor of a loved one. We’ll send a personalized acknowledgment to the honoree or family.' },
 ]
 
 export default function GivePage() {
@@ -32,8 +32,8 @@ export default function GivePage() {
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">
               <span className="text-red">$500</span> Sponsors One Future Citizen
             </h2>
-            <p className="text-gray-500 leading-relaxed">
-              Every citizen is fully sponsored \u2014 we never charge parents or families. A $500 sponsorship covers one citizen&rsquo;s entire week: housing, meals, materials, speakers, and life-changing civic education. Your gift at any level helps send Missouri&rsquo;s next generation of leaders to Boys State.
+            <p className="text-gray-600 leading-relaxed">
+              Every citizen is fully sponsored — we never charge parents or families. A $500 sponsorship covers one citizen&rsquo;s entire week: housing, meals, materials, speakers, and life-changing civic education. Your gift at any level helps send Missouri&rsquo;s next generation of leaders to Boys State.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export default function GivePage() {
               <div key={i} className={`bg-white border border-gray-200 ${l.color} border-t-4 rounded-xl p-7 text-center`}>
                 <span className="font-serif font-bold text-3xl text-navy">{l.amount}</span>
                 <h3 className="font-serif font-bold text-navy text-lg mt-2 mb-2">{l.name}</h3>
-                <p className="text-sm text-gray-400">{l.desc}</p>
+                <p className="text-sm text-gray-500">{l.desc}</p>
               </div>
             ))}
           </div>
@@ -76,7 +76,7 @@ export default function GivePage() {
             <button className="mt-6 w-full bg-gold hover:bg-gold-light text-white font-bold text-base py-4 rounded-lg transition">
               Complete Donation
             </button>
-            <p className="text-xs text-gray-400 mt-3 text-center">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
+            <p className="text-xs text-gray-500 mt-3 text-center">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
           </div>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function GivePage() {
             {otherWays.map((w, i) => (
               <Link key={i} to={w.to} className="bg-white border border-gray-200 rounded-xl p-7 hover:-translate-y-1 hover:shadow-lg transition-all">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{w.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-3">{w.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-3">{w.desc}</p>
                 <span className="text-sm font-bold text-red">Learn More &rarr;</span>
               </Link>
             ))}

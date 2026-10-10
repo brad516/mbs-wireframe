@@ -36,7 +36,7 @@ export default function SessionCitizensPage() {
                 <div>
                   <h3 className="font-serif font-bold text-navy text-lg">{c.name}</h3>
                   <span className="text-xs text-red font-bold">{c.city}</span>
-                  <p className="text-sm text-gray-400 mt-2">{c.reason}</p>
+                  <p className="text-sm text-gray-500 mt-2">{c.reason}</p>
                 </div>
               </div>
             ))}

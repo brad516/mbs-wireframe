@@ -1,0 +1,84 @@
+// Which photos from photos.moboysstate.org fill which slot on the site.
+// After editing, run `npm run photos:sync` to download them and rebuild
+// src/data/photos.json.
+//
+// Each slot is a query:
+//   year    required
+//   days    e.g. ['Thursday'] (see /api/session/days)
+//   tags    e.g. ['Athletics'] (see /api/photo/tags); days AND tags must both match
+//   match   text the file name must contain, e.g. 'ThursdayInauguration'
+//   count   how many photos (default 1), spread evenly across the matches
+//   names   exact file names to use instead, in order (pins the choice)
+//   parts   several queries whose photos are combined into one slot
+//   widths  output widths in px (default 640 and 1280)
+//   alt     alt text for the images
+//
+// To find names worth pinning:
+//   npm run photos:sync -- --list --year 2026 --day Thursday
+
+const CURRENT = 2026
+const ARCHIVE_YEARS = [2025, 2024, 2023, 2022, 2021, 2019, 2018]
+// Most 2026 closing-day photos are filed under Sunday on the photo site.
+const CLOSING_DAYS = ['Sunday', 'Closing Ceremony']
+
+const slots = {
+  // The week, shared by the home and students carousels and the timeline
+  'week.saturday': { year: CURRENT, days: ['Saturday'], match: 'SaturdayArrivals', alt: 'Citizens arriving and checking in on Saturday' },
+  'week.sunday': { year: CURRENT, tags: ['Elections'], match: 'SundayVoting', alt: 'Citizens voting in city elections on Sunday' },
+  'week.montue': { year: CURRENT, tags: ['Legislature'], alt: 'The Boys State legislature in session' },
+  'week.wednesday': { year: CURRENT, days: ['Wednesday'], match: 'WednesdayGubernatorialDebate', alt: 'Candidates for Governor debating before the state' },
+  'week.thursday': { year: CURRENT, days: ['Thursday'], match: 'ThursdayInauguration', alt: 'The newly elected Governor at the inauguration' },
+  'week.friday': { year: CURRENT, days: CLOSING_DAYS, match: 'SaturdayClosingCeremony', alt: 'Citizens at the closing ceremony' },
+
+  // Full-bleed home page hero, pinned by name
+  'home.hero': {
+    year: CURRENT,
+    tags: ['Campaigns'],
+    names: ['2026MBS_WednesdayJointPartyRally-220.jpg'],
+    widths: [960, 1920],
+    alt: 'The whole of Missouri Boys State on its feet at the joint party rally',
+  },
+
+  // Feature images
+  'home.alumni': { year: CURRENT, days: ['Friday'], match: 'FridayAlumniStories', alt: 'Missouri Boys State alumni sharing their stories' },
+  'about.group': { year: CURRENT, tags: ['Photo Day'], match: 'SaturdayStatePhoto', alt: 'The full Missouri Boys State session gathered for the state photo' },
+  'legion.history': { year: CURRENT, tags: ['Am. Legion'], alt: 'American Legion members with Boys State citizens' },
+  'parents.campus': { year: CURRENT, days: ['Saturday'], match: 'SaturdayFirstCityMeetings', alt: 'Citizens meeting their city and counselors on campus' },
+  'parents.assembly': { year: CURRENT, days: ['Tuesday'], match: 'TuesdayEveningAssembly', alt: 'A speaker addressing citizens at an evening assembly' },
+  'students.athletics': { year: CURRENT, tags: ['Athletics'], match: 'TuesdayAthletics', alt: 'Citizens competing in athletics' },
+  'students.campus-life': { year: CURRENT, days: ['Sunday'], match: 'SundayEveningActivities', alt: 'Citizens during evening activities on campus' },
+  'sessions.preview': { year: CURRENT, days: ['Saturday'], match: 'SaturdayEveningAssembly', alt: 'Citizens gathered for the opening evening assembly' },
+
+  // Activity cards on A Week in the Life
+  'activity.campaigns': { year: CURRENT, days: ['Wednesday'], match: 'WednesdayWhistlestops', alt: 'Candidates campaigning at whistle-stop speeches' },
+  'activity.legislature': { year: CURRENT, tags: ['Legislature'], count: 2, alt: 'Citizens debating legislation' },
+  'activity.athletics': { year: CURRENT, days: ['Monday'], match: 'MondayAthletics', alt: 'Citizens playing softball and tennis' },
+  'activity.speakers': { year: CURRENT, tags: ['Speakers'], alt: 'A keynote speaker addressing citizens' },
+  'activity.city-life': { year: CURRENT, days: ['Saturday'], match: 'SaturdayFirstCityMeetings', count: 3, alt: 'Citizens in their first city meeting' },
+
+  // Gallery on the session archives page
+  'sessions.gallery': {
+    year: CURRENT,
+    alt: `Missouri Boys State ${CURRENT}`,
+    parts: [
+      { days: ['Saturday'], match: 'SaturdayArrivals', count: 2 },
+      { days: ['Wednesday'], match: 'WednesdayJointPartyRally' },
+      { days: ['Thursday'], match: 'ThursdayStateFair' },
+      { days: ['Thursday'], match: 'ThursdayEveningCeremony' },
+      { days: CLOSING_DAYS, match: 'SaturdayAwards' },
+    ],
+  },
+}
+
+// Per-year session pages. Older file names carry no event, so pick by day.
+for (const year of ARCHIVE_YEARS) {
+  slots[`session.${year}.gallery`] = {
+    year,
+    alt: `Missouri Boys State ${year}`,
+    parts: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'].map((day) => ({ days: [day] })),
+  }
+  slots[`session.${year}.group`] = { year, tags: ['Photo Day', 'Formal'], alt: `Citizens of the ${year} session` }
+  slots[`session.${year}.closing`] = { year, days: ['Closing Ceremony'], count: 4, alt: `The ${year} closing ceremony` }
+}
+
+export default slots

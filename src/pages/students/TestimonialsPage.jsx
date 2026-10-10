@@ -4,12 +4,12 @@ import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const testimonials = [
-  { quote: "Boys State taught me that leadership isn't about titles \u2014 it's about showing up and making things happen.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
+  { quote: "Boys State taught me that leadership isn't about titles — it's about showing up and making things happen.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
   { quote: "I went in knowing nobody and left with 30 guys I'll be friends with for life. And I got elected county sheriff.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
   { quote: "My college interviewer asked me about Boys State more than anything else on my application. It was the thing that set me apart.", name: 'Student Name', detail: '2023 Citizen, Boys Nation Senator' },
-  { quote: "I never thought I\u2019d run for office, but Boys State showed me I could. I won governor and I\u2019ll never forget that feeling.", name: 'Student Name', detail: '2023 Citizen, Governor' },
-  { quote: "The debates were intense, the friendships were real, and the experience was unforgettable. I\u2019d do it all over again.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
-  { quote: "Boys State didn\u2019t just teach me about government \u2014 it taught me about myself. I left more confident than I\u2019ve ever been.", name: 'Student Name', detail: '2022 Citizen, City of [Name]' },
+  { quote: "I never thought I’d run for office, but Boys State showed me I could. I won governor and I’ll never forget that feeling.", name: 'Student Name', detail: '2023 Citizen, Governor' },
+  { quote: "The debates were intense, the friendships were real, and the experience was unforgettable. I’d do it all over again.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
+  { quote: "Boys State didn’t just teach me about government — it taught me about myself. I left more confident than I’ve ever been.", name: 'Student Name', detail: '2022 Citizen, City of [Name]' },
 ]
 
 const years = ['All Years', '2024', '2023', '2022']
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
                   </blockquote>
                   <div>
                     <strong className="text-sm text-navy">{t.name}</strong>
-                    <span className="block text-xs text-gray-400">{t.detail}</span>
+                    <span className="block text-xs text-gray-500">{t.detail}</span>
                   </div>
                 </div>
               </div>

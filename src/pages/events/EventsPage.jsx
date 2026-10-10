@@ -18,7 +18,7 @@ const past = [
 const keyDates = [
   { label: 'Nominations Open', value: 'January 15' },
   { label: 'Nominations Close', value: 'May 1' },
-  { label: '2026 Session', value: 'June 13\u201319', highlight: true },
+  { label: '2026 Session', value: 'June 13–19', highlight: true },
   { label: 'Boys Nation', value: 'July (TBD)' },
   { label: 'Alumni Homecoming', value: 'October (TBD)' },
 ]
@@ -46,8 +46,8 @@ export default function EventsPage() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif font-bold text-navy text-lg">{e.title}</h3>
-                  <p className="text-sm text-gray-400 mb-1">{e.loc}</p>
-                  <p className="text-sm text-gray-500">{e.desc}</p>
+                  <p className="text-sm text-gray-500 mb-1">{e.loc}</p>
+                  <p className="text-sm text-gray-600">{e.desc}</p>
                 </div>
                 <div className="shrink-0 self-center">
                   {e.slug ? (
@@ -80,7 +80,7 @@ export default function EventsPage() {
                       d.highlight ? 'bg-gold-bg -mx-3 px-3 py-2.5 rounded-md' : 'border-b border-gray-200 last:border-b-0'
                     }`}
                   >
-                    <span className="text-gray-500 font-medium">{d.label}</span>
+                    <span className="text-gray-600 font-medium">{d.label}</span>
                     <span className={`font-bold ${d.highlight ? 'text-red' : 'text-navy'}`}>{d.value}</span>
                   </div>
                 ))}
@@ -96,7 +96,7 @@ export default function EventsPage() {
                   <div key={i} className="bg-cream border border-gray-200 rounded-xl p-5">
                     <span className="text-[11px] font-bold text-gold tracking-wide uppercase">{p.date}</span>
                     <h4 className="font-serif font-bold text-navy text-[15px] mt-1">{p.title}</h4>
-                    <p className="text-sm text-gray-400">{p.desc}</p>
+                    <p className="text-sm text-gray-500">{p.desc}</p>
                   </div>
                 ))}
               </div>

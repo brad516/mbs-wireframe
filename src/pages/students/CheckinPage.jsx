@@ -5,9 +5,9 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const timeline = [
   { time: '12:00 PM', title: 'Arrival & Parking', desc: 'Arrive at Lindenwood University. Follow signs to the designated parking and drop-off area.' },
-  { time: '12:00\u20131:00 PM', title: 'Registration', desc: 'Check in at the registration desk. Receive your city assignment, nametag, t-shirt, and welcome packet.' },
-  { time: '1:00\u20132:00 PM', title: 'Move In', desc: 'Find your dorm room, meet your roommate, and get settled. Staff and counselors are available to help.' },
-  { time: '2:00\u20133:00 PM', title: 'City Assembly', desc: 'Meet your city-mates and city counselors. Introductions, icebreakers, and overview of the week.' },
+  { time: '12:00–1:00 PM', title: 'Registration', desc: 'Check in at the registration desk. Receive your city assignment, nametag, t-shirt, and welcome packet.' },
+  { time: '1:00–2:00 PM', title: 'Move In', desc: 'Find your dorm room, meet your roommate, and get settled. Staff and counselors are available to help.' },
+  { time: '2:00–3:00 PM', title: 'City Assembly', desc: 'Meet your city-mates and city counselors. Introductions, icebreakers, and overview of the week.' },
   { time: '3:00 PM', title: 'Parents Depart', desc: 'Say goodbye to family. The Boys State experience officially begins.' },
   { time: '5:00 PM', title: 'Opening Ceremony', desc: 'All citizens assemble for the official opening ceremony, welcome address, and program orientation.' },
 ]
@@ -21,7 +21,7 @@ const toBring = [
   'Bedding: pillow, sheets, blanket (or sleeping bag)',
   'Towels and washcloths',
   'Notebook and pen',
-  'Small amount of spending money ($20\u201350)',
+  'Small amount of spending money ($20–50)',
   'Positive attitude and willingness to participate',
 ]
 
@@ -55,7 +55,7 @@ export default function CheckinPage() {
                 </div>
                 <div className="flex-1 bg-white border border-gray-200 rounded-xl p-5">
                   <h3 className="font-serif font-bold text-navy text-base mb-1">{t.title}</h3>
-                  <p className="text-sm text-gray-400">{t.desc}</p>
+                  <p className="text-sm text-gray-500">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -74,7 +74,7 @@ export default function CheckinPage() {
                 {toBring.map((item, i) => (
                   <li key={i} className="flex gap-3 items-center">
                     <span className="w-5 h-5 border-2 border-gray-300 rounded flex items-center justify-center shrink-0" />
-                    <span className="text-sm text-gray-500">{item}</span>
+                    <span className="text-sm text-gray-600">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -88,7 +88,7 @@ export default function CheckinPage() {
                     <span className="w-5 h-5 bg-red/10 rounded flex items-center justify-center shrink-0">
                       <span className="text-red text-xs font-bold">&times;</span>
                     </span>
-                    <span className="text-sm text-gray-500">{item}</span>
+                    <span className="text-sm text-gray-600">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -102,7 +102,7 @@ export default function CheckinPage() {
         <div className="max-w-4xl mx-auto px-6">
           <Tag>Campus</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-8">Lindenwood University Campus</h2>
-          <MediaPlaceholder label="Campus Map \u2014 Lindenwood University, St. Charles, MO" size="landscape" />
+          <MediaPlaceholder label="Campus Map — Lindenwood University, St. Charles, MO" size="landscape" />
         </div>
       </section>
 
@@ -112,15 +112,15 @@ export default function CheckinPage() {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
               <h3 className="font-serif font-bold text-navy text-base mb-1">MBS Headquarters</h3>
-              <p className="text-sm text-gray-400">660.429.2761</p>
+              <p className="text-sm text-gray-500">660.429.2761</p>
             </div>
             <div>
               <h3 className="font-serif font-bold text-navy text-base mb-1">Email</h3>
-              <p className="text-sm text-gray-400">headquarters@moboysstate.org</p>
+              <p className="text-sm text-gray-500">headquarters@moboysstate.org</p>
             </div>
             <div>
               <h3 className="font-serif font-bold text-navy text-base mb-1">Emergency (During Session)</h3>
-              <p className="text-sm text-gray-400">Number provided at check-in</p>
+              <p className="text-sm text-gray-500">Number provided at check-in</p>
             </div>
           </div>
         </div>

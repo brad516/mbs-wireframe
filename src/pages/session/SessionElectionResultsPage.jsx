@@ -57,7 +57,7 @@ export default function SessionElectionResultsPage() {
                 <div className="p-5 text-center">
                   <span className="text-[11px] font-bold text-gold tracking-wide uppercase">{official.label}</span>
                   <h3 className="font-serif font-bold text-navy text-xl mt-1">{official.name}</h3>
-                  <p className="text-sm text-gray-400">{official.city} &middot; {official.party} Party</p>
+                  <p className="text-sm text-gray-500">{official.city} &middot; {official.party} Party</p>
                 </div>
               </div>
             ))}
@@ -75,8 +75,8 @@ export default function SessionElectionResultsPage() {
             {results.officers.map((o, i) => (
               <div key={i} className={`grid grid-cols-3 px-6 py-3 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} border-t border-gray-200`}>
                 <span className="font-bold text-navy">{o.office}</span>
-                <span className="text-gray-500">{o.name}</span>
-                <span className="text-gray-400">{o.party}</span>
+                <span className="text-gray-600">{o.name}</span>
+                <span className="text-gray-500">{o.party}</span>
               </div>
             ))}
           </div>
@@ -85,11 +85,11 @@ export default function SessionElectionResultsPage() {
           <Tag>Boys Nation</Tag>
           <h2 className="font-serif font-bold text-navy text-2xl mb-6">Boys Nation Senators</h2>
           <div className="bg-gold-bg border border-gray-200 rounded-xl p-6">
-            <p className="text-sm text-gray-500 mb-3">Selected to represent Missouri at Boys Nation in Washington, D.C.:</p>
+            <p className="text-sm text-gray-600 mb-3">Selected to represent Missouri at Boys Nation in Washington, D.C.:</p>
             <ul className="space-y-2">
               {results.boysNation.map((name, i) => (
                 <li key={i} className="flex gap-2 items-center">
-                  <span className="text-red font-bold">{'\u2605'}</span>
+                  <span className="text-red font-bold">{'★'}</span>
                   <span className="font-bold text-navy">{name}</span>
                 </li>
               ))}

@@ -38,6 +38,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Brand */}
           <div className="lg:col-span-1">
+            <img src="/logos/missouri-boys-state.svg" alt="" width="90" height="72" className="h-20 w-auto mb-4 bg-white rounded-xl p-2" />
             <span className="font-serif text-lg font-bold text-white block mb-3">Missouri Boys State</span>
             <p className="text-[13px] leading-relaxed text-white/50">
               A program of The American Legion, Department of Missouri. Developing tomorrow's civic leaders since 1938.
@@ -58,7 +59,7 @@ export default function Footer() {
           {/* Link columns */}
           {cols.map((col) => (
             <div key={col.title}>
-              <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/40 mb-4">{col.title}</h5>
+              <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/60 mb-4">{col.title}</h5>
               {col.links.map((link) => (
                 <Link
                   key={link.to}
@@ -73,7 +74,7 @@ export default function Footer() {
 
           {/* Donate & Contact */}
           <div>
-            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/40 mb-4">Support Boys State</h5>
+            <h5 className="text-[11px] font-bold tracking-[0.15em] uppercase text-white/60 mb-4">Support Boys State</h5>
             <p className="text-[13px] text-white/50 mb-4">Your tax-deductible gift changes lives.</p>
             <Link
               to="/give"
@@ -90,7 +91,7 @@ export default function Footer() {
               Shop MBS Store &rarr;
             </a>
             <div className="mt-6 pt-4 border-t border-white/10">
-              <p className="text-[11px] text-white/35 leading-relaxed">
+              <p className="text-[11px] text-white/60 leading-relaxed">
                 P.O. Box 667<br />
                 Warrensburg, MO 64093<br />
                 660.429.2761<br />
@@ -102,11 +103,11 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-white/35">&copy; 2026 Missouri Boys State. A program of The American Legion, Department of Missouri.</p>
+          <p className="text-xs text-white/60">&copy; 2026 Missouri Boys State. A program of The American Legion, Department of Missouri.</p>
           <div className="flex gap-5">
-            <Link to="/privacy" className="text-xs text-white/35 hover:text-white/60">Privacy Policy</Link>
-            <Link to="/terms" className="text-xs text-white/35 hover:text-white/60">Terms of Use</Link>
-            <a href="https://staff.moboysstate.org" target="_blank" rel="noopener noreferrer" className="text-xs text-white/20 hover:text-white/40">Staff Login</a>
+            <Link to="/privacy" className="text-xs text-white/60 hover:text-white/60">Privacy Policy</Link>
+            <Link to="/terms" className="text-xs text-white/60 hover:text-white/60">Terms of Use</Link>
+            <a href="https://staff.moboysstate.org" target="_blank" rel="noopener noreferrer" className="text-xs text-white/50 hover:text-white/60">Staff Login</a>
           </div>
         </div>
       </div>

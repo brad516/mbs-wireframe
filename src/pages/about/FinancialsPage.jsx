@@ -34,7 +34,7 @@ export default function FinancialsPage() {
             {metrics.map((m, i) => (
               <div key={i}>
                 <span className="block font-serif text-4xl font-bold text-red leading-none">{m.number}</span>
-                <span className="block text-[13px] font-medium text-gray-400 mt-1.5">{m.label}</span>
+                <span className="block text-[13px] font-medium text-gray-500 mt-1.5">{m.label}</span>
               </div>
             ))}
           </div>
@@ -55,7 +55,7 @@ export default function FinancialsPage() {
                 <span className="font-serif font-bold text-navy text-lg min-w-[50px]">{b.pct}</span>
                 <div className="flex-1">
                   <span className="font-bold text-sm text-navy">{b.category}</span>
-                  <p className="text-xs text-gray-400">{b.desc}</p>
+                  <p className="text-xs text-gray-500">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -68,11 +68,11 @@ export default function FinancialsPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Tag>Annual Report</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-4">Download Our Annual Report</h2>
-          <p className="text-gray-500 mb-8">Our full annual report includes detailed financial statements, program outcomes, donor recognition, and plans for the future.</p>
+          <p className="text-gray-600 mb-8">Our full annual report includes detailed financial statements, program outcomes, donor recognition, and plans for the future.</p>
           <button className="bg-navy hover:bg-navy-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Download 2025 Annual Report (PDF)
           </button>
-          <p className="text-xs text-gray-400 mt-3">Missouri Boys State is a 501(c)(3) nonprofit. EIN: XX-XXXXXXX</p>
+          <p className="text-xs text-gray-500 mt-3">Missouri Boys State is a 501(c)(3) nonprofit. EIN: XX-XXXXXXX</p>
         </div>
       </section>
 

@@ -28,7 +28,7 @@ export default function JoinPage() {
             {benefits.map((b, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7 text-center">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{b.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{b.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -56,7 +56,7 @@ export default function JoinPage() {
             <button className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
               Join the Alumni Association
             </button>
-            <p className="text-xs text-gray-400 mt-3">Membership is free. You&rsquo;ll receive a welcome email with next steps.</p>
+            <p className="text-xs text-gray-500 mt-3">Membership is free. You&rsquo;ll receive a welcome email with next steps.</p>
           </div>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function JoinPage() {
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif font-bold text-white text-2xl mb-4">Want to give back too?</h2>
-          <p className="text-white/70 mb-6">Pay it forward \u2014 your $500 gift fully sponsors a future citizen to attend Boys State.</p>
+          <p className="text-white/70 mb-6">Pay it forward — your $500 gift fully sponsors a future citizen to attend Boys State.</p>
           <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Make a Gift
           </Link>

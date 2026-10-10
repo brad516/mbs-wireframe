@@ -6,13 +6,13 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 const getInvolved = [
   { to: '/alumni/join', title: 'Join the Alumni Association', desc: 'Connect with 50,000+ fellow alumni. Access events, networking, and ways to give back.', cta: 'Join Now', color: 'bg-red' },
   { to: '/give', title: 'Sponsor a Future Citizen', desc: 'Your tax-deductible gift of $500 fully sponsors a citizen. Pay it forward and send the next generation to Boys State.', cta: 'Donate', color: 'bg-gold' },
-  { to: '/events', title: 'Attend Events', desc: 'Trivia nights, golf tournaments, homecoming \u2014 stay connected with the MBS community.', cta: 'See Events', color: 'bg-navy' },
+  { to: '/events', title: 'Attend Events', desc: 'Trivia nights, golf tournaments, homecoming — stay connected with the MBS community.', cta: 'See Events', color: 'bg-navy' },
 ]
 
 const spotlights = [
-  { name: 'Alumni Name', year: 'Class of 2015', role: 'State Representative, District 42', quote: 'Boys State showed me that public service isn\u2019t about power \u2014 it\u2019s about people.' },
+  { name: 'Alumni Name', year: 'Class of 2015', role: 'State Representative, District 42', quote: 'Boys State showed me that public service isn’t about power — it’s about people.' },
   { name: 'Alumni Name', year: 'Class of 2008', role: 'CEO, Missouri Tech Startup', quote: 'The leadership skills I built at Boys State are the same ones I use to run my company today.' },
-  { name: 'Alumni Name', year: 'Class of 2019', role: 'U.S. Army Officer', quote: 'Boys State was the first place someone told me I could lead. I haven\u2019t stopped since.' },
+  { name: 'Alumni Name', year: 'Class of 2019', role: 'U.S. Army Officer', quote: 'Boys State was the first place someone told me I could lead. I haven’t stopped since.' },
 ]
 
 export default function AlumniPage() {
@@ -31,7 +31,7 @@ export default function AlumniPage() {
             {getInvolved.map((item, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-4">{item.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed mb-4">{item.desc}</p>
                 <Link to={item.to} className={`inline-block ${item.color} hover:opacity-90 text-white font-bold text-sm px-5 py-2 rounded-lg transition`}>
                   {item.cta}
                 </Link>
@@ -59,7 +59,7 @@ export default function AlumniPage() {
                     &ldquo;{s.quote}&rdquo;
                   </blockquote>
                   <strong className="text-sm text-navy block">{s.name}</strong>
-                  <span className="text-xs text-gray-400 block">{s.year}</span>
+                  <span className="text-xs text-gray-500 block">{s.year}</span>
                   <span className="text-xs text-red font-bold">{s.role}</span>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function AlumniPage() {
             ].map((s, i) => (
               <div key={i}>
                 <span className="block font-serif text-3xl font-bold text-navy leading-none">{s.number}</span>
-                <span className="block text-[13px] font-medium text-gray-400 mt-1.5">{s.label}</span>
+                <span className="block text-[13px] font-medium text-gray-500 mt-1.5">{s.label}</span>
               </div>
             ))}
           </div>

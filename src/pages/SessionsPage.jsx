@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import Tag from '../components/Tag'
 import MediaPlaceholder from '../components/MediaPlaceholder'
+import { getPhoto, getPhotos } from '../lib/photos'
+
+const PHOTO_SITE = 'https://photos.moboysstate.org'
 
 const sessions = [
   { year: '2025', governor: 'Governor Name', delegates: '1,584' },
@@ -9,12 +12,14 @@ const sessions = [
   { year: '2023', governor: 'Governor Name', delegates: '1,575' },
   { year: '2022', governor: 'Governor Name', delegates: '1,550' },
   { year: '2021', governor: 'Governor Name', delegates: '1,200' },
-  { year: '2020', governor: 'Cancelled (COVID-19)', delegates: '\u2014' },
+  { year: '2020', governor: 'Cancelled (COVID-19)', delegates: '—' },
   { year: '2019', governor: 'Governor Name', delegates: '1,610' },
   { year: '2018', governor: 'Governor Name', delegates: '1,598' },
 ]
 
 export default function SessionsPage() {
+  const gallery = getPhotos('sessions.gallery')
+
   return (
     <>
       <PageHero
@@ -36,7 +41,7 @@ export default function SessionsPage() {
                 Apply Now
               </Link>
             </div>
-            <MediaPlaceholder label="2026 Session Preview Photo" size="landscape" />
+            <MediaPlaceholder label="2026 Session Preview Photo" size="landscape" photo={getPhoto('sessions.preview')} />
           </div>
         </div>
       </section>
@@ -53,11 +58,11 @@ export default function SessionsPage() {
                 to={s.year === '2020' ? '#' : `/session/${s.year}`}
                 className={`bg-white border border-gray-200 rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all ${s.year === '2020' ? 'opacity-50 pointer-events-none' : ''}`}
               >
-                <MediaPlaceholder label={`${s.year} Session Photo`} size="landscape" />
+                <MediaPlaceholder label={`${s.year} Session Photo`} size="landscape" photo={getPhoto(`session.${s.year}.gallery`)} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
                 <div className="p-5">
                   <h3 className="font-serif font-bold text-navy text-2xl">{s.year}</h3>
-                  <p className="text-sm text-gray-400">Governor: {s.governor}</p>
-                  <p className="text-sm text-gray-400">{s.delegates} citizens</p>
+                  <p className="text-sm text-gray-500">Governor: {s.governor}</p>
+                  <p className="text-sm text-gray-500">{s.delegates} citizens</p>
                   {s.year !== '2020' && (
                     <span className="inline-block mt-3 text-sm font-bold text-red">View Session &rarr;</span>
                   )}
@@ -77,8 +82,13 @@ export default function SessionsPage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <MediaPlaceholder key={n} label={`Gallery Photo ${n}`} size="landscape" />
+              <MediaPlaceholder key={n} label={`Gallery Photo ${n}`} size="landscape" photo={gallery[n - 1]} sizes="(min-width: 1024px) 33vw, 50vw" />
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a href={PHOTO_SITE} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-red hover:text-red-dark">
+              See all photos &rarr;
+            </a>
           </div>
         </div>
       </section>

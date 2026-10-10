@@ -19,7 +19,7 @@ export default function SessionSubNav({ year }) {
         <div className="flex items-center gap-1 overflow-x-auto -mb-px">
           <Link
             to="/sessions"
-            className="shrink-0 text-xs font-bold text-gray-400 hover:text-navy px-3 py-3 transition"
+            className="shrink-0 text-xs font-bold text-gray-500 hover:text-navy px-3 py-3 transition"
           >
             &larr; All Sessions
           </Link>
@@ -34,7 +34,7 @@ export default function SessionSubNav({ year }) {
                 className={`shrink-0 text-xs font-bold px-3 py-3 border-b-2 transition ${
                   isActive
                     ? 'border-red text-red'
-                    : 'border-transparent text-gray-500 hover:text-navy hover:border-gray-300'
+                    : 'border-transparent text-gray-600 hover:text-navy hover:border-gray-300'
                 }`}
               >
                 {page.label}

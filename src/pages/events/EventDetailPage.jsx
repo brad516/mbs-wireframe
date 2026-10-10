@@ -9,7 +9,7 @@ const eventData = {
     title: 'Spring Trivia Night',
     description: 'Test your knowledge and sponsor future Missouri Boys State citizens.',
     date: 'Saturday, April 18, 2026',
-    time: '6:00 PM \u2013 10:00 PM',
+    time: '6:00 PM – 10:00 PM',
     location: 'The Coliseum, St. Louis, MO',
     details: 'Join us for our annual trivia fundraiser! Assemble a team of up to 8 players and compete for prizes while helping sponsor future MBS citizens. The evening includes dinner, a silent auction, and plenty of fun. All proceeds directly fund citizen sponsorships for the 2026 session.',
     price: '$30 per person / $200 per table of 8',
@@ -52,7 +52,7 @@ export default function EventDetailPage() {
             <div className="lg:col-span-2">
               <Tag>About This Event</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-6">Event Details</h2>
-              <p className="text-gray-500 leading-relaxed mb-8">{event.details}</p>
+              <p className="text-gray-600 leading-relaxed mb-8">{event.details}</p>
               <MediaPlaceholder label={`${event.title} Photo / Flyer`} size="landscape" />
             </div>
 
@@ -62,19 +62,19 @@ export default function EventDetailPage() {
               <div className="space-y-4 text-sm">
                 <div>
                   <span className="font-bold text-navy block">Date</span>
-                  <span className="text-gray-500">{event.date}</span>
+                  <span className="text-gray-600">{event.date}</span>
                 </div>
                 <div>
                   <span className="font-bold text-navy block">Time</span>
-                  <span className="text-gray-500">{event.time}</span>
+                  <span className="text-gray-600">{event.time}</span>
                 </div>
                 <div>
                   <span className="font-bold text-navy block">Location</span>
-                  <span className="text-gray-500">{event.location}</span>
+                  <span className="text-gray-600">{event.location}</span>
                 </div>
                 <div>
                   <span className="font-bold text-navy block">Cost</span>
-                  <span className="text-gray-500">{event.price}</span>
+                  <span className="text-gray-600">{event.price}</span>
                 </div>
               </div>
               <button className="mt-6 w-full bg-red hover:bg-red-dark text-white font-bold text-sm py-3 rounded-lg transition">

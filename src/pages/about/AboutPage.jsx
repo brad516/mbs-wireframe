@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto } from '../../lib/photos'
 
 const leadership = [
   { name: 'Executive Director Name', title: 'Executive Director' },
@@ -18,7 +19,7 @@ const stats = [
 ]
 
 const subPages = [
-  { to: '/about/american-legion', title: 'Our History & The American Legion', desc: 'From 1938 to today \u2014 the story of MBS and the Legion that built it.' },
+  { to: '/about/american-legion', title: 'Our History & The American Legion', desc: 'From 1938 to today — the story of MBS and the Legion that built it.' },
   { to: '/about/financials', title: 'Annual Report & Financials', desc: 'Transparency in how we fund and deliver the Boys State experience.' },
   { to: '/about/staff', title: 'Our Team', desc: 'Meet the staff and volunteers who make Boys State happen.' },
 ]
@@ -39,14 +40,14 @@ export default function AboutPage() {
             <div>
               <Tag>Our Mission</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">Developing Civic Leaders for a Stronger Missouri</h2>
-              <p className="text-lg text-gray-500 leading-relaxed mb-4">
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
                 Missouri Boys State exists to inspire and educate the next generation of civic leaders through hands-on participation in the democratic process.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 We believe that when young people experience government firsthand, they become better citizens, stronger leaders, and more engaged members of their communities. Our vision is a Missouri where every community benefits from leaders shaped by the values of service, integrity, and informed civic participation.
               </p>
             </div>
-            <MediaPlaceholder label="About MBS Photo / Group Shot" size="tall" />
+            <MediaPlaceholder label="About MBS Photo / Group Shot" size="tall" photo={getPhoto('about.group')} />
           </div>
         </div>
       </section>
@@ -71,7 +72,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-navy text-sm">{v.title}</h3>
-                      <p className="text-sm text-gray-400">{v.desc}</p>
+                      <p className="text-sm text-gray-500">{v.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -80,13 +81,13 @@ export default function AboutPage() {
             <div>
               <Tag>The MBS Constitution</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-6">A Government by Citizens</h2>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Missouri Boys State operates under its own constitution, drafted and ratified by citizens. The constitution establishes the structure of government, including the powers of each branch, the rights of citizens, and the election process.
               </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Each year, citizens propose amendments through the legislative process &mdash; debating, voting, and enacting constitutional changes just as real legislators do. The constitution is a living document that evolves with each session.
               </p>
-              <p className="text-sm text-gray-400 italic">
+              <p className="text-sm text-gray-500 italic">
                 The full MBS Constitution is provided to all citizens during orientation.
               </p>
             </div>
@@ -101,7 +102,7 @@ export default function AboutPage() {
             {stats.map((s, i) => (
               <div key={i} className="text-center">
                 <span className="block font-serif text-4xl font-bold text-navy leading-none">{s.number}</span>
-                <span className="block text-[13px] font-medium text-gray-400 mt-1.5">{s.label}</span>
+                <span className="block text-[13px] font-medium text-gray-500 mt-1.5">{s.label}</span>
               </div>
             ))}
           </div>
@@ -123,7 +124,7 @@ export default function AboutPage() {
                 </div>
                 <div className="p-5 text-center">
                   <strong className="text-sm text-navy block">{l.name}</strong>
-                  <span className="text-xs text-gray-400">{l.title}</span>
+                  <span className="text-xs text-gray-500">{l.title}</span>
                 </div>
               </div>
             ))}
@@ -142,7 +143,7 @@ export default function AboutPage() {
             {subPages.map((p, i) => (
               <Link key={i} to={p.to} className="bg-white border border-gray-200 rounded-xl p-7 hover:-translate-y-1 hover:shadow-lg transition-all">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{p.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{p.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{p.desc}</p>
                 <span className="inline-block mt-4 text-sm font-bold text-navy">Read More &rarr;</span>
               </Link>
             ))}
@@ -154,7 +155,7 @@ export default function AboutPage() {
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif font-bold text-white text-2xl mb-4">Get Involved</h2>
-          <p className="text-white/70 mb-6">Whether you give, nominate, or volunteer \u2014 you help build the next generation of leaders.</p>
+          <p className="text-white/70 mb-6">Whether you give, nominate, or volunteer — you help build the next generation of leaders.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
               Make a Gift

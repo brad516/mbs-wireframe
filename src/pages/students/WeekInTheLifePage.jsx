@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto } from '../../lib/photos'
 
 const days = [
   { day: 'Sunday', title: 'Arrival & City Formation', desc: 'Check in at Lindenwood University, meet your city-mates, elect initial city officers, and attend the opening ceremony.' },
@@ -10,16 +11,16 @@ const days = [
   { day: 'Wednesday', title: 'General Elections & Court', desc: 'General elections determine all offices from city council to governor. The Supreme Court hears its first cases.' },
   { day: 'Thursday', title: 'Inauguration & Governance', desc: 'The governor is inaugurated. The legislature passes bills, the court issues rulings, and the executive signs or vetoes legislation.' },
   { day: 'Friday', title: 'Boys Nation Selection & Awards', desc: 'Two citizens are selected to represent Missouri at Boys Nation in Washington, D.C. Awards ceremony celebrates outstanding citizens.' },
-  { day: 'Saturday', title: 'Departure', desc: 'Say goodbye to your city-mates and new friends. Head home changed \u2014 with memories, skills, and connections that last a lifetime.' },
+  { day: 'Saturday', title: 'Departure', desc: 'Say goodbye to your city-mates and new friends. Head home changed — with memories, skills, and connections that last a lifetime.' },
 ]
 
 const activities = [
-  { title: 'Campaign & Elections', desc: 'Run for office, give speeches, debate opponents, and earn every vote.' },
-  { title: 'Legislature & Law', desc: 'Draft bills, argue in committee, and pass legislation through both chambers.' },
-  { title: 'Athletics & Competition', desc: 'City-vs-city competitions in basketball, football, softball, and more.' },
+  { title: 'Campaign & Elections', slot: 'activity.campaigns', desc: 'Run for office, give speeches, debate opponents, and earn every vote.' },
+  { title: 'Legislature & Law', slot: 'activity.legislature', desc: 'Draft bills, argue in committee, and pass legislation through both chambers.' },
+  { title: 'Athletics & Competition', slot: 'activity.athletics', desc: 'City-vs-city competitions in basketball, football, softball, and more.' },
   { title: 'Talent Show', desc: 'Every city puts on a performance. The talent show is a highlight of the week.' },
-  { title: 'Keynote Speakers', desc: 'Hear from governors, generals, CEOs, and civic leaders who challenge you to lead.' },
-  { title: 'City Life & Brotherhood', desc: 'Build your city from scratch. Bond over shared challenges and late-night conversations.' },
+  { title: 'Keynote Speakers', slot: 'activity.speakers', desc: 'Hear from governors, generals, CEOs, and civic leaders who challenge you to lead.' },
+  { title: 'City Life & Brotherhood', slot: 'activity.city-life', desc: 'Build your city from scratch. Bond over shared challenges and late-night conversations.' },
 ]
 
 export default function WeekInTheLifePage() {
@@ -47,7 +48,7 @@ export default function WeekInTheLifePage() {
                 </div>
                 <div className="flex-1 bg-white border border-gray-200 rounded-xl p-5">
                   <h3 className="font-serif font-bold text-navy text-base mb-1">{d.title}</h3>
-                  <p className="text-sm text-gray-400">{d.desc}</p>
+                  <p className="text-sm text-gray-500">{d.desc}</p>
                 </div>
               </div>
             ))}
@@ -65,10 +66,10 @@ export default function WeekInTheLifePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((a, i) => (
               <div key={i} className="bg-cream border border-gray-200 rounded-xl overflow-hidden">
-                <MediaPlaceholder label={`${a.title} Photo`} size="landscape" />
+                <MediaPlaceholder label={`${a.title} Photo`} size="landscape" photo={getPhoto(a.slot)} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
                 <div className="p-5">
                   <h3 className="font-serif font-bold text-navy text-base mb-1">{a.title}</h3>
-                  <p className="text-sm text-gray-400">{a.desc}</p>
+                  <p className="text-sm text-gray-500">{a.desc}</p>
                 </div>
               </div>
             ))}

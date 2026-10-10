@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto } from '../../lib/photos'
 
 const timeline = [
   { year: '1935', title: 'Boys State Founded', desc: 'The American Legion establishes Boys State as a national program to teach youth about government through hands-on participation.' },
@@ -19,7 +20,7 @@ export default function AmericanLegionPage() {
       <PageHero
         tag="Our History"
         title="The American Legion & Missouri Boys State"
-        description="Since 1938, The American Legion has been the driving force behind Missouri Boys State \u2014 a partnership built on service, patriotism, and civic education."
+        description="Since 1938, The American Legion has been the driving force behind Missouri Boys State — a partnership built on service, patriotism, and civic education."
       />
 
       {/* Legion Connection */}
@@ -29,17 +30,17 @@ export default function AmericanLegionPage() {
             <div>
               <Tag>The Partnership</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">A Foundation of Service</h2>
-              <p className="text-lg text-gray-500 leading-relaxed mb-4">
-                The American Legion, Department of Missouri, has sponsored and operated Missouri Boys State since 1938. Local Legion posts across the state are the backbone of the program \u2014 identifying, nominating, and often sponsoring the outstanding young men who become citizens.
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                The American Legion, Department of Missouri, has sponsored and operated Missouri Boys State since 1938. Local Legion posts across the state are the backbone of the program — identifying, nominating, and often sponsoring the outstanding young men who become citizens.
               </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 The Legion&rsquo;s commitment to youth development, patriotism, and civic education is the foundation on which Boys State was built. Veterans who served their country now serve their communities by investing in the next generation of leaders.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 Today, hundreds of Legion posts participate in the nomination process, and Legion volunteers serve as counselors, mentors, and supporters throughout the Boys State experience.
               </p>
             </div>
-            <MediaPlaceholder label="American Legion / Boys State Historical Photo" size="tall" />
+            <MediaPlaceholder label="American Legion / Boys State Historical Photo" size="tall" photo={getPhoto('legion.history')} />
           </div>
         </div>
       </section>
@@ -59,7 +60,7 @@ export default function AmericanLegionPage() {
                 </div>
                 <div className="flex-1 bg-cream border border-gray-200 rounded-xl p-5">
                   <h3 className="font-serif font-bold text-navy text-base mb-1">{t.title}</h3>
-                  <p className="text-sm text-gray-400">{t.desc}</p>
+                  <p className="text-sm text-gray-500">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -82,7 +83,7 @@ export default function AmericanLegionPage() {
             ].map((item, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7">
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

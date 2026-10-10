@@ -5,7 +5,7 @@ import MediaPlaceholder from '../components/MediaPlaceholder'
 const contactInfo = [
   { label: 'Address', value: 'P.O. Box 667\nWarrensburg, MO 64093', icon: '\u{1F4CD}' },
   { label: 'Phone', value: '660.429.2761', icon: '\u{1F4DE}' },
-  { label: 'Email', value: 'headquarters@moboysstate.org', icon: '\u2709\uFE0F' },
+  { label: 'Email', value: 'headquarters@moboysstate.org', icon: '✉️' },
 ]
 
 export default function ContactPage() {
@@ -25,7 +25,7 @@ export default function ContactPage() {
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7 text-center">
                 <div className="text-3xl mb-3">{c.icon}</div>
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{c.label}</h3>
-                <p className="text-sm text-gray-500 whitespace-pre-line">{c.value}</p>
+                <p className="text-sm text-gray-600 whitespace-pre-line">{c.value}</p>
               </div>
             ))}
           </div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
             <div>
               <Tag>Location</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-8">Find Us</h2>
-              <MediaPlaceholder label="Map \u2014 Warrensburg, MO / Lindenwood University, St. Charles" size="tall" />
+              <MediaPlaceholder label="Map — Warrensburg, MO / Lindenwood University, St. Charles" size="tall" />
             </div>
           </div>
         </div>

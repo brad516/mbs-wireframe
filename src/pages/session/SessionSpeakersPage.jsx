@@ -48,7 +48,7 @@ export default function SessionSpeakersPage() {
                 <div className="p-5 flex-1">
                   <h3 className="font-serif font-bold text-navy text-lg">{s.name}</h3>
                   <span className="text-xs text-red font-bold">{s.title}</span>
-                  <p className="text-sm text-gray-400 mt-2">&ldquo;{s.topic}&rdquo;</p>
+                  <p className="text-sm text-gray-500 mt-2">&ldquo;{s.topic}&rdquo;</p>
                 </div>
               </div>
             ))}

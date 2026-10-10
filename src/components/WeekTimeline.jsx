@@ -1,11 +1,13 @@
 import { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import MediaPlaceholder from './MediaPlaceholder'
+import { getPhoto } from '../lib/photos'
 import Tag from './Tag'
 
 const phases = [
   {
     day: 'Saturday',
+    slot: 'week.saturday',
     label: 'Day 1',
     title: 'Arrival & City Formation',
     desc: 'You arrive at Lindenwood University, meet your City Counselor, and unpack in your dorm. That night, the energy hits — you\'re assigned to the Federalist or Nationalist party, meet your city of ~50 citizens, and begin organizing from scratch. By midnight, you\'re already debating platforms and sizing up who\'s running for what.',
@@ -14,6 +16,7 @@ const phases = [
   },
   {
     day: 'Sunday',
+    slot: 'week.sunday',
     label: 'Day 2',
     title: 'Elections & City Government',
     desc: 'The pace is relentless. Party caucuses nominate candidates, campaigns launch, and speeches fill the halls. By afternoon, your city has elected a Mayor, City Council, Senators, and Representatives. Appointed officials follow — City Attorney, Police Chief, Fire Chief. Your city government is live before dinner.',
@@ -22,6 +25,7 @@ const phases = [
   },
   {
     day: 'Mon–Tue',
+    slot: 'week.montue',
     label: 'Days 3–4',
     title: 'Legislature, Courts & County Government',
     desc: 'The General Assembly convenes. Bills are drafted, debated in committee, and voted on in both chambers. Attorneys pass the Bar Exam and try cases in Circuit Court. County elections expand the government further — Presiding Commissioners, Sheriffs, Prosecuting Attorneys, and Circuit Judges take office.',
@@ -30,6 +34,7 @@ const phases = [
   },
   {
     day: 'Wednesday',
+    slot: 'week.wednesday',
     label: 'Day 5',
     title: 'The Statewide Primary & the Governor\'s Race',
     desc: 'The stakes go statewide. Candidates for Governor, Lieutenant Governor, Secretary of State, and more face off in an open primary election. That evening, the Federalist and Nationalist nominees for Governor debate before the entire state. Campaign war rooms run through the night.',
@@ -38,6 +43,7 @@ const phases = [
   },
   {
     day: 'Thursday',
+    slot: 'week.thursday',
     label: 'Day 6',
     title: 'General Election & Inauguration',
     desc: 'Every citizen votes in the statewide general election. The Governor is elected and inaugurated. Cabinet members are confirmed by the Senate. The full machinery of state government — legislative, executive, judicial — is running. You built this.',
@@ -46,6 +52,7 @@ const phases = [
   },
   {
     day: 'Friday',
+    slot: 'week.friday',
     label: 'Day 7',
     title: 'Democracy in Action & Brotherhood',
     desc: 'The week culminates in the Democracy in Action ceremony — Citizen of the Week, Model City, Model County, and Outstanding Business awards are announced. But it\'s the quiet moments that hit hardest: the friendships forged in your city, the late-night conversations, the realization that this week changed something in you.',
@@ -85,10 +92,10 @@ function TimelinePhase({ phase, index, isVisible }) {
           </div>
           <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-1 block">{phase.label}</span>
           <h3 className="font-serif font-bold text-navy text-xl lg:text-2xl mb-3">{phase.title}</h3>
-          <p className="text-sm text-gray-500 leading-relaxed">{phase.desc}</p>
+          <p className="text-sm text-gray-600 leading-relaxed">{phase.desc}</p>
         </div>
         <div className={`${isEven ? '' : 'lg:[direction:ltr]'}`}>
-          <MediaPlaceholder label={phase.img} size="landscape" />
+          <MediaPlaceholder label={phase.img} size="landscape" photo={getPhoto(phase.slot)} />
         </div>
       </div>
     </div>
@@ -127,7 +134,7 @@ export default function WeekTimeline() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <Tag>The Experience</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-3">A Week Like No Other</h2>
-          <p className="text-gray-400 text-base leading-relaxed">
+          <p className="text-gray-500 text-base leading-relaxed">
             From the moment you arrive on Saturday to the bonds you carry home on Friday, every day at Boys State builds on the last — accelerating toward something you didn&rsquo;t know you were capable of.
           </p>
         </div>

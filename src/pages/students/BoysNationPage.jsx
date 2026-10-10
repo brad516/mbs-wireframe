@@ -33,13 +33,13 @@ export default function BoysNationPage() {
             <div>
               <Tag>The Program</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-4">What Is Boys Nation?</h2>
-              <p className="text-lg text-gray-500 leading-relaxed mb-4">
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
                 Boys Nation is The American Legion&rsquo;s premier youth program at the national level. Each summer, two representatives from every state&rsquo;s Boys State program convene in Washington, D.C. for a week of government simulation at the federal level.
               </p>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Boys Nation senators draft and debate legislation, elect a president and vice president, and hear from national leaders including senators, Supreme Court justices, and cabinet members.
               </p>
-              <p className="text-gray-500 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 The program has produced presidents, senators, governors, and leaders across every field. It represents the pinnacle of the Boys State experience.
               </p>
             </div>
@@ -54,14 +54,14 @@ export default function BoysNationPage() {
           <div className="max-w-3xl mx-auto">
             <Tag>Selection</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl mb-6">How Citizens Are Selected</h2>
-            <p className="text-gray-500 mb-8">On the final day of Missouri Boys State, a selection committee identifies two outstanding citizens to represent Missouri at Boys Nation. Selection is based on:</p>
+            <p className="text-gray-600 mb-8">On the final day of Missouri Boys State, a selection committee identifies two outstanding citizens to represent Missouri at Boys Nation. Selection is based on:</p>
             <ul className="space-y-3">
               {selectionCriteria.map((c, i) => (
                 <li key={i} className="flex gap-3 items-start">
                   <span className="mt-1 w-5 h-5 bg-red rounded-full flex items-center justify-center shrink-0">
-                    <span className="text-white text-xs font-bold">{'\u2713'}</span>
+                    <span className="text-white text-xs font-bold">{'✓'}</span>
                   </span>
-                  <span className="text-gray-500">{c}</span>
+                  <span className="text-gray-600">{c}</span>
                 </li>
               ))}
             </ul>
@@ -85,8 +85,8 @@ export default function BoysNationPage() {
                 <div className="p-5">
                   <strong className="text-sm text-navy block">{a.name}</strong>
                   <span className="text-xs text-gold font-bold">{a.year}</span>
-                  <span className="text-xs text-gray-400 block">{a.role}</span>
-                  <p className="text-sm text-gray-400 mt-2">{a.desc}</p>
+                  <span className="text-xs text-gray-500 block">{a.role}</span>
+                  <p className="text-sm text-gray-500 mt-2">{a.desc}</p>
                 </div>
               </div>
             ))}

@@ -17,30 +17,30 @@ export default function MemorialGiftsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-8">
               <div className="w-12 h-12 bg-navy/10 rounded-xl flex items-center justify-center mb-5">
-                <span className="text-navy text-xl font-bold">{'\u2605'}</span>
+                <span className="text-navy text-xl font-bold">{'★'}</span>
               </div>
               <h3 className="font-serif font-bold text-navy text-xl mb-3">In Honor Of</h3>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Celebrate a birthday, graduation, retirement, Father&rsquo;s Day, or any special occasion with a gift that shapes the next generation of leaders. A great way to honor a Boys State alumnus in your life.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Personalized acknowledgment sent to the honoree or their family</li>
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Option to include a personal message</li>
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Tax-deductible receipt provided to donor</li>
+              <ul className="space-y-2 text-sm text-gray-500">
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Personalized acknowledgment sent to the honoree or their family</li>
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Option to include a personal message</li>
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Tax-deductible receipt provided to donor</li>
               </ul>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-8">
               <div className="w-12 h-12 bg-red/10 rounded-xl flex items-center justify-center mb-5">
-                <span className="text-red text-xl font-bold">{'\u2764'}</span>
+                <span className="text-red text-xl font-bold">{'❤'}</span>
               </div>
               <h3 className="font-serif font-bold text-navy text-xl mb-3">In Memory Of</h3>
-              <p className="text-gray-500 leading-relaxed mb-4">
+              <p className="text-gray-600 leading-relaxed mb-4">
                 Remember a loved one with a gift that carries their legacy forward. Memorial gifts are a meaningful way to honor someone who valued civic leadership, service, or the Boys State experience.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Personalized sympathy acknowledgment sent to the family</li>
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Name recognized in the MBS Annual Report (with permission)</li>
-                <li className="flex gap-2"><span className="text-red font-bold">{'\u2713'}</span>Tax-deductible receipt provided to donor</li>
+              <ul className="space-y-2 text-sm text-gray-500">
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Personalized sympathy acknowledgment sent to the family</li>
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Name recognized in the MBS Annual Report (with permission)</li>
+                <li className="flex gap-2"><span className="text-red font-bold">{'✓'}</span>Tax-deductible receipt provided to donor</li>
               </ul>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function MemorialGiftsPage() {
         <div className="max-w-3xl mx-auto px-6">
           <Tag>Make a Gift</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Memorial &amp; Honor Gift Form</h2>
-          <p className="text-gray-500 mb-8">Complete the form below and we&rsquo;ll handle the rest &mdash; including sending a personalized acknowledgment to the honoree or family.</p>
+          <p className="text-gray-600 mb-8">Complete the form below and we&rsquo;ll handle the rest &mdash; including sending a personalized acknowledgment to the honoree or family.</p>
           <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 bg-gray-50">
             <div className="mb-6">
               <label className="block text-sm font-bold text-navy mb-2">Gift Type</label>
@@ -60,7 +60,7 @@ export default function MemorialGiftsPage() {
                 <button className="flex-1 py-3 border-2 border-navy rounded-lg text-sm font-bold text-navy bg-cream">
                   In Honor Of
                 </button>
-                <button className="flex-1 py-3 border border-gray-200 rounded-lg text-sm font-bold text-gray-400">
+                <button className="flex-1 py-3 border border-gray-200 rounded-lg text-sm font-bold text-gray-500">
                   In Memory Of
                 </button>
               </div>
@@ -100,7 +100,7 @@ export default function MemorialGiftsPage() {
             <button className="w-full bg-gold hover:bg-gold-light text-white font-bold text-base py-4 rounded-lg transition">
               Complete Gift
             </button>
-            <p className="text-xs text-gray-400 mt-3 text-center">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
+            <p className="text-xs text-gray-500 mt-3 text-center">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
           </div>
         </div>
       </section>

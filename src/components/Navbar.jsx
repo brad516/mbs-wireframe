@@ -231,7 +231,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <span className="text-white/20 mx-1">|</span>
+            <span className="text-white/50 mx-1">|</span>
             <Link
               to="/nominate"
               className="text-white/70 text-[11px] font-bold px-2.5 py-1 hover:text-white transition"
@@ -255,13 +255,11 @@ export default function Navbar() {
       </div>
 
       {/* Main nav bar */}
-      <nav className="bg-navy sticky top-0 z-50 shadow-lg">
+      <nav className="bg-navy/90 backdrop-blur-md sticky top-0 z-50 shadow-lg border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 flex items-center h-16 gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <span className="bg-red text-white font-serif font-bold text-xs w-9 h-9 rounded-md flex items-center justify-center">
-              MBS
-            </span>
+            <img src="/logos/missouri-boys-state.svg" alt="" width="50" height="40" className="h-11 w-auto bg-white rounded-lg p-1 shadow-sm" />
             <span className="text-white font-serif font-bold text-[15px] whitespace-nowrap hidden sm:block">
               Missouri Boys State
             </span>
@@ -332,7 +330,7 @@ export default function Navbar() {
                     <h3 className="font-serif font-bold text-navy text-xl mb-2">
                       {item.mega.featured.title}
                     </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
                       {item.mega.featured.description}
                     </p>
                     <Link
@@ -347,7 +345,7 @@ export default function Navbar() {
                   {/* Link groups */}
                   {item.mega.groups.map((group, gi) => (
                     <div key={gi} className="col-span-4">
-                      <h4 className="text-[11px] font-bold uppercase tracking-wider text-gray-400 mb-3">
+                      <h4 className="text-[11px] font-bold uppercase tracking-wider text-gray-500 mb-3">
                         {group.heading}
                       </h4>
                       <ul className="space-y-1">
@@ -392,7 +390,7 @@ export default function Navbar() {
           <span className="font-serif font-bold text-navy text-sm">Menu</span>
           <button
             onClick={() => setOpen(false)}
-            className="text-gray-400 hover:text-gray-800 text-2xl leading-none p-1"
+            className="text-gray-500 hover:text-gray-800 text-2xl leading-none p-1"
             aria-label="Close menu"
           >
             ✕
@@ -414,7 +412,7 @@ export default function Navbar() {
                 >
                   {item.label}
                   <svg
-                    className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                    className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
                       mobileExpanded === item.label ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -460,7 +458,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-sm text-gray-500 hover:text-navy transition"
+                className="text-sm text-gray-600 hover:text-navy transition"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

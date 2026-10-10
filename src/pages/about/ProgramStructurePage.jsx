@@ -121,13 +121,13 @@ export default function ProgramStructurePage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Tag>Government Structure</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-3">The 51st State</h2>
-            <p className="text-gray-400">Citizens build a three-branch government at every level — city, county, and state. Each level has its own legislature, executive, and judiciary, just like the real Missouri.</p>
+            <p className="text-gray-500">Citizens build a three-branch government at every level — city, county, and state. Each level has its own legislature, executive, and judiciary, just like the real Missouri.</p>
           </div>
 
           {/* Ward → City → County → State visual */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-0 mb-16">
             {[
-              { label: 'Ward', sub: '~15 citizens', color: 'bg-gray-100 text-gray-500 border-gray-200' },
+              { label: 'Ward', sub: '~15 citizens', color: 'bg-gray-100 text-gray-600 border-gray-200' },
               { label: 'City', sub: '3 wards', color: 'bg-red/5 text-red border-red/20' },
               { label: 'County', sub: '2 cities', color: 'bg-navy/5 text-navy border-navy/20' },
               { label: 'State', sub: '8 counties', color: 'bg-gold-bg text-gold border-gold/30' },
@@ -167,7 +167,7 @@ export default function ProgramStructurePage() {
                   {/* Positions */}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <span className="text-[11px] font-bold tracking-wider uppercase text-gray-400 mb-2 block">Elected</span>
+                      <span className="text-[11px] font-bold tracking-wider uppercase text-gray-500 mb-2 block">Elected</span>
                       <div className="flex flex-wrap gap-1.5">
                         {g.elected.map((p) => (
                           <span key={p} className="bg-red/5 text-red text-xs font-medium px-2.5 py-1 rounded-md">{p}</span>
@@ -175,7 +175,7 @@ export default function ProgramStructurePage() {
                       </div>
                     </div>
                     <div>
-                      <span className="text-[11px] font-bold tracking-wider uppercase text-gray-400 mb-2 block">Appointed</span>
+                      <span className="text-[11px] font-bold tracking-wider uppercase text-gray-500 mb-2 block">Appointed</span>
                       <div className="flex flex-wrap gap-1.5">
                         {g.appointed.map((p) => (
                           <span key={p} className="bg-navy/5 text-navy text-xs font-medium px-2.5 py-1 rounded-md">{p}</span>
@@ -196,7 +196,7 @@ export default function ProgramStructurePage() {
           <div className="text-center max-w-xl mx-auto mb-12">
             <Tag>Geography</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl mb-3">8 Counties, 16 Cities</h2>
-            <p className="text-gray-400">Each county is composed of two cities. You'll be assigned to a city when you arrive — this is your home base for the week.</p>
+            <p className="text-gray-500">Each county is composed of two cities. You'll be assigned to a city when you arrive — this is your home base for the week.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {counties.map((c) => (
@@ -204,7 +204,7 @@ export default function ProgramStructurePage() {
                 <h4 className="font-serif font-bold text-navy text-base mb-2">{c.county} County</h4>
                 <div className="flex gap-2">
                   {c.cities.map((city) => (
-                    <span key={city} className="bg-white border border-gray-200 text-sm text-gray-500 px-3 py-1 rounded-md flex-1 text-center">{city}</span>
+                    <span key={city} className="bg-white border border-gray-200 text-sm text-gray-600 px-3 py-1 rounded-md flex-1 text-center">{city}</span>
                   ))}
                 </div>
               </div>
@@ -219,13 +219,13 @@ export default function ProgramStructurePage() {
           <div className="text-center max-w-xl mx-auto mb-12">
             <Tag>Political Parties</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl mb-3">Federalists & Nationalists</h2>
-            <p className="text-gray-400">Every citizen is randomly assigned to one of two parties. These are fictional — they have no relation to real-world political parties. You define what your party stands for.</p>
+            <p className="text-gray-500">Every citizen is randomly assigned to one of two parties. These are fictional — they have no relation to real-world political parties. You define what your party stands for.</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {['Federalist Party', 'Nationalist Party'].map((party) => (
               <div key={party} className="bg-white border border-gray-200 rounded-xl p-7 text-center">
                 <h3 className="font-serif font-bold text-navy text-xl mb-3">{party}</h3>
-                <ul className="text-sm text-gray-400 space-y-2 text-left">
+                <ul className="text-sm text-gray-500 space-y-2 text-left">
                   <li>Draft your party platform at city, county, and state levels</li>
                   <li>Nominate candidates for every elected office via caucuses</li>
                   <li>Elect party leadership at every level</li>
@@ -244,7 +244,7 @@ export default function ProgramStructurePage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Tag>Schools of Instruction</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-3">9 Schools. Real-World Instructors.</h2>
-            <p className="text-gray-400">Every citizen attends one school of instruction for the week. Classes are taught by practicing attorneys, Highway Patrol troopers, journalists, business executives, and policy professionals. Some positions require a specific school.</p>
+            <p className="text-gray-500">Every citizen attends one school of instruction for the week. Classes are taught by practicing attorneys, Highway Patrol troopers, journalists, business executives, and policy professionals. Some positions require a specific school.</p>
           </div>
           <div className="space-y-4">
             {schools.map((s) => (
@@ -252,11 +252,11 @@ export default function ProgramStructurePage() {
                 <div className="flex flex-col lg:flex-row lg:items-start gap-4">
                   <div className="flex-1">
                     <h3 className="font-serif font-bold text-navy text-lg mb-1">{s.name}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
                   </div>
                   {s.positions.length > 0 && (
                     <div className="lg:w-72 shrink-0">
-                      <span className="text-[10px] font-bold tracking-wider uppercase text-gray-400 block mb-1.5">Unlocks Positions</span>
+                      <span className="text-[10px] font-bold tracking-wider uppercase text-gray-500 block mb-1.5">Unlocks Positions</span>
                       <div className="flex flex-wrap gap-1.5">
                         {s.positions.map((p) => (
                           <span key={p} className="bg-white border border-gray-200 text-xs text-navy font-medium px-2 py-0.5 rounded">{p}</span>
@@ -277,7 +277,7 @@ export default function ProgramStructurePage() {
           <div className="text-center max-w-xl mx-auto mb-12">
             <Tag>Media at MBS</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl mb-3">Run the Press</h2>
-            <p className="text-gray-400">MBS has a fully operational media operation — citizens produce real content every day of the program.</p>
+            <p className="text-gray-500">MBS has a fully operational media operation — citizens produce real content every day of the program.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
@@ -288,7 +288,7 @@ export default function ProgramStructurePage() {
               <div key={m.name} className="bg-white border border-gray-200 rounded-xl p-7">
                 <span className="text-[10px] font-bold tracking-wider uppercase text-gold mb-2 block">{m.type}</span>
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{m.name}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{m.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{m.desc}</p>
               </div>
             ))}
           </div>

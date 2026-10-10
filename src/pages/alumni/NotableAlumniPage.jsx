@@ -67,7 +67,7 @@ export default function NotableAlumniPage() {
                 <div className="p-4">
                   <strong className="text-sm text-navy block">{a.name}</strong>
                   <span className="text-xs text-gold font-bold">{a.year}</span>
-                  <span className="text-xs text-gray-400 block">{a.role}</span>
+                  <span className="text-xs text-gray-500 block">{a.role}</span>
                 </div>
               </div>
             ))}
@@ -80,7 +80,7 @@ export default function NotableAlumniPage() {
         <div className="max-w-4xl mx-auto px-6">
           <Tag>MBS Governors</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-8">Boys State Governors</h2>
-          <p className="text-gray-500 mb-6">Missouri Boys State governors have come from all over the state, from towns and cities of all sizes. Every citizen at the start of the week has the opportunity to run for governor.</p>
+          <p className="text-gray-600 mb-6">Missouri Boys State governors have come from all over the state, from towns and cities of all sizes. Every citizen at the start of the week has the opportunity to run for governor.</p>
           <div className="bg-cream border border-gray-200 rounded-xl overflow-hidden">
             <div className="grid grid-cols-3 bg-navy text-white text-sm font-bold px-6 py-3">
               <span>Year</span>
@@ -90,8 +90,8 @@ export default function NotableAlumniPage() {
             {governors.map((g, i) => (
               <div key={i} className={`grid grid-cols-3 px-6 py-3 text-sm ${i % 2 === 0 ? 'bg-cream' : 'bg-white'} border-t border-gray-200`}>
                 <span className="font-bold text-navy">{g.year}</span>
-                <span className="text-gray-500">{g.name}</span>
-                <span className="text-gray-400">{g.hometown}</span>
+                <span className="text-gray-600">{g.name}</span>
+                <span className="text-gray-500">{g.hometown}</span>
               </div>
             ))}
           </div>

@@ -3,15 +3,16 @@ import PageHero from '../../components/PageHero'
 import SessionSubNav from '../../components/SessionSubNav'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto, getPhotos } from '../../lib/photos'
 
 const sessionData = {
-  '2025': { governor: 'Governor Name', delegates: '1,584', location: 'Lindenwood University, St. Charles', dates: 'June 14\u201320, 2025' },
-  '2024': { governor: 'Governor Name', delegates: '1,612', location: 'Lindenwood University, St. Charles', dates: 'June 15\u201321, 2024' },
-  '2023': { governor: 'Governor Name', delegates: '1,575', location: 'Lindenwood University, St. Charles', dates: 'June 17\u201323, 2023' },
-  '2022': { governor: 'Governor Name', delegates: '1,550', location: 'Lindenwood University, St. Charles', dates: 'June 18\u201324, 2022' },
-  '2021': { governor: 'Governor Name', delegates: '1,200', location: 'University of Central Missouri, Warrensburg', dates: 'June 19\u201325, 2021' },
-  '2019': { governor: 'Governor Name', delegates: '1,610', location: 'University of Central Missouri, Warrensburg', dates: 'June 15\u201321, 2019' },
-  '2018': { governor: 'Governor Name', delegates: '1,598', location: 'University of Central Missouri, Warrensburg', dates: 'June 16\u201322, 2018' },
+  '2025': { governor: 'Governor Name', delegates: '1,584', location: 'Lindenwood University, St. Charles', dates: 'June 14–20, 2025' },
+  '2024': { governor: 'Governor Name', delegates: '1,612', location: 'Lindenwood University, St. Charles', dates: 'June 15–21, 2024' },
+  '2023': { governor: 'Governor Name', delegates: '1,575', location: 'Lindenwood University, St. Charles', dates: 'June 17–23, 2023' },
+  '2022': { governor: 'Governor Name', delegates: '1,550', location: 'Lindenwood University, St. Charles', dates: 'June 18–24, 2022' },
+  '2021': { governor: 'Governor Name', delegates: '1,200', location: 'University of Central Missouri, Warrensburg', dates: 'June 19–25, 2021' },
+  '2019': { governor: 'Governor Name', delegates: '1,610', location: 'University of Central Missouri, Warrensburg', dates: 'June 15–21, 2019' },
+  '2018': { governor: 'Governor Name', delegates: '1,598', location: 'University of Central Missouri, Warrensburg', dates: 'June 16–22, 2018' },
 }
 
 const subPages = [
@@ -25,6 +26,7 @@ const subPages = [
 export default function SessionYearPage() {
   const { year } = useParams()
   const session = sessionData[year]
+  const gallery = getPhotos(`session.${year}.gallery`)
 
   if (!session) {
     return (
@@ -40,7 +42,7 @@ export default function SessionYearPage() {
       <PageHero
         tag={`Session ${year}`}
         title={`${year} Missouri Boys State`}
-        description={`${session.dates} \u2014 ${session.location}`}
+        description={`${session.dates} — ${session.location}`}
       />
       <SessionSubNav year={year} />
 
@@ -61,12 +63,12 @@ export default function SessionYearPage() {
                 ].map((item, i) => (
                   <div key={i} className="flex items-baseline gap-3 py-2 border-b border-gray-200">
                     <span className="font-bold text-sm text-navy min-w-[140px] shrink-0">{item.label}</span>
-                    <span className="text-sm text-gray-500">{item.value}</span>
+                    <span className="text-sm text-gray-600">{item.value}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <MediaPlaceholder label={`${year} Session Group Photo`} size="tall" />
+            <MediaPlaceholder label={`${year} Session Group Photo`} size="tall" photo={getPhoto(`session.${year}.group`)} />
           </div>
         </div>
       </section>
@@ -84,7 +86,7 @@ export default function SessionYearPage() {
                 className="bg-cream border border-gray-200 rounded-xl p-7 hover:-translate-y-1 hover:shadow-lg transition-all"
               >
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{page.title}</h3>
-                <p className="text-sm text-gray-400 mb-3">{page.desc}</p>
+                <p className="text-sm text-gray-500 mb-3">{page.desc}</p>
                 <span className="text-sm font-bold text-red">View &rarr;</span>
               </Link>
             ))}
@@ -101,8 +103,13 @@ export default function SessionYearPage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((n) => (
-              <MediaPlaceholder key={n} label={`${year} Photo ${n}`} size="landscape" />
+              <MediaPlaceholder key={n} label={`${year} Photo ${n}`} size="landscape" photo={gallery[n - 1]} sizes="(min-width: 1024px) 33vw, 50vw" />
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <a href={`https://photos.moboysstate.org/year/${year}`} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-red hover:text-red-dark">
+              See all {year} photos &rarr;
+            </a>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import Tag from '../components/Tag'
 import FAQAccordion from '../components/FAQAccordion'
 
 const nominators = [
-  { title: 'American Legion Posts', desc: 'Local posts are the backbone of the nomination process. Each post can nominate multiple citizens from their community.', icon: '\u2605' },
+  { title: 'American Legion Posts', desc: 'Local posts are the backbone of the nomination process. Each post can nominate multiple citizens from their community.', icon: '★' },
   { title: 'Educators & Counselors', desc: 'Teachers, principals, and school counselors can nominate students who demonstrate leadership and civic interest.', icon: '\u{1F3EB}' },
   { title: 'Community Leaders', desc: 'Coaches, pastors, civic leaders, and other community members who know a standout young man can submit a nomination.', icon: '\u{1F91D}' },
 ]
@@ -20,9 +20,9 @@ const qualities = [
 
 const faqItems = [
   { question: 'How many students can I nominate?', answer: 'There is no limit to the number of students you can nominate. We encourage nominators to identify all qualified young men in their community.' },
-  { question: 'Does the nominee need to know they\u2019re being nominated?', answer: 'We recommend informing the student and their family before submitting a nomination, as they\u2019ll need to complete an application after being nominated.' },
+  { question: 'Does the nominee need to know they’re being nominated?', answer: 'We recommend informing the student and their family before submitting a nomination, as they’ll need to complete an application after being nominated.' },
   { question: 'Is there a fee to nominate or attend?', answer: 'No. Nominating a student is free, and there is no cost to the citizen or their family. Every citizen is fully sponsored through a $500 sponsorship funded by alumni, local businesses, and community organizations.' },
-  { question: 'What happens after I submit a nomination?', answer: 'The nominee and their family will receive information about completing an application. Once accepted, they\u2019ll be invited to attend a pre-session orientation meeting.' },
+  { question: 'What happens after I submit a nomination?', answer: 'The nominee and their family will receive information about completing an application. Once accepted, they’ll be invited to attend a pre-session orientation meeting.' },
 ]
 
 export default function NominatePage() {
@@ -46,7 +46,7 @@ export default function NominatePage() {
               <div key={i} className="bg-white border border-gray-200 rounded-xl p-7 text-center">
                 <div className="text-3xl mb-4">{n.icon}</div>
                 <h3 className="font-serif font-bold text-navy text-lg mb-2">{n.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{n.desc}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{n.desc}</p>
               </div>
             ))}
           </div>
@@ -64,16 +64,16 @@ export default function NominatePage() {
                 {qualities.map((q, i) => (
                   <li key={i} className="flex gap-3 items-start">
                     <span className="mt-1 w-5 h-5 bg-red rounded-full flex items-center justify-center shrink-0">
-                      <span className="text-white text-xs font-bold">{'\u2713'}</span>
+                      <span className="text-white text-xs font-bold">{'✓'}</span>
                     </span>
-                    <span className="text-gray-500">{q}</span>
+                    <span className="text-gray-600">{q}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="bg-cream border border-gray-200 rounded-xl p-12 text-center">
               <div className="text-5xl mb-4">{'\u{1F393}'}</div>
-              <p className="text-sm text-gray-400">Student Leadership Photo</p>
+              <p className="text-sm text-gray-500">Student Leadership Photo</p>
             </div>
           </div>
         </div>

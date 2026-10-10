@@ -5,8 +5,8 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const featured = {
   date: 'Mar 15, 2026',
-  title: '2026 Session Dates Announced: June 13\u201319 at Lindenwood University',
-  desc: 'Missouri Boys State will return to Lindenwood University in St. Charles for its annual session. Registration opens April 1 for all sponsored citizens. This year\u2019s program promises expanded activities, new keynote speakers, and record-setting community sponsorship contributions.',
+  title: '2026 Session Dates Announced: June 13–19 at Lindenwood University',
+  desc: 'Missouri Boys State will return to Lindenwood University in St. Charles for its annual session. Registration opens April 1 for all sponsored citizens. This year’s program promises expanded activities, new keynote speakers, and record-setting community sponsorship contributions.',
 }
 
 const articles = [
@@ -24,7 +24,7 @@ export default function NewsPage() {
       <PageHero
         tag="News"
         title="News & Media"
-        description="The latest from Missouri Boys State \u2014 announcements, stories, and updates."
+        description="The latest from Missouri Boys State — announcements, stories, and updates."
       />
 
       {/* Featured Article */}
@@ -35,7 +35,7 @@ export default function NewsPage() {
             <div>
               <span className="text-[11px] font-bold text-gold tracking-wide uppercase">{featured.date}</span>
               <h2 className="font-serif font-bold text-navy text-2xl lg:text-3xl my-3 leading-snug">{featured.title}</h2>
-              <p className="text-gray-500 leading-relaxed">{featured.desc}</p>
+              <p className="text-gray-600 leading-relaxed">{featured.desc}</p>
               <a href="#" className="inline-block mt-4 text-sm font-bold text-red">Read Full Article &rarr;</a>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function NewsPage() {
               <a key={i} href="#" className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md transition block">
                 <span className="text-[11px] font-bold text-gold tracking-wide uppercase">{a.date}</span>
                 <h3 className="font-serif font-bold text-navy text-[15px] mt-2 mb-1 leading-snug">{a.title}</h3>
-                <p className="text-[13px] text-gray-400">{a.desc}</p>
+                <p className="text-[13px] text-gray-500">{a.desc}</p>
               </a>
             ))}
           </div>
@@ -58,7 +58,7 @@ export default function NewsPage() {
       <section className="py-16 bg-cream border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h3 className="font-serif font-bold text-navy text-xl mb-2">Looking for press materials?</h3>
-          <p className="text-sm text-gray-400 mb-4">Access press releases, media kits, and contact information for media inquiries.</p>
+          <p className="text-sm text-gray-500 mb-4">Access press releases, media kits, and contact information for media inquiries.</p>
           <Link to="/news/press" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Press Room
           </Link>
