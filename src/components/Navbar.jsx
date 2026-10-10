@@ -295,6 +295,12 @@ export default function Navbar() {
           {/* Desktop CTA - compact, since utility bar has full CTAs */}
           <div className="hidden lg:flex gap-2 shrink-0">
             <Link
+              to="/nominate"
+              className="border border-white/40 hover:border-white hover:bg-white/10 text-white text-[13px] font-bold px-5 py-2 rounded-lg transition"
+            >
+              Nominate
+            </Link>
+            <Link
               to="/apply"
               className="bg-red hover:bg-red-dark text-white text-[13px] font-bold px-5 py-2 rounded-lg transition"
             >

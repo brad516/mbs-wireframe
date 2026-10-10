@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import SponsorLogo from '../components/SponsorLogo'
 import CountUp from '../components/CountUp'
+import { AudienceRouter, Selection, DistinguishedAlumni, Endorsements, SampleBadge, outcomes, givingLevels } from './home/PrestigeSections'
 import { getPhoto } from '../lib/photos'
 import Tag from '../components/Tag'
 
@@ -37,13 +38,13 @@ function Hero() {
 
       <div className={`relative z-[2] text-center max-w-3xl px-6 ${hero ? 'pt-56 pb-14' : 'py-10'}`}>
         <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5 [text-shadow:0_1px_8px_rgb(8_21_41/0.9)] motion-safe:animate-rise">
-          A Program of The American Legion, Department of Missouri
+          Est. 1938 &middot; By Nomination &middot; A Program of The American Legion
         </p>
         <h1 className="font-serif font-bold text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 [text-shadow:0_2px_16px_rgb(8_21_41/0.6)] motion-safe:animate-rise [animation-delay:120ms]">
-          Where Missouri&rsquo;s<br />Next Leaders Begin
+          Missouri&rsquo;s Premier<br />Civic Leadership Program
         </h1>
         <p className="text-white/90 text-lg leading-relaxed max-w-xl mx-auto mb-9 motion-safe:animate-rise [animation-delay:240ms]">
-          For 85+ years, Boys State has challenged the best high school juniors in Missouri to lead, compete, and govern — one transformative week at a time.
+          Each June, 1,600 of Missouri&rsquo;s most promising juniors are chosen by their schools to build and run a state of their own. It is an honor they carry for life.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center motion-safe:animate-rise [animation-delay:360ms]">
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-base px-9 py-4 rounded-lg transition">
@@ -53,7 +54,7 @@ function Hero() {
             Nominate a Student
           </Link>
           <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-base px-9 py-4 rounded-lg transition">
-            Give / Sponsor
+            Invest in a Citizen
           </Link>
         </div>
       </div>
@@ -70,31 +71,27 @@ function Hero() {
 /* ══════════════════════════════════════════════════
    STATS BAR
    ══════════════════════════════════════════════════ */
-const stats = [
-  { number: '85+', label: 'Years of Leadership' },
-  { number: '1,600', label: 'Citizens Each Summer' },
-  { number: '50,000+', label: 'Alumni Nationwide' },
-  { number: '2', label: 'Boys Nation Senators Annually' },
-]
-
 function StatsBar() {
   return (
     <section className="relative bg-white border-b border-gray-200 py-9">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-light to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
-          {stats.map((s, i) => (
+          {outcomes.map((s, i) => (
             <div key={i} className="flex items-center gap-8 sm:gap-12">
               <div className="text-center">
                 <span className="block font-serif text-4xl font-bold text-navy leading-none"><CountUp value={s.number} /></span>
-                <span className="block text-[13px] font-medium text-gray-500 mt-1.5">{s.label}</span>
+                <span className="block text-[13px] font-medium text-gray-600 mt-1.5 max-w-[11rem]">{s.label}</span>
               </div>
-              {i < stats.length - 1 && (
+              {i < outcomes.length - 1 && (
                 <div className="hidden sm:block w-px h-10 bg-gray-200" />
               )}
             </div>
           ))}
         </div>
+        <p className="flex items-center justify-center gap-3 text-xs text-gray-500 mt-6">
+          Source: Missouri Boys State alumni survey and annual report. <SampleBadge />
+        </p>
       </div>
     </section>
   )
@@ -523,19 +520,32 @@ function DonateStrip() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 text-center lg:text-left">
             <Tag light>Support the Mission</Tag>
-            <h2 className="font-serif font-bold text-white text-3xl lg:text-4xl mb-4">Every Dollar Sends a Future Leader</h2>
+            <h2 className="font-serif font-bold text-white text-3xl lg:text-4xl mb-4">Invest in Missouri&rsquo;s Next Generation of Leaders</h2>
             <p className="text-white/80 text-base leading-relaxed">
               It costs approximately <strong className="text-gold-light">$500 to sponsor one citizen</strong> for the full Boys State experience. Every dollar you give directly sponsors a future citizen — ensuring no young man is ever limited by finances.
             </p>
           </div>
-          <div className="shrink-0 flex flex-col items-center gap-3">
-            <Link to="/give" className="bg-gold hover:bg-gold-light text-white font-bold text-base px-9 py-4 rounded-lg transition w-full text-center">
-              Make a Gift
-            </Link>
-            <Link to="/give/corporate" className="border-2 border-white/30 hover:border-white hover:bg-white/10 text-white font-bold text-base px-9 py-4 rounded-lg transition w-full text-center">
-              Corporate Sponsorship
-            </Link>
-            <p className="text-xs text-white/60 mt-1">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
+          <div className="w-full lg:w-[30rem] shrink-0">
+            <div className="grid grid-cols-2 gap-3">
+              {givingLevels.map((g) => (
+                <Link
+                  key={g.amount}
+                  to="/give"
+                  className={`group rounded-xl p-5 text-left transition border ${g.featured ? 'bg-gold border-gold hover:bg-gold-light' : 'border-white/20 hover:border-gold-light hover:bg-white/5'}`}
+                >
+                  <span className="block font-serif font-bold text-white text-2xl">{g.amount}</span>
+                  <span className="block font-bold text-white text-sm mt-1">{g.label}</span>
+                  <span className={`block text-xs mt-0.5 ${g.featured ? 'text-white/90' : 'text-white/60'}`}>{g.desc}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-3 mt-4">
+              <Link to="/give/corporate" className="text-sm font-bold text-gold-light hover:text-white transition">
+                Corporate partnership &rarr;
+              </Link>
+              <SampleBadge light />
+            </div>
+            <p className="text-xs text-white/60 mt-3">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
           </div>
         </div>
       </div>
@@ -678,8 +688,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <AudienceRouter />
       <UrgencyBanner />
       <StatsBar />
+      <Selection />
       <MissionValues />
       <LegionConnection />
       <WhatIsMBS />
@@ -687,6 +699,8 @@ export default function HomePage() {
       <WeekCarousel />
       <CostAndSafety />
       <StudentVoices />
+      <DistinguishedAlumni />
+      <Endorsements />
       <AlumniImpact />
       <AudiencePaths />
       <DonateStrip />
