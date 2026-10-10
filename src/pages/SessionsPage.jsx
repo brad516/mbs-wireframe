@@ -24,6 +24,7 @@ export default function SessionsPage() {
   return (
     <>
       <PageHero
+        photo="hero.sessions"
         tag="Archives"
         title="Session Archives"
         description="A look back at 85+ years of Missouri Boys State sessions, governors, and memories."

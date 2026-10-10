@@ -28,6 +28,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        photo="hero.about"
         tag="About"
         title="About Missouri Boys State"
         description="A program of The American Legion, developing civic leaders since 1938."

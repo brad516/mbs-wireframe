@@ -19,6 +19,8 @@ export default function GivePage() {
   return (
     <>
       <PageHero
+        photo="hero.give"
+        photoPosition="object-[center_18%]"
         tag="Give"
         title="Invest in Missouri&rsquo;s Future Leaders"
         description="Every citizen is fully sponsored. Your tax-deductible gift directly funds citizen sponsorships and ensures no young man is limited by finances."

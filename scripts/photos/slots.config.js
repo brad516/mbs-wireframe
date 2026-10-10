@@ -39,6 +39,19 @@ const slots = {
     alt: 'The whole of Missouri Boys State on its feet at the joint party rally',
   },
 
+  // Page heroes, pinned by name. No day/tag filter so they share one scan.
+  ...Object.fromEntries(
+    Object.entries({
+      students: ['2026MBS_FridayEveningAssembly-53.jpg', 'Citizens arm in arm, holding up phone lights at the final evening assembly'],
+      parents: ['2026MBS_SaturdayArrivals-78.jpg', 'A staff member welcoming citizens as they arrive with their bags'],
+      educators: ['2026MBS_MondaySchools-84.jpg', 'An instructor teaching citizens in a School of Instruction'],
+      about: ['2026MBS_ThursdayEveningCeremony-80.jpg', 'The whole of Missouri Boys State gathered in the arena'],
+      alumni: ['2026MBS_FridayAlumniStories-30.jpg', 'Alumni speaking with citizens'],
+      give: ['2026MBS_SaturdayAwards-18.jpg', 'A citizen holding his award at the closing ceremony'],
+      sessions: ['2026MBS_SaturdayStatePhoto-2.jpg', 'Every citizen of the session in the stadium for the state photo'],
+    }).map(([page, [name, alt]]) => [`hero.${page}`, { year: CURRENT, names: [name], widths: [960, 1920], alt }]),
+  ),
+
   // Feature images
   'home.alumni': { year: CURRENT, days: ['Friday'], match: 'FridayAlumniStories', alt: 'Missouri Boys State alumni sharing their stories' },
   'about.group': { year: CURRENT, tags: ['Photo Day'], match: 'SaturdayStatePhoto', alt: 'The full Missouri Boys State session gathered for the state photo' },

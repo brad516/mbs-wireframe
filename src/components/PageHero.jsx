@@ -1,17 +1,22 @@
 import Tag from './Tag'
+import HeroBackground from './HeroBackground'
 
-export default function PageHero({ tag, title, description }) {
+export default function PageHero({ tag, title, description, photo, photoPosition }) {
   return (
-    <section className="relative bg-navy py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,theme(colors.navy.lighter),transparent_65%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-light/60 to-transparent" />
-      <div className="relative max-w-4xl mx-auto px-6 text-center motion-safe:animate-rise">
+    <section className={`relative bg-navy overflow-hidden ${photo ? 'py-28 lg:py-36' : 'py-20'}`}>
+      {photo ? (
+        <HeroBackground slot={photo} position={photoPosition} />
+      ) : (
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,theme(colors.navy.lighter),transparent_65%)]" />
+      )}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-light/60 to-transparent z-[2]" />
+      <div className="relative z-[2] max-w-4xl mx-auto px-6 text-center motion-safe:animate-rise">
         {tag && <Tag light>{tag}</Tag>}
         <h1 className="font-serif font-bold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
           {title}
         </h1>
         {description && (
-          <p className="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-white/90 text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
           </p>
         )}

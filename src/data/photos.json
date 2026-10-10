@@ -83,6 +83,76 @@
       "alt": "A keynote speaker addressing citizens"
     }
   ],
+  "hero.about": [
+    {
+      "name": "2026MBS_ThursdayEveningCeremony-80.jpg",
+      "src": "/photos/2026/2026mbs-thursdayeveningceremony-80-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-thursdayeveningceremony-80-960.webp 960w, /photos/2026/2026mbs-thursdayeveningceremony-80-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "The whole of Missouri Boys State gathered in the arena"
+    }
+  ],
+  "hero.alumni": [
+    {
+      "name": "2026MBS_FridayAlumniStories-30.jpg",
+      "src": "/photos/2026/2026mbs-fridayalumnistories-30-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-fridayalumnistories-30-960.webp 960w, /photos/2026/2026mbs-fridayalumnistories-30-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Alumni speaking with citizens"
+    }
+  ],
+  "hero.educators": [
+    {
+      "name": "2026MBS_MondaySchools-84.jpg",
+      "src": "/photos/2026/2026mbs-mondayschools-84-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-mondayschools-84-960.webp 960w, /photos/2026/2026mbs-mondayschools-84-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "An instructor teaching citizens in a School of Instruction"
+    }
+  ],
+  "hero.give": [
+    {
+      "name": "2026MBS_SaturdayAwards-18.jpg",
+      "src": "/photos/2026/2026mbs-saturdayawards-18-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-saturdayawards-18-960.webp 960w, /photos/2026/2026mbs-saturdayawards-18-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "A citizen holding his award at the closing ceremony"
+    }
+  ],
+  "hero.parents": [
+    {
+      "name": "2026MBS_SaturdayArrivals-78.jpg",
+      "src": "/photos/2026/2026mbs-saturdayarrivals-78-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-saturdayarrivals-78-960.webp 960w, /photos/2026/2026mbs-saturdayarrivals-78-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "A staff member welcoming citizens as they arrive with their bags"
+    }
+  ],
+  "hero.sessions": [
+    {
+      "name": "2026MBS_SaturdayStatePhoto-2.jpg",
+      "src": "/photos/2026/2026mbs-saturdaystatephoto-2-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-saturdaystatephoto-2-960.webp 960w, /photos/2026/2026mbs-saturdaystatephoto-2-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Every citizen of the session in the stadium for the state photo"
+    }
+  ],
+  "hero.students": [
+    {
+      "name": "2026MBS_FridayEveningAssembly-53.jpg",
+      "src": "/photos/2026/2026mbs-fridayeveningassembly-53-1920.webp",
+      "srcSet": "/photos/2026/2026mbs-fridayeveningassembly-53-960.webp 960w, /photos/2026/2026mbs-fridayeveningassembly-53-1920.webp 1920w",
+      "width": 1920,
+      "height": 1280,
+      "alt": "Citizens arm in arm, holding up phone lights at the final evening assembly"
+    }
+  ],
   "home.alumni": [
     {
       "name": "2026MBS_FridayAlumniStories-30.jpg",

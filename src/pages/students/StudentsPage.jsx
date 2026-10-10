@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
+import HeroBackground from '../../components/HeroBackground'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { getPhoto } from '../../lib/photos'
 import FAQAccordion from '../../components/FAQAccordion'
@@ -63,8 +64,7 @@ const faqItems = [
 function StudentHero() {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center bg-navy overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-light via-navy to-navy-lighter" />
-      <div className="absolute inset-0 bg-gradient-to-br from-navy/85 to-navy/60 z-[1]" />
+      <HeroBackground slot="hero.students" />
 
       <div className="relative z-[2] text-center max-w-3xl px-6 py-10">
         <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5">
@@ -83,7 +83,7 @@ function StudentHero() {
             <div key={i} className="flex items-center gap-8 sm:gap-12">
               <div className="text-center">
                 <span className={`block font-serif text-3xl sm:text-4xl font-bold leading-none ${s.highlight ? 'text-gold-light' : 'text-white'}`}>{s.number}</span>
-                <span className="block text-[12px] font-medium text-white/50 mt-1">{s.label}</span>
+                <span className="block text-[12px] font-medium text-white/80 mt-1">{s.label}</span>
               </div>
               {i < heroStats.length - 1 && <div className="hidden sm:block w-px h-8 bg-white/20" />}
             </div>
@@ -100,9 +100,6 @@ function StudentHero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[2] text-white/50 text-sm">
-        Student Hero Photo / Video Background
-      </div>
     </section>
   )
 }

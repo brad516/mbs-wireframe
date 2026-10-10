@@ -19,6 +19,8 @@ export default function AlumniPage() {
   return (
     <>
       <PageHero
+        photo="hero.alumni"
+        photoPosition="object-[center_15%]"
         tag="Alumni"
         title="Once a Boys Stater, Always a Boys Stater"
         description="Join a network of 50,000+ alumni who are leading in every field and every community across Missouri and beyond."

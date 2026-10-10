@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
+import HeroBackground from '../components/HeroBackground'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import FAQAccordion from '../components/FAQAccordion'
 import CountUp from '../components/CountUp'
@@ -49,8 +50,7 @@ const educatorTestimonials = [
 function EducatorHero() {
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center bg-navy overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-light via-navy to-navy-lighter" />
-      <div className="absolute inset-0 bg-gradient-to-br from-navy/85 to-navy/60 z-[1]" />
+      <HeroBackground slot="hero.educators" />
 
       <div className="relative z-[2] text-center max-w-3xl px-6 py-10">
         <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mb-5">
@@ -89,9 +89,6 @@ function EducatorHero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[2] text-white/50 text-sm">
-        Educator Hero Photo Background
-      </div>
     </section>
   )
 }
