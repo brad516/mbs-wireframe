@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { casinoNight } from '../../data/casinoNight'
 
 const upcoming = [
-  { month: 'APR', day: '18', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. All proceeds sponsor future MBS citizens.', slug: 'trivia', cta: 'Get Tickets' },
-  { month: 'MAY', day: '10', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', desc: 'Four-person scramble format. Includes lunch, prizes, and networking with MBS alumni and supporters.', slug: 'golf', cta: 'Register' },
-  { month: 'JUN', day: '13', title: '2026 Boys State Session', loc: 'Lindenwood University, St. Charles', desc: 'The main event. 1,600 citizens convene for a week of leadership, government, and brotherhood.', slug: null, cta: 'Learn More' },
+  { month: 'OCT', day: '9', title: 'MBS Casino Night: Betting on Democracy', loc: 'UMKC Bloch School Atrium, Kansas City', desc: 'Tables, an open bar and a toast to the next class of Boys State. Proceeds go straight to the program.', slug: 'casino-night', cta: 'Get Tickets' },
+  { month: 'APR', day: '17', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. All proceeds sponsor future MBS citizens.', slug: 'trivia', cta: 'Get Tickets' },
+  { month: 'MAY', day: '8', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', desc: 'Four-person scramble format. Includes lunch, prizes, and networking with MBS alumni and supporters.', slug: 'golf', cta: 'Register' },
+  { month: 'JUN', day: '19', title: '2027 Boys State Session', loc: 'Lindenwood University, St. Charles', desc: 'The main event. 1,600 citizens convene for a week of leadership, government, and brotherhood.', slug: null, cta: 'Learn More' },
   { month: 'OCT', day: 'TBD', title: 'Alumni Homecoming Weekend', loc: 'Lindenwood University, St. Charles', desc: 'Alumni from all years gather for a weekend of reconnection, tours, and celebration.', slug: null, cta: 'Coming Soon' },
 ]
 
@@ -18,7 +20,7 @@ const past = [
 const keyDates = [
   { label: 'Nominations Open', value: 'January 15' },
   { label: 'Nominations Close', value: 'May 1' },
-  { label: '2026 Session', value: 'June 13–19', highlight: true },
+  { label: '2027 Session', value: 'June 19–26', highlight: true },
   { label: 'Boys Nation', value: 'July (TBD)' },
   { label: 'Alumni Homecoming', value: 'October (TBD)' },
 ]
@@ -31,6 +33,29 @@ export default function EventsPage() {
         title="Events & Calendar"
         description="Fundraisers, gatherings, and key dates for the Missouri Boys State community."
       />
+
+      {/* Signature event */}
+      <section className="pt-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <Link
+            to={`/events/${casinoNight.slug}`}
+            className="group relative block overflow-hidden rounded-2xl bg-navy-dark shadow-lg"
+          >
+            <img src={casinoNight.heroImage} alt="" className="absolute inset-0 w-full h-full object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:group-hover:scale-[1.03]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/85 to-navy-dark/30" />
+            <div className="relative p-8 sm:p-12 lg:p-16 max-w-2xl">
+              <span className="inline-block bg-gold text-white text-[11px] font-bold tracking-[0.15em] uppercase px-3 py-1 rounded">Signature Event</span>
+              <p className="text-gold-light text-xs font-bold tracking-[0.2em] uppercase mt-6 mb-2">{casinoNight.edition}</p>
+              <h2 className="font-serif font-bold text-white text-4xl lg:text-5xl mb-3">{casinoNight.title}</h2>
+              <p className="text-white/90 text-lg mb-6">{casinoNight.tagline}</p>
+              <p className="text-white font-semibold mb-8">{casinoNight.date} · {casinoNight.time}<br />{casinoNight.venue}, {casinoNight.city}</p>
+              <span className="inline-block bg-red group-hover:bg-red-dark text-white font-bold text-base px-8 py-3.5 rounded-lg transition">
+                Tickets &amp; Details &rarr;
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
 
       {/* Upcoming Events */}
       <section className="py-24">
@@ -71,7 +96,7 @@ export default function EventsPage() {
             {/* Key Dates */}
             <div>
               <Tag>Key Dates</Tag>
-              <h2 className="font-serif font-bold text-navy text-2xl mb-6">2026 Calendar</h2>
+              <h2 className="font-serif font-bold text-navy text-2xl mb-6">2027 Calendar</h2>
               <div className="bg-cream border border-gray-200 rounded-xl p-6">
                 {keyDates.map((d, i) => (
                   <div

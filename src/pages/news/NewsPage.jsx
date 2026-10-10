@@ -5,14 +5,14 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const featured = {
   date: 'Mar 15, 2026',
-  title: '2026 Session Dates Announced: June 13–19 at Lindenwood University',
+  title: '2027 Session Dates Announced: June 19–26 at Lindenwood University',
   desc: 'Missouri Boys State will return to Lindenwood University in St. Charles for its annual session. Registration opens April 1 for all sponsored citizens. This year’s program promises expanded activities, new keynote speakers, and record-setting community sponsorship contributions.',
 }
 
 const articles = [
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'The tradition of civic leadership continues at the highest levels of Missouri government.' },
-  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every citizen is fully sponsored. The MBS Memorial Trust has exceeded its fundraising target.' },
-  { date: 'Jan 25, 2026', title: 'Nominations Now Open for 2026 Session', desc: 'American Legion posts, schools, and community leaders can begin nominating outstanding high school juniors.' },
+  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2027', desc: 'Community generosity ensures every citizen is fully sponsored. The MBS Memorial Trust has exceeded its fundraising target.' },
+  { date: 'Jan 25, 2026', title: 'Nominations Now Open for 2027 Session', desc: 'American Legion posts, schools, and community leaders can begin nominating outstanding high school juniors.' },
   { date: 'Dec 15, 2025', title: 'MBS Governor Earns Full Scholarship to Mizzou', desc: 'The 2025 Boys State governor has been awarded a prestigious leadership scholarship to the University of Missouri.' },
   { date: 'Nov 20, 2025', title: 'Annual Golf Tournament Raises $45,000', desc: 'The fall fundraiser at Old Warson Country Club drew record participation and exceeded its goal.' },
   { date: 'Oct 5, 2025', title: 'Alumni Homecoming Weekend Draws 300+ Attendees', desc: 'Alumni from six decades gathered at Lindenwood University for a weekend of reconnection and celebration.' },

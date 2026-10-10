@@ -32,7 +32,9 @@ import NewsPage from './pages/news/NewsPage'
 import PressPage from './pages/news/PressPage'
 import EventsPage from './pages/events/EventsPage'
 import EventDetailPage from './pages/events/EventDetailPage'
+import CasinoNightPage from './pages/events/CasinoNightPage'
 import SessionsPage from './pages/SessionsPage'
+import SessionLivePage from './pages/session/SessionLivePage'
 import SessionYearPage from './pages/session/SessionYearPage'
 import SessionSpeakersPage from './pages/session/SessionSpeakersPage'
 import SessionElectionResultsPage from './pages/session/SessionElectionResultsPage'
@@ -85,8 +87,11 @@ export default function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/press" element={<PressPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/casino-night" element={<CasinoNightPage />} />
           <Route path="/events/:slug" element={<EventDetailPage />} />
           <Route path="/sessions" element={<SessionsPage />} />
+          <Route path="/session/2026" element={<SessionLivePage />} />
+          <Route path="/session/2026/day/:day" element={<SessionLivePage />} />
           <Route path="/session/:year" element={<SessionYearPage />} />
           <Route path="/session/:year/speakers" element={<SessionSpeakersPage />} />
           <Route path="/session/:year/election-results" element={<SessionElectionResultsPage />} />

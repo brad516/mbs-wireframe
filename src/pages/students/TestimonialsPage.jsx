@@ -67,7 +67,7 @@ export default function TestimonialsPage() {
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif font-bold text-white text-2xl mb-4">Ready to write your own story?</h2>
-          <p className="text-white/70 mb-6">Applications for the 2026 session are open now.</p>
+          <p className="text-white/70 mb-6">Applications for the 2027 session are open now.</p>
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Apply Now
           </Link>

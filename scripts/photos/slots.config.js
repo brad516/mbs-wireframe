@@ -81,4 +81,25 @@ for (const year of ARCHIVE_YEARS) {
   slots[`session.${year}.closing`] = { year, days: ['Closing Ceremony'], count: 4, alt: `The ${year} closing ceremony` }
 }
 
+// Day-by-day galleries for the live session page. File names carry the event,
+// so each day is built from its events. No day/tag filter is set, which lets
+// every part share one scan of the year.
+const LIVE_DAYS = {
+  saturday: [['SaturdayArrivals', 2], ['SaturdayFirstCityMeetings', 2], ['SaturdayEveningAssembly', 2]],
+  sunday: [['SundayCityCaucusAndRally', 2], ['SundayVoting', 1], ['SundayElectionResults', 1], ['SundayEveningActivities', 2]],
+  monday: [['MondayAthleticsSoftballTennis', 2], ['MondaySchools', 2], ['MondayCountyPartyMeetings', 1], ['2026MBS_Monday-', 1]],
+  tuesday: [['NaturalizationCeremony', 2], ['TuesdayNationalistPartyCaucus', 1], ['TuesdayLawSchool', 1], ['TuesdayEveningAssembly', 2]],
+  wednesday: [['WednesdayWhistlestops', 1], ['WednesdayGubernatorialDebate', 2], ['WednesdayJointPartyRally', 2], ['WednesdayElectionResults', 1]],
+  thursday: [['ThursdayGeneralElectionResults', 1], ['ThursdayInauguration', 2], ['ThursdayStateFair', 2], ['ThursdayEveningCeremony', 1]],
+  friday: [['FridayPhotoDay', 2], ['FridayEveningAssembly', 3], ['FridayAlumniStories', 1]],
+  closing: [['SaturdayClosingCeremony', 3], ['SaturdayAwards', 2], ['SaturdayStatePhoto', 1]],
+}
+for (const [day, events] of Object.entries(LIVE_DAYS)) {
+  slots[`live.${CURRENT}.${day}`] = {
+    year: CURRENT,
+    alt: `Missouri Boys State ${CURRENT}`,
+    parts: events.map(([match, count]) => ({ match, count })),
+  }
+}
+
 export default slots

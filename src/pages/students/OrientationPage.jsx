@@ -3,11 +3,11 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const meetings = [
-  { date: 'April 12, 2026', location: 'American Legion Post 138, Bolivar', time: '2:00 PM' },
-  { date: 'April 19, 2026', location: 'American Legion Post 5, St. Louis', time: '10:00 AM' },
-  { date: 'April 26, 2026', location: 'American Legion Post 21, Kansas City', time: '1:00 PM' },
-  { date: 'May 3, 2026', location: 'American Legion Post 11, Springfield', time: '2:00 PM' },
-  { date: 'May 10, 2026', location: 'American Legion Post 68, Columbia', time: '10:00 AM' },
+  { date: 'April 12, 2027', location: 'American Legion Post 138, Bolivar', time: '2:00 PM' },
+  { date: 'April 19, 2027', location: 'American Legion Post 5, St. Louis', time: '10:00 AM' },
+  { date: 'April 26, 2027', location: 'American Legion Post 21, Kansas City', time: '1:00 PM' },
+  { date: 'May 3, 2027', location: 'American Legion Post 11, Springfield', time: '2:00 PM' },
+  { date: 'May 10, 2027', location: 'American Legion Post 68, Columbia', time: '10:00 AM' },
 ]
 
 const checklist = [

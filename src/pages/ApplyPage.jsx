@@ -16,7 +16,7 @@ const keyDates = [
   { label: 'Nominations Open', value: 'January 15' },
   { label: 'Applications Open', value: 'February 1' },
   { label: 'Application Deadline', value: 'May 1', highlight: true },
-  { label: '2026 Session', value: 'June 13–19', highlight: true },
+  { label: '2027 Session', value: 'June 19–26', highlight: true },
 ]
 
 const faqItems = [

@@ -52,7 +52,7 @@ const faqItems = [
   { question: 'What is Missouri Boys State?', answer: 'An 8-day immersive leadership and civic education program for rising high school seniors. You and ~850 other citizens build a functioning state government from scratch — complete with elections, legislature, courts, media, and businesses.' },
   { question: 'How much does it cost?', answer: 'Nothing. Every citizen is fully sponsored. There is no fee for you or your family. You may want to bring ~$45 for snacks, toiletries, and the official MBS t-shirt.' },
   { question: 'What should I expect?', answer: 'A fast-paced, action-packed week. You’ll hit the ground running Saturday night with party organization and caucuses. Elections, legislation, court cases, and campaigns happen every day. You’ll also attend a school of instruction, compete in athletics, and hear from keynote speakers every night.' },
-  { question: 'What are the dates for 2026?', answer: 'The 2026 session runs June 13–19 at Lindenwood University in St. Charles, MO.' },
+  { question: 'What are the dates for 2027?', answer: 'The 2027 session runs June 19–26 at Lindenwood University in St. Charles, MO.' },
   { question: 'What should I bring?', answer: 'Comfortable clothes for the week, business casual attire if you plan to run for office, personal toiletries, any medications, and a positive attitude. A full packing list is provided after acceptance.' },
   { question: 'Can I bring a musical instrument?', answer: 'Yes! There are often informal jam sessions and talent show opportunities during the week.' },
 ]
@@ -513,7 +513,7 @@ function StickyApplyCTA() {
       <div className="bg-navy/95 backdrop-blur-sm border-t border-white/10 py-3 px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="hidden sm:block">
-            <span className="text-white font-bold text-sm">2026 Session: June 13&ndash;19</span>
+            <span className="text-white font-bold text-sm">2027 Session: June 19&ndash;26</span>
             <span className="text-white/50 text-sm ml-3">Applications close May 1</span>
           </div>
           <div className="flex gap-3 w-full sm:w-auto">
@@ -538,7 +538,7 @@ function BottomCTA() {
     <section className="bg-navy py-16">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="font-serif font-bold text-white text-2xl mb-4">Take the First Step</h2>
-        <p className="text-white/70 mb-6 max-w-lg mx-auto">Applications for the 2026 session are open. Join 850 citizens this June for the week that shapes a lifetime.</p>
+        <p className="text-white/70 mb-6 max-w-lg mx-auto">Applications for the 2027 session are open. Join 850 citizens this June for the week that shapes a lifetime.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Apply Now

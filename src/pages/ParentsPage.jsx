@@ -92,7 +92,7 @@ function SessionSpotlight() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
           <p className="text-white text-sm font-bold">
-            2026 Session: June 13&ndash;19 at Lindenwood University, St. Charles, MO
+            2027 Session: June 19&ndash;26 at Lindenwood University, St. Charles, MO
           </p>
           <span className="hidden sm:inline text-white/60">|</span>
           <p className="text-white/90 text-sm">
@@ -486,7 +486,7 @@ function BottomCTA() {
     <section className="bg-navy py-16">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="font-serif font-bold text-white text-2xl mb-4">Ready to help your son take the next step?</h2>
-        <p className="text-white/70 mb-6">Applications for the 2026 session are open. The deadline is May 1.</p>
+        <p className="text-white/70 mb-6">Applications for the 2027 session are open. The deadline is May 1.</p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link to="/apply" className="bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Apply Now

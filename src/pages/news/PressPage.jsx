@@ -2,9 +2,9 @@ import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 
 const releases = [
-  { date: 'Mar 15, 2026', title: '2026 Missouri Boys State Session Dates Announced', desc: 'The American Legion Boys State of Missouri, Inc. announces the 2026 session will be held June 13–19 at Lindenwood University.' },
+  { date: 'Mar 15, 2026', title: '2027 Missouri Boys State Session Dates Announced', desc: 'The American Legion Boys State of Missouri, Inc. announces the 2027 session will be held June 19–26 at Lindenwood University.' },
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'Former Boys State citizens continue the program’s legacy of civic leadership at the highest levels.' },
-  { date: 'Jan 15, 2026', title: 'Nominations Open for 2026 Missouri Boys State', desc: 'American Legion posts, schools, and community leaders are invited to nominate outstanding high school juniors.' },
+  { date: 'Jan 15, 2026', title: 'Nominations Open for 2027 Missouri Boys State', desc: 'American Legion posts, schools, and community leaders are invited to nominate outstanding high school juniors.' },
   { date: 'Nov 20, 2025', title: 'Annual Golf Tournament Raises $45,000 for Citizen Sponsorships', desc: 'The fall fundraiser at Old Warson Country Club drew record participation and exceeded its fundraising goal.' },
   { date: 'Jun 20, 2025', title: '2025 Missouri Boys State Session Concludes Successfully', desc: 'Nearly 1,600 citizens participated in the week-long civic education program at Lindenwood University.' },
 ]

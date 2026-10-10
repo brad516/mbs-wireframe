@@ -106,7 +106,7 @@ function UrgencyBanner() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
           <p className="text-white text-sm font-bold">
-            2026 Session: June 13&ndash;19 at Lindenwood University
+            2027 Session: June 19&ndash;26 at Lindenwood University
           </p>
           <span className="hidden sm:inline text-white/60">|</span>
           <p className="text-white/90 text-sm">
@@ -592,21 +592,22 @@ function Partners() {
    NEWS & EVENTS
    ══════════════════════════════════════════════════ */
 const newsItems = [
-  { date: 'Mar 15, 2026', title: '2026 Session Dates Announced: June 13–19 at Lindenwood University', desc: 'Registration opens April 1 for all sponsored citizens.' },
+  { date: 'Mar 15, 2026', title: '2027 Session Dates Announced: June 19–26 at Lindenwood University', desc: 'Registration opens April 1 for all sponsored citizens.' },
   { date: 'Feb 28, 2026', title: 'Three MBS Alumni Named to Missouri Supreme Court Commission', desc: 'The tradition of civic leadership continues at the highest levels.' },
-  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2026', desc: 'Community generosity ensures every citizen is fully sponsored for the upcoming session.' },
+  { date: 'Feb 10, 2026', title: 'Sponsorship Fund Surpasses $200K Goal for 2027', desc: 'Community generosity ensures every citizen is fully sponsored for the upcoming session.' },
 ]
 
 const events = [
-  { month: 'APR', day: '18', title: 'Spring Trivia Night', loc: 'Fundraiser at The Coliseum, St. Louis', link: '/events/trivia', cta: 'Get Tickets' },
-  { month: 'MAY', day: '10', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', link: '/events/golf', cta: 'Register' },
-  { month: 'JUN', day: '13', title: '2026 Boys State Session Begins', loc: 'Lindenwood University, St. Charles', link: '/students', cta: 'Learn More' },
+  { month: 'OCT', day: '9', title: 'MBS Casino Night', loc: 'UMKC Bloch School Atrium, Kansas City', link: '/events/casino-night', cta: 'Get Tickets' },
+  { month: 'APR', day: '17', title: 'Spring Trivia Night', loc: 'Fundraiser at The Coliseum, St. Louis', link: '/events/trivia', cta: 'Get Tickets' },
+  { month: 'MAY', day: '8', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', link: '/events/golf', cta: 'Register' },
+  { month: 'JUN', day: '19', title: '2027 Boys State Session Begins', loc: 'Lindenwood University, St. Charles', link: '/students', cta: 'Learn More' },
 ]
 
 const keyDates = [
   { label: 'Nominations Open', value: 'January 15' },
   { label: 'Nominations Close', value: 'May 1' },
-  { label: '2026 Session', value: 'June 13–19', highlight: true },
+  { label: '2027 Session', value: 'June 19–26', highlight: true },
   { label: 'Boys Nation', value: 'July (TBD)' },
   { label: 'Alumni Homecoming', value: 'October (TBD)' },
 ]

@@ -9,7 +9,7 @@ const tabs = [
     label: 'General',
     items: [
       { question: 'What is Missouri Boys State?', answer: 'Missouri Boys State is a week-long immersive leadership and civic education program for high school juniors, sponsored by The American Legion. Each summer, approximately 1,600 citizens build a functioning state government from the ground up.' },
-      { question: 'When and where is the 2026 session?', answer: 'The 2026 session runs June 13–19 at Lindenwood University in St. Charles, Missouri.' },
+      { question: 'When and where is the 2027 session?', answer: 'The 2027 session runs June 19–26 at Lindenwood University in St. Charles, Missouri.' },
       { question: 'How long has Boys State been running?', answer: 'Missouri Boys State has been developing civic leaders since 1938 — over 85 years of continuous operation, with more than 50,000 alumni.' },
       { question: 'Is Missouri Boys State affiliated with a political party?', answer: 'No. Boys State is entirely nonpartisan. While citizens form political parties during the program, these are not affiliated with any real-world party. The focus is on understanding the democratic process, not partisan politics.' },
       { question: 'What is Boys Nation?', answer: 'Boys Nation is a national program where the top two representatives from each state’s Boys State convene in Washington, D.C. for a week of government simulation at the federal level. Missouri sends two senators each year.' },

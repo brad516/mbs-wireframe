@@ -7,6 +7,7 @@ import { getPhoto, getPhotos } from '../lib/photos'
 const PHOTO_SITE = 'https://photos.moboysstate.org'
 
 const sessions = [
+  { year: '2026', governor: 'Craig Shade', delegates: '862' },
   { year: '2025', governor: 'Governor Name', delegates: '1,584' },
   { year: '2024', governor: 'Governor Name', delegates: '1,612' },
   { year: '2023', governor: 'Governor Name', delegates: '1,575' },
@@ -34,14 +35,14 @@ export default function SessionsPage() {
           <div className="bg-red text-white rounded-xl p-10 grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <span className="text-white/60 text-xs font-bold tracking-[0.15em] uppercase">Upcoming</span>
-              <h2 className="font-serif font-bold text-3xl mt-2 mb-4">2026 Session</h2>
-              <p className="text-white/80 leading-relaxed mb-2">June 13&ndash;19 at Lindenwood University, St. Charles</p>
+              <h2 className="font-serif font-bold text-3xl mt-2 mb-4">2027 Session</h2>
+              <p className="text-white/80 leading-relaxed mb-2">June 19&ndash;26 at Lindenwood University, St. Charles</p>
               <p className="text-white/80 leading-relaxed mb-6">~1,600 citizens expected</p>
               <Link to="/apply" className="bg-white text-red font-bold text-sm px-7 py-3 rounded-lg hover:bg-cream transition">
                 Apply Now
               </Link>
             </div>
-            <MediaPlaceholder label="2026 Session Preview Photo" size="landscape" photo={getPhoto('sessions.preview')} />
+            <MediaPlaceholder label="2027 Session Preview Photo" size="landscape" photo={getPhoto('sessions.preview')} />
           </div>
         </div>
       </section>
@@ -58,7 +59,7 @@ export default function SessionsPage() {
                 to={s.year === '2020' ? '#' : `/session/${s.year}`}
                 className={`bg-white border border-gray-200 rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all ${s.year === '2020' ? 'opacity-50 pointer-events-none' : ''}`}
               >
-                <MediaPlaceholder label={`${s.year} Session Photo`} size="landscape" photo={getPhoto(`session.${s.year}.gallery`)} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
+                <MediaPlaceholder label={`${s.year} Session Photo`} size="landscape" photo={getPhoto(`session.${s.year}.gallery`) || getPhoto(`live.${s.year}.thursday`, 1)} sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" />
                 <div className="p-5">
                   <h3 className="font-serif font-bold text-navy text-2xl">{s.year}</h3>
                   <p className="text-sm text-gray-500">Governor: {s.governor}</p>
