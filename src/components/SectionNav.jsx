@@ -52,7 +52,10 @@ const sections = [
   },
   {
     base: '/news',
-    label: 'News',
+    label: 'News & Events',
+    // Events and the session archive live outside /news but belong to this
+    // section. Casino Night is left out: it has its own in-page bar.
+    also: ['/events', '/events/trivia', '/events/golf', '/sessions'],
     pages: [
       { to: '/news', label: 'Latest News' },
       { to: '/news/press', label: 'Press Room' },
@@ -64,7 +67,7 @@ const sections = [
 
 export default function SectionNav() {
   const { pathname } = useLocation()
-  const section = sections.find((s) => pathname === s.base || pathname.startsWith(`${s.base}/`))
+  const section = sections.find((s) => pathname === s.base || pathname.startsWith(`${s.base}/`) || s.also?.includes(pathname))
   const activeRef = useRef(null)
 
   // Keep the current page in view when the bar scrolls sideways on phones.
@@ -80,7 +83,8 @@ export default function SectionNav() {
         <span className="hidden md:block shrink-0 text-[11px] font-bold tracking-[0.15em] uppercase text-gold">{section.label}</span>
         <ul className="flex items-center gap-1 overflow-x-auto -mx-2 px-2">
           {section.pages.map((page) => {
-            const active = pathname === page.to
+            // An event's own page still counts as being under Events.
+            const active = pathname === page.to || (page.to === '/events' && pathname.startsWith('/events/'))
             return (
               <li key={page.to} className="shrink-0">
                 <Link
