@@ -5,6 +5,9 @@ import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { SampleBadge } from '../home/PrestigeSections'
 import { getPhotos } from '../../lib/photos'
 import { session2026 as session } from '../../data/session2026'
+import { sponsors } from '../../data/sponsors'
+
+const partnerCredits = ['The American Legion', 'Lindenwood University', 'Garmin', 'Central Bank', 'Edward Jones', 'Veterans United']
 
 // The live session hub: one page per day of the week, written for families
 // following from home. Add ?live=wednesday to the URL to preview how the page
@@ -298,6 +301,25 @@ export default function SessionLivePage() {
             </ul>
           </div>
           <MediaPlaceholder label={`KMBS-TV · ${day.weekday} newscast`} size="tall" showPlay />
+        </div>
+      </section>
+
+      {/* Partner credit */}
+      <section className="bg-white border-t border-gray-200 py-8">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-10">
+          <p className="shrink-0 text-[11px] font-bold tracking-[0.15em] uppercase text-gray-500">
+            The {session.ordinal} session is made possible by
+          </p>
+          <ul className="flex flex-wrap items-center gap-x-9 gap-y-4 flex-1">
+            {partnerCredits.map((name) => (
+              <li key={name}>
+                <img src={sponsors[name].logo} alt={name} loading="lazy" className="h-6 w-auto max-w-[120px] object-contain grayscale opacity-60" />
+              </li>
+            ))}
+          </ul>
+          <Link to="/give/corporate" className="shrink-0 text-xs font-bold text-gray-600 hover:text-navy transition whitespace-nowrap">
+            Our partners &rarr;
+          </Link>
         </div>
       </section>
 
