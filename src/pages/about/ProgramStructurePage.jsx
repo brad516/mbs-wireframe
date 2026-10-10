@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { getPhoto } from '../../lib/photos'
 
 /* ── Schools of Instruction ── */
 const schools = [
@@ -61,6 +63,29 @@ const schools = [
 ]
 
 /* ── Government Levels ── */
+const businessSteps = [
+  { n: '01', title: 'Pitch', desc: 'Citizens in the School of Commerce develop an idea: a print shop, a campaign consultancy, a snack stand, a newspaper ad agency.' },
+  { n: '02', title: 'License', desc: 'They apply to their city for a business license, pay the fee in Boys State Bucks and answer to the city council that granted it.' },
+  { n: '03', title: 'Open', desc: 'Businesses open on Main Street and sell to the people with money to spend: candidates, campaigns, cities and fellow citizens.' },
+  { n: '04', title: 'Compete', desc: 'Owners keep books, pay taxes and lobby the legislature. The best is named Outstanding Business at the end of the week.' },
+]
+
+const careers = [
+  { sector: 'Elected office', roles: ['Mayor', 'City Council', 'Senator', 'Representative', 'County Commissioner', 'Governor'] },
+  { sector: 'Law & courts', roles: ['Attorney', 'Judge', 'Court Clerk', 'Prosecuting Attorney'] },
+  { sector: 'Public safety', roles: ['Law Enforcement Officer', 'Firefighter', 'Sheriff'] },
+  { sector: 'Business & finance', roles: ['Business Owner', 'Treasurer', 'Lobbyist', 'Chamber of Commerce'] },
+  { sector: 'Media', roles: ['Newspaper Journalist', 'TV Journalist', 'Podcast Journalist', 'Public Relations Specialist'] },
+  { sector: 'Politics & staff', roles: ['Party Leader', 'Political Strategist', 'Legislative Staff', 'City Clerk'] },
+]
+
+const beyondCapitol = [
+  { title: 'Athletics', desc: 'City against city in softball, soccer, basketball, tennis, pickleball, cross country and more. The standings count toward Model City.' },
+  { title: 'State Fair', desc: 'An evening with Missouri Girls State: a booth from every city, carnival games and staff-judged competitions.' },
+  { title: 'Naturalization ceremony', desc: 'Citizens watch people from around the world take the oath and become Americans, then give them a standing ovation.' },
+  { title: 'Truman Model City Award', desc: 'Everything a city does all week is tallied, from elections to athletics to its businesses. One city wins.' },
+]
+
 const govLevels = [
   {
     level: 'City',
@@ -112,7 +137,7 @@ export default function ProgramStructurePage() {
       <PageHero
         tag="The Program"
         title="Program Structure"
-        description="Missouri Boys State is a fully functioning democracy — built from scratch by citizens every year. Here's how it all works."
+        description="Missouri Boys State is a fully functioning state — a government, an economy, courts and a press, built from scratch by citizens every year. Here's how it all works."
       />
 
       {/* Government Structure Overview */}
@@ -232,6 +257,80 @@ export default function ProgramStructurePage() {
                   <li>Run statewide primary and general election campaigns</li>
                   <li>Hire party staff: Executive Director, Field Director, Communications Director</li>
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Economy */}
+      <section className="py-24 bg-navy">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+              <Tag light>The Economy</Tag>
+              <h2 className="font-serif font-bold text-white text-3xl lg:text-4xl mb-4">A State Needs More Than a Government</h2>
+              <p className="text-white/80 leading-relaxed mb-4">
+                Not every citizen runs for office. Some open a business. Missouri Boys State has its own currency, Boys State Bucks, its own Main Street, and an economy that the government has to tax, regulate and answer to.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                Entrepreneurs learn what every owner learns: customers are hard to find, regulations cost money, and the people writing the rules will take your call if you show up.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <MediaPlaceholder label="Main Street businesses" size="square" photo={getPhoto('structure.mainstreet', 1)} sizes="(min-width: 1024px) 25vw, 50vw" />
+              <MediaPlaceholder label="Citizens doing business" size="square" photo={getPhoto('structure.mainstreet', 0)} sizes="(min-width: 1024px) 25vw, 50vw" />
+            </div>
+          </div>
+          <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden">
+            {businessSteps.map((step) => (
+              <li key={step.n} className="bg-navy p-7">
+                <span className="font-serif text-gold-light text-sm font-bold tracking-widest">{step.n}</span>
+                <h3 className="font-serif font-bold text-white text-xl mt-2 mb-2">{step.title}</h3>
+                <p className="text-sm text-white/70 leading-relaxed">{step.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Careers */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-2xl mb-12">
+            <Tag>Every Citizen Has a Job</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">Only a Few Are Elected. Everyone Works.</h2>
+            <p className="text-gray-600 leading-relaxed">
+              At the end of the week, Outstanding Citizen awards are given in nineteen roles. Most of them are not elected offices. A state runs on its clerks, reporters, firefighters and shop owners as much as its Governor.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+            {careers.map((c) => (
+              <div key={c.sector} className="bg-white p-7">
+                <h3 className="text-[11px] font-bold tracking-[0.15em] uppercase text-gold mb-4">{c.sector}</h3>
+                <ul className="space-y-2">
+                  {c.roles.map((role) => (
+                    <li key={role} className="font-serif font-bold text-navy">{role}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond the Capitol */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-2xl mb-12">
+            <Tag>Beyond the Capitol</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl">The Rest of the Week</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {beyondCapitol.map((item) => (
+              <div key={item.title} className="border-t-2 border-gold pt-6">
+                <h3 className="font-serif font-bold text-navy text-lg mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

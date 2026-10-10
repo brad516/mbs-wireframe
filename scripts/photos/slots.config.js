@@ -49,6 +49,10 @@ const slots = {
   'students.campus-life': { year: CURRENT, days: ['Sunday'], match: 'SundayEveningActivities', alt: 'Citizens during evening activities on campus' },
   'sessions.preview': { year: CURRENT, days: ['Saturday'], match: 'SaturdayEveningAssembly', alt: 'Citizens gathered for the opening evening assembly' },
 
+  // Program structure page: life beyond elected office
+  'structure.mainstreet': { year: CURRENT, tags: ['Misc.'], match: 'WednesdayMainStreet', count: 3, alt: 'Citizens running their businesses on Main Street' },
+  'structure.law': { year: CURRENT, tags: ['Courts & Law'], match: 'TuesdayLawSchool', alt: 'Citizens in the School of Law' },
+
   // Activity cards on A Week in the Life
   'activity.campaigns': { year: CURRENT, days: ['Wednesday'], match: 'WednesdayWhistlestops', alt: 'Candidates campaigning at whistle-stop speeches' },
   'activity.legislature': { year: CURRENT, tags: ['Legislature'], count: 2, alt: 'Citizens debating legislation' },

@@ -1242,6 +1242,42 @@
       "alt": "Citizens gathered for the opening evening assembly"
     }
   ],
+  "structure.law": [
+    {
+      "name": "2026MBS_TuesdayLawSchool-35.jpg",
+      "src": "/photos/2026/2026mbs-tuesdaylawschool-35-1280.webp",
+      "srcSet": "/photos/2026/2026mbs-tuesdaylawschool-35-640.webp 640w, /photos/2026/2026mbs-tuesdaylawschool-35-1280.webp 1280w",
+      "width": 1280,
+      "height": 853,
+      "alt": "Citizens in the School of Law"
+    }
+  ],
+  "structure.mainstreet": [
+    {
+      "name": "2026MBS_WednesdayMainStreet-42.jpg",
+      "src": "/photos/2026/2026mbs-wednesdaymainstreet-42-1280.webp",
+      "srcSet": "/photos/2026/2026mbs-wednesdaymainstreet-42-640.webp 640w, /photos/2026/2026mbs-wednesdaymainstreet-42-1280.webp 1280w",
+      "width": 1280,
+      "height": 853,
+      "alt": "Citizens running their businesses on Main Street"
+    },
+    {
+      "name": "2026MBS_WednesdayMainStreet-29.jpg",
+      "src": "/photos/2026/2026mbs-wednesdaymainstreet-29-1280.webp",
+      "srcSet": "/photos/2026/2026mbs-wednesdaymainstreet-29-640.webp 640w, /photos/2026/2026mbs-wednesdaymainstreet-29-1280.webp 1280w",
+      "width": 1280,
+      "height": 853,
+      "alt": "Citizens running their businesses on Main Street"
+    },
+    {
+      "name": "2026MBS_WednesdayMainStreet-17.jpg",
+      "src": "/photos/2026/2026mbs-wednesdaymainstreet-17-1280.webp",
+      "srcSet": "/photos/2026/2026mbs-wednesdaymainstreet-17-640.webp 640w, /photos/2026/2026mbs-wednesdaymainstreet-17-1280.webp 1280w",
+      "width": 1280,
+      "height": 853,
+      "alt": "Citizens running their businesses on Main Street"
+    }
+  ],
   "students.athletics": [
     {
       "name": "2026MBS_TuesdayAthletics-80.jpg",

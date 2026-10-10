@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import FAQAccordion from '../components/FAQAccordion'
+import CountUp from '../components/CountUp'
+import QuietPrompt from '../components/QuietPrompt'
 
 /* ══════════════════════════════════════════════════
    DATA
@@ -158,6 +160,134 @@ function WhyNominate() {
               className="absolute inset-0 w-full h-full"
             />
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   WHY IT MATTERS FOR YOUR SCHOOL
+   ══════════════════════════════════════════════════ */
+const programFacts = [
+  { number: '$2M', label: 'in annual scholarships available' },
+  { number: '67K', label: 'Missouri students have attended' },
+  { number: '500', label: 'high schools represented in the last 5 years' },
+  { number: '1938', label: 'the first Missouri Boys State', plain: true },
+]
+
+const schoolBenefits = [
+  {
+    title: 'A statewide honor on the record',
+    desc: 'Citizens are chosen by their schools, not signed up. It is a selective distinction your students can name on applications, and one your school can name at awards night.',
+  },
+  {
+    title: 'Credit and scholarships',
+    desc: 'A high score on the Schools of Instruction final exam qualifies citizens for college credit at a greatly reduced cost, alongside the scholarships open only to Boys State citizens.',
+  },
+  {
+    title: 'It comes back to your building',
+    desc: 'Returning citizens run for student council, start clubs and speak up in class. One week in June shows up in your hallways in August.',
+  },
+]
+
+function WhyItMattersForYourSchool() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-2xl mb-12">
+          <Tag>For Your School</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">What a Nomination Says About Your School</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Sending a citizen is not only good for the student. It tells your community which kind of young men your school produces.
+          </p>
+        </div>
+        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden mb-12">
+          {programFacts.map((f) => (
+            <div key={f.label} className="bg-cream p-7 text-center">
+              <dd className="font-serif font-bold text-navy text-4xl">{f.plain ? f.number : <CountUp value={f.number} />}</dd>
+              <dt className="text-sm text-gray-600 mt-2">{f.label}</dt>
+            </div>
+          ))}
+        </dl>
+        <div className="grid md:grid-cols-3 gap-10">
+          {schoolBenefits.map((b) => (
+            <div key={b.title} className="border-t-2 border-gold pt-6">
+              <h3 className="font-serif font-bold text-navy text-xl mb-3">{b.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   WHO TO NOMINATE
+   ══════════════════════════════════════════════════ */
+const nomineeProfiles = [
+  { title: 'The organizer', desc: 'Gets the group project done and makes sure everyone is credited.' },
+  { title: 'The one who asks why', desc: 'Pushes back in class, respectfully, and wants the reasoning.' },
+  { title: 'The quiet one others follow', desc: 'Rarely the loudest voice, but the room turns to him.' },
+  { title: 'The team captain', desc: 'Leads by showing up first and leaving last.' },
+  { title: 'The storyteller', desc: 'Writes, films or broadcasts, and would run a newsroom if given one.' },
+  { title: 'The one nobody has asked yet', desc: 'Has never been picked for something like this, and should be.' },
+]
+
+function WhoToNominate() {
+  return (
+    <section className="py-24">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_1.5fr] gap-16 items-start">
+        <div>
+          <Tag>Who to Nominate</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">Not Just the Student Council President</h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Boys State needs mayors, but it also needs judges, reporters, sheriffs, lobbyists and business owners. The best classes are the ones where counselors look past the obvious name.
+          </p>
+          <Link to="/nominate" className="inline-block bg-red hover:bg-red-dark text-white font-bold text-sm px-7 py-3 rounded-lg transition">
+            Nominate a Student
+          </Link>
+          <p className="text-xs text-gray-500 mt-4">Open to current high school juniors.</p>
+        </div>
+        <ul className="grid sm:grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+          {nomineeProfiles.map((n) => (
+            <li key={n.title} className="bg-white p-6">
+              <h3 className="font-serif font-bold text-navy text-lg mb-1">{n.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{n.desc}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   BRING IT BACK TO SCHOOL
+   ══════════════════════════════════════════════════ */
+const backAtSchool = [
+  { title: 'Follow the week', desc: 'Daily stories, photos and election results while your students are on campus.', to: '/session/2026', cta: 'See the 2026 week' },
+  { title: 'Put them on stage', desc: 'Ask returning citizens to speak to your sophomores in the fall. It is your best recruiting tool for next year.', to: '/students/testimonials', cta: 'Hear from citizens' },
+  { title: 'Recognize them', desc: 'Name your citizens at awards night and in the yearbook. Ask us for a letter to your principal for each one.', to: '/contact', cta: 'Request the letter' },
+]
+
+function BringItBack() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-2xl mb-12">
+          <Tag>After the Week</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl">Bring It Back to School</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {backAtSchool.map((item) => (
+            <div key={item.title} className="bg-cream border border-gray-200 rounded-xl p-7 flex flex-col">
+              <h3 className="font-serif font-bold text-navy text-xl mb-3">{item.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-1">{item.desc}</p>
+              <Link to={item.to} className="text-sm font-bold text-red hover:text-red-dark">{item.cta} &rarr;</Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -509,11 +639,20 @@ export default function EducatorsPage() {
       <EducatorHero />
       <SessionSpotlight />
       <WhyNominate />
+      <WhyItMattersForYourSchool />
       <ForceMultiplier />
+      <WhoToNominate />
       <WhatStudentsExperience />
       <CurriculumAlignment />
       <StudentOutcomes />
       <EducatorTestimonials />
+      <BringItBack />
+      <QuietPrompt
+        lead="Know a business or civic group near your school?"
+        detail="A $500 sponsorship sends one of your students."
+        to="/give/corporate"
+        cta="Share the sponsor page"
+      />
       <NominationToolkit />
       <DownloadableResources />
       <LegionPostFinder />

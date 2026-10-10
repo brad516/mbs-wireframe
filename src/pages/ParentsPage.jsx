@@ -392,9 +392,100 @@ function SponsorshipModel() {
             <p className="text-sm text-gray-500 mt-1">We believe every young man who is nominated should be able to attend, regardless of financial circumstances. This model ensures that ability &mdash; not ability to pay &mdash; determines who attends Missouri Boys State.</p>
           </div>
           <div className="py-3 bg-gold-bg -mx-4 px-4 rounded-md mt-2">
-            <span className="text-sm font-bold text-navy">Want to pay it forward?</span>
-            <p className="text-sm text-gray-500 mt-1">If you&rsquo;d like to give back, consider <Link to="/give" className="text-red font-bold hover:underline">sponsoring a future citizen</Link>. Your $500 gift sends one more young man to Boys State.</p>
+            <span className="text-sm font-bold text-navy">Someone paid for your son&rsquo;s week.</span>
+            <p className="text-sm text-gray-600 mt-1">An alumnus, a Legion post or a family like yours. There is no expectation, but many parents later choose to <Link to="/give" className="text-red font-bold hover:underline">do the same for the next citizen</Link>.</p>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   FOLLOW THE WEEK
+   ══════════════════════════════════════════════════ */
+const followPoints = [
+  'A new page every day with the day’s stories',
+  'Photos you can browse and download',
+  'Election results as each level of government is chosen',
+  'Who spoke that evening and what he said',
+]
+
+function FollowTheWeek() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <Tag>While He&rsquo;s Away</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">Follow Every Day From Home</h2>
+          <p className="text-gray-600 leading-relaxed mb-6">
+            The days are full and your son may not call much, so we bring the week to you. Each day of the session gets its own page with everything that happened.
+          </p>
+          <ul className="space-y-3 mb-8">
+            {followPoints.map((point) => (
+              <li key={point} className="flex items-start gap-3 text-navy">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+          <Link to="/session/2026" className="inline-block bg-navy hover:bg-navy-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
+            See how the 2026 week looked
+          </Link>
+        </div>
+        <MediaPlaceholder label="A day page from the session" size="tall" photo={getPhoto('live.2026.wednesday', 2)} />
+      </div>
+    </section>
+  )
+}
+
+/* ══════════════════════════════════════════════════
+   AFTER THE WEEK
+   ══════════════════════════════════════════════════ */
+const afterTheWeek = [
+  {
+    label: 'Show up',
+    title: 'Come to an event',
+    desc: 'Casino Night in Kansas City, the golf tournament, trivia night. Parents are some of our most loyal guests, and it is a good excuse to see the families you met at closing.',
+    to: '/events',
+    cta: 'See upcoming events',
+  },
+  {
+    label: 'Pay it forward',
+    title: 'Send the next family’s son',
+    desc: 'Someone you may never meet paid for your son’s week. $500 does the same for a junior whose family is reading this page a year from now.',
+    to: '/give',
+    cta: 'Sponsor a citizen',
+  },
+  {
+    label: 'Open a door',
+    title: 'Tell one more family',
+    desc: 'Most citizens come because one adult said “you should do this.” Mention it to a neighbor, a teammate’s parents or your school counselor.',
+    to: '/nominate',
+    cta: 'Nominate a student',
+  },
+]
+
+function AfterTheWeek() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-2xl mb-12">
+          <Tag>After the Week</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-4">The Week Ends. The Family Doesn&rsquo;t.</h2>
+          <p className="text-gray-600 leading-relaxed">
+            Parents often tell us they wish they had known about Boys State sooner. There are three easy ways to stay part of it once your son is home.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+          {afterTheWeek.map((item) => (
+            <div key={item.title} className="bg-cream p-8 flex flex-col">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-gold">{item.label}</span>
+              <h3 className="font-serif font-bold text-navy text-xl mt-2 mb-3">{item.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-1">{item.desc}</p>
+              <Link to={item.to} className="text-sm font-bold text-red hover:text-red-dark">{item.cta} &rarr;</Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -514,12 +605,14 @@ export default function ParentsPage() {
       <AtAGlanceWithVideo />
       <Safety />
       <WeekOverview />
+      <FollowTheWeek />
       <WhatHellLearn />
       <SpeakersForParents />
       <WhatHellComeHomeWith />
       <Scholarships />
       <SponsorshipModel />
       <ParentTestimonials />
+      <AfterTheWeek />
       <Eligibility />
       <ParentFAQ />
       <BottomCTA />
