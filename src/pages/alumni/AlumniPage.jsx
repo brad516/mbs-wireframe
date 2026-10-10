@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 
 const getInvolved = [
@@ -103,6 +104,7 @@ export default function AlumniPage() {
         </div>
       </section>
 
+      <CoreValues variant="band" lead="You learned these in one week. You have carried them ever since." />
       {/* CTA */}
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">

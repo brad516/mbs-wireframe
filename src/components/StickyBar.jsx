@@ -11,7 +11,10 @@ export default function StickyBar({ children, className = 'bg-red py-3' }) {
   useEffect(() => {
     const update = () => {
       const el = ref.current
-      if (el) setPinned(el.getBoundingClientRect().bottom < 0)
+      if (!el) return
+      // Step aside at the very bottom so the footer's last line is not covered.
+      const atPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80
+      setPinned(el.getBoundingClientRect().bottom < 0 && !atPageEnd)
     }
     update()
     window.addEventListener('scroll', update, { passive: true })

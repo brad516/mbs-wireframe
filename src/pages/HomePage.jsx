@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import SponsorLogo from '../components/SponsorLogo'
+import { MissionVision, CoreValues } from '../components/Mission'
 import HeroBackground from '../components/HeroBackground'
 import CountUp from '../components/CountUp'
 import { AudienceRouter, Selection, DistinguishedAlumni, Endorsements, SampleBadge, outcomes, givingLevels } from './home/PrestigeSections'
@@ -101,40 +102,17 @@ function UrgencyBanner() {
 /* ══════════════════════════════════════════════════
    MISSION & VALUES
    ══════════════════════════════════════════════════ */
-const values = [
-  { title: 'Leadership by Doing', desc: 'Citizens don’t study government — they build one. Every role is earned, every decision is real.' },
-  { title: 'Character & Integrity', desc: 'We develop young men of principle who lead with honesty, courage, and accountability.' },
-  { title: 'Civic Responsibility', desc: 'Understanding how government works — and why participation matters — is foundational to democracy.' },
-  { title: 'Brotherhood & Service', desc: 'Lifelong bonds are forged through shared challenge. Alumni carry a commitment to serve their communities.' },
-]
-
 function MissionValues() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <Tag>Our Mission</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl mb-5">
-            Developing Civic Leaders for a Stronger Missouri
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">
-            Missouri Boys State exists to inspire and educate the next generation of civic leaders through hands-on participation in the democratic process. We believe that when young people experience government firsthand, they become better citizens, stronger leaders, and more engaged members of their communities.
-          </p>
-          <p className="text-gray-500 leading-relaxed">
-            Our vision is a Missouri where every community benefits from leaders shaped by the values of service, integrity, and informed civic participation.
-          </p>
+        <div className="mb-16">
+          <MissionVision />
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((v, i) => (
-            <div key={i} className="text-center">
-              <div className="w-12 h-12 bg-navy/5 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <div className="w-2.5 h-2.5 bg-red rounded-full" />
-              </div>
-              <h3 className="font-serif font-bold text-navy text-base mb-2">{v.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{v.desc}</p>
-            </div>
-          ))}
+        <div className="text-center mb-8">
+          <Tag>Our Core Values</Tag>
         </div>
+        <CoreValues />
       </div>
     </section>
   )

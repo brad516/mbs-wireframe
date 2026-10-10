@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import SponsorLogo from '../../components/SponsorLogo'
 
@@ -366,6 +367,7 @@ export default function CorporatePage() {
         </div>
       </section>
 
+      <CoreValues variant="band" lead="What your organization puts its name beside." />
       {/* Bottom CTA — Individual Sponsorship */}
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">

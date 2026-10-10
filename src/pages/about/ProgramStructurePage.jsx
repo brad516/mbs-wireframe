@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { getPhoto } from '../../lib/photos'
 
@@ -394,6 +395,7 @@ export default function ProgramStructurePage() {
         </div>
       </section>
 
+      <CoreValues variant="band" lead="The structure changes a little every year. These do not." />
       {/* CTA */}
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">

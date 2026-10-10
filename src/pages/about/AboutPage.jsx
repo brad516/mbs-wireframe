@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { MissionVision, CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { getPhoto } from '../../lib/photos'
 
@@ -38,16 +39,7 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <Tag>Our Mission</Tag>
-              <h2 className="font-serif font-bold text-navy text-3xl mb-4">Developing Civic Leaders for a Stronger Missouri</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                Missouri Boys State exists to inspire and educate the next generation of civic leaders through hands-on participation in the democratic process.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                We believe that when young people experience government firsthand, they become better citizens, stronger leaders, and more engaged members of their communities. Our vision is a Missouri where every community benefits from leaders shaped by the values of service, integrity, and informed civic participation.
-              </p>
-            </div>
+            <MissionVision align="left" />
             <MediaPlaceholder label="About MBS Photo / Group Shot" size="tall" photo={getPhoto('about.group')} />
           </div>
         </div>
@@ -58,26 +50,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <Tag>Our Values</Tag>
+              <Tag>Our Core Values</Tag>
               <h2 className="font-serif font-bold text-navy text-3xl mb-6">What We Stand For</h2>
-              <div className="space-y-4">
-                {[
-                  { title: 'Service', desc: 'A commitment to something greater than ourselves, rooted in the American Legion tradition of selfless service.' },
-                  { title: 'Leadership', desc: 'The courage to step forward, make decisions, and inspire others toward a common purpose.' },
-                  { title: 'Integrity', desc: 'Doing what is right even when no one is watching. Character is the foundation of effective citizenship.' },
-                  { title: 'Civic Engagement', desc: 'An informed, active citizenry is essential to democracy. Boys State cultivates lifelong participants in the democratic process.' },
-                ].map((v, i) => (
-                  <div key={i} className="flex gap-4 items-start">
-                    <div className="w-8 h-8 bg-red/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                      <div className="w-2 h-2 bg-red rounded-full" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-navy text-sm">{v.title}</h3>
-                      <p className="text-sm text-gray-500">{v.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <CoreValues variant="list" />
             </div>
             <div>
               <Tag>The MBS Constitution</Tag>

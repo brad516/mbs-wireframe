@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
+import InfluenceStat from '../components/InfluenceStat'
+import { CoreValues } from '../components/Mission'
 import StickyBar from '../components/StickyBar'
 import HeroBackground from '../components/HeroBackground'
 import MediaPlaceholder from '../components/MediaPlaceholder'
@@ -600,6 +602,13 @@ export default function ParentsPage() {
     <>
       <ParentHero />
       <SessionSpotlight />
+      <InfluenceStat
+        number="55%"
+        headline="of 2026 citizens said a parent was the biggest influence on their decision to attend."
+        source="Source: 2026 Missouri Boys State citizen survey."
+      >
+        More than a counselor, a teacher or a friend. If your son has been nominated and is on the fence, the most persuasive voice in his life is probably yours.
+      </InfluenceStat>
       <AtAGlanceWithVideo />
       <Safety />
       <WeekOverview />
@@ -613,6 +622,7 @@ export default function ParentsPage() {
       <AfterTheWeek />
       <Eligibility />
       <ParentFAQ />
+      <CoreValues variant="band" lead="What we will ask of your son, and what the staff around him hold themselves to." />
       <BottomCTA />
     </>
   )

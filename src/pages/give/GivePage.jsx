@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { CoreValues } from '../../components/Mission'
 import DonationFormDemo from '../../components/DonationFormDemo'
 import { SampleBadge } from '../home/PrestigeSections'
 
@@ -85,6 +86,7 @@ export default function GivePage() {
         </div>
       </section>
 
+      <CoreValues variant="band" lead="Every gift goes toward one mission and four values." />
       {/* Corporate CTA */}
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">

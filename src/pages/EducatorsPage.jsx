@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
+import InfluenceStat from '../components/InfluenceStat'
+import { CoreValues } from '../components/Mission'
 import StickyBar from '../components/StickyBar'
 import HeroBackground from '../components/HeroBackground'
 import MediaPlaceholder from '../components/MediaPlaceholder'
@@ -636,6 +638,13 @@ export default function EducatorsPage() {
     <>
       <EducatorHero />
       <SessionSpotlight />
+      <InfluenceStat
+        number="43%"
+        headline="of 2026 citizens came because a school counselor or educator encouraged them."
+        source="Source: 2026 Missouri Boys State citizen survey."
+      >
+        For more than four in ten, the week began with one adult at school saying &ldquo;you should do this.&rdquo; Most students will not put themselves forward. They are waiting to be asked.
+      </InfluenceStat>
       <WhyNominate />
       <WhyItMattersForYourSchool />
       <ForceMultiplier />
@@ -655,6 +664,7 @@ export default function EducatorsPage() {
       <DownloadableResources />
       <LegionPostFinder />
       <EducatorFAQ />
+      <CoreValues variant="band" lead="The same values you teach, practiced for eight days straight." />
       <BottomCTA />
     </>
   )

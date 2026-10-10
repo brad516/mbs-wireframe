@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
+import { CoreValues } from '../../components/Mission'
 import HeroBackground from '../../components/HeroBackground'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { getPhoto } from '../../lib/photos'
@@ -567,6 +568,7 @@ export default function StudentsPage() {
       <StudentVoices />
       <DigDeeper />
       <StudentFAQ />
+      <CoreValues variant="band" lead="Four things every citizen is asked to live by for the week, and after it." />
       <BottomCTA />
       <StickyApplyCTA />
     </>
