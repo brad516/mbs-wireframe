@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import DonationFormDemo from '../../components/DonationFormDemo'
+import { SampleBadge } from '../home/PrestigeSections'
 
 const levels = [
   { name: 'Friend', amount: '$50', desc: 'Contributes toward sponsoring a future citizen', color: 'border-t-navy' },
@@ -54,32 +56,13 @@ export default function GivePage() {
 
       {/* Donation Form Placeholder */}
       <section className="py-24 bg-white">
-        <div className="max-w-xl mx-auto px-6">
+        <div className="max-w-2xl mx-auto px-6">
           <Tag>Make a Gift</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl mb-8">Donate Online</h2>
-          <div className="border-2 border-dashed border-gray-300 rounded-xl p-10 bg-gray-50">
-            <div className="flex gap-3 mb-6">
-              {['$25', '$50', '$100', '$250', '$500', 'Other'].map((amt) => (
-                <button key={amt} className="flex-1 py-3 border border-gray-200 rounded-lg text-sm font-bold text-navy hover:border-red hover:text-red transition">
-                  {amt}
-                </button>
-              ))}
-            </div>
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-bold text-navy mb-1">Full Name</label>
-                <div className="w-full h-10 bg-white border border-gray-200 rounded-md" />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-navy mb-1">Email</label>
-                <div className="w-full h-10 bg-white border border-gray-200 rounded-md" />
-              </div>
-            </div>
-            <button className="mt-6 w-full bg-gold hover:bg-gold-light text-white font-bold text-base py-4 rounded-lg transition">
-              Complete Donation
-            </button>
-            <p className="text-xs text-gray-500 mt-3 text-center">Missouri Boys State is a 501(c)(3). All gifts are tax-deductible.</p>
+          <div className="flex items-end justify-between gap-4 mb-8">
+            <h2 className="font-serif font-bold text-navy text-3xl">Donate Online</h2>
+            <SampleBadge />
           </div>
+          <DonationFormDemo />
         </div>
       </section>
 

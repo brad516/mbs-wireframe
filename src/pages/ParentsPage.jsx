@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
+import StickyBar from '../components/StickyBar'
 import HeroBackground from '../components/HeroBackground'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 import { getPhoto } from '../lib/photos'
@@ -85,8 +86,8 @@ function ParentHero() {
    ══════════════════════════════════════════════════ */
 function SessionSpotlight() {
   return (
-    <section className="bg-red py-3">
-      <div className="max-w-7xl mx-auto px-6">
+    <StickyBar>
+      <div className="max-w-7xl mx-auto px-12 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
           <p className="text-white text-sm font-bold">
             2027 Session: June 19&ndash;26 at Lindenwood University, St. Charles, MO
@@ -100,7 +101,7 @@ function SessionSpotlight() {
           </Link>
         </div>
       </div>
-    </section>
+    </StickyBar>
   )
 }
 

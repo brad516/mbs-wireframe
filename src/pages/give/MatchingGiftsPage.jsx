@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import EmployerMatchSearch from '../../components/EmployerMatchSearch'
+import { SampleBadge } from '../home/PrestigeSections'
 
 const steps = [
   { step: '1', title: 'Make Your Gift', desc: 'Donate online at any level through our Give page. Every dollar helps sponsor a future citizen.', color: 'bg-navy' },
@@ -16,6 +19,8 @@ const commonEmployers = [
 ]
 
 export default function MatchingGiftsPage() {
+  const [gift, setGift] = useState(500)
+
   return (
     <>
       <PageHero
@@ -89,16 +94,24 @@ export default function MatchingGiftsPage() {
         <div className="max-w-3xl mx-auto px-6">
           <Tag>Find Your Employer</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Does Your Employer Match?</h2>
-          <p className="text-gray-600 mb-8">Search below to see if your company offers a matching gift program. Thousands of employers participate.</p>
-          <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 bg-gray-50 mb-10">
-            <label className="block text-sm font-bold text-navy mb-2">Search Your Employer</label>
-            <div className="flex gap-3">
-              <div className="flex-1 h-12 bg-white border border-gray-200 rounded-lg" />
-              <button className="bg-navy text-white font-bold text-sm px-6 rounded-lg transition hover:bg-navy-light">
-                Search
-              </button>
+          <p className="text-gray-600 mb-8">Search below to see if your company offers a matching gift program, what it matches and how to claim it.</p>
+          <div className="bg-cream border border-gray-200 rounded-xl p-6 sm:p-8 mb-10">
+            <EmployerMatchSearch gift={gift} />
+            <div className="flex flex-wrap items-center gap-3 mt-5 pt-5 border-t border-gray-200">
+              <span className="text-sm font-bold text-navy">My gift:</span>
+              {[100, 250, 500, 1000].map((a) => (
+                <button
+                  key={a}
+                  type="button"
+                  aria-pressed={gift === a}
+                  onClick={() => setGift(a)}
+                  className={`text-sm font-bold px-4 py-1.5 rounded-full border transition ${gift === a ? 'bg-navy border-navy text-white' : 'border-gray-300 text-navy hover:border-navy'}`}
+                >
+                  ${a.toLocaleString('en-US')}
+                </button>
+              ))}
+              <span className="ml-auto"><SampleBadge /></span>
             </div>
-            <p className="text-xs text-gray-500 mt-2">Matching gift search widget placeholder &mdash; integrates with Double the Donation or similar service.</p>
           </div>
 
           <div>

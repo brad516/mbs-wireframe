@@ -6,6 +6,7 @@ import CountUp from '../components/CountUp'
 import { AudienceRouter, Selection, DistinguishedAlumni, Endorsements, SampleBadge, outcomes, givingLevels } from './home/PrestigeSections'
 import { getPhoto } from '../lib/photos'
 import Tag from '../components/Tag'
+import StickyBar from '../components/StickyBar'
 
 /* ══════════════════════════════════════════════════
    HERO
@@ -78,8 +79,8 @@ function StatsBar() {
    ══════════════════════════════════════════════════ */
 function UrgencyBanner() {
   return (
-    <section className="bg-red py-3">
-      <div className="max-w-7xl mx-auto px-6">
+    <StickyBar>
+      <div className="max-w-7xl mx-auto px-12 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
           <p className="text-white text-sm font-bold">
             2027 Session: June 19&ndash;26 at Lindenwood University
@@ -93,7 +94,7 @@ function UrgencyBanner() {
           </Link>
         </div>
       </div>
-    </section>
+    </StickyBar>
   )
 }
 
