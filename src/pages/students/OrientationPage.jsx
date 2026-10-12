@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { surveyQuotes, surveySource } from '../../data/survey2026'
 
 const meetings = [
   { date: 'April 12, 2027', location: 'American Legion Post 138, Bolivar', time: '2:00 PM' },
@@ -66,6 +67,25 @@ export default function OrientationPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Advice from last year's citizens */}
+      <section className="py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <Tag>From Last Year&rsquo;s Citizens</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl mb-3">Advice for Your First Day</h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            We asked the 2026 class what they would tell you. The most common answer by far: get involved early and run for something.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {surveyQuotes.advice.map((quote, i) => (
+              <blockquote key={i} className="bg-white border border-gray-200 border-l-4 border-l-gold rounded-lg p-5 font-serif text-sm italic text-navy leading-relaxed">
+                &ldquo;{quote}&rdquo;
+              </blockquote>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">{surveySource}</p>
         </div>
       </section>
 

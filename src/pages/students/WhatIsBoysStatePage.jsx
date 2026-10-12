@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import SurveyStats from '../../components/SurveyStats'
+import { survey } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import { getPhoto } from '../../lib/photos'
@@ -100,6 +102,7 @@ export default function WhatIsBoysStatePage() {
             <Tag>What You Gain</Tag>
             <h2 className="font-serif font-bold text-navy text-3xl">More Than a Week</h2>
           </div>
+          <SurveyStats stats={survey.students.stats} className="mb-12" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {outcomes.map((o, i) => (
               <div key={i} className="text-center">

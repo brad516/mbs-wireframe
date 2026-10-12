@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import InfluenceStat from '../../components/InfluenceStat'
+import SurveyStats from '../../components/SurveyStats'
+import { survey, surveySource } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 import SponsorLogo from '../../components/SponsorLogo'
@@ -154,6 +157,17 @@ export default function CorporatePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Internship interest */}
+      <InfluenceStat number={survey.corporate.lead.number} headline={survey.corporate.lead.headline} source={surveySource}>
+        {survey.corporate.lead.detail}
+      </InfluenceStat>
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="font-serif font-bold text-navy text-xl mb-5">Where citizens would want to intern</h3>
+          <SurveyStats stats={survey.corporate.internshipFields} />
         </div>
       </section>
 

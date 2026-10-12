@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
 import InfluenceStat from '../components/InfluenceStat'
+import SurveyStats from '../components/SurveyStats'
+import { survey, surveySource } from '../data/survey2026'
 import { CoreValues } from '../components/Mission'
 import StickyBar from '../components/StickyBar'
 import HeroBackground from '../components/HeroBackground'
@@ -188,6 +190,10 @@ function Safety() {
             </p>
           </div>
           <MediaPlaceholder label="Lindenwood University campus — safe, enclosed, supervised" size="tall" photo={getPhoto('parents.campus')} />
+        </div>
+        <div className="mt-16">
+          <h3 className="font-serif font-bold text-navy text-xl mb-5">What last summer&rsquo;s citizens told us</h3>
+          <SurveyStats stats={survey.parents.stats} />
         </div>
       </div>
     </section>
@@ -602,12 +608,8 @@ export default function ParentsPage() {
     <>
       <ParentHero />
       <SessionSpotlight />
-      <InfluenceStat
-        number="55%"
-        headline="of 2026 citizens said a parent was the biggest influence on their decision to attend."
-        source="Source: 2026 Missouri Boys State citizen survey."
-      >
-        More than a counselor, a teacher or a friend. If your son has been nominated and is on the fence, the most persuasive voice in his life is probably yours.
+      <InfluenceStat number={survey.parents.lead.number} headline={survey.parents.lead.headline} source={surveySource}>
+        {survey.parents.lead.detail}
       </InfluenceStat>
       <AtAGlanceWithVideo />
       <Safety />

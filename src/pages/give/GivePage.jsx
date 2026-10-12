@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import InfluenceStat from '../../components/InfluenceStat'
+import SurveyStats from '../../components/SurveyStats'
+import { survey, surveySource, surveyQuotes } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import DonationFormDemo from '../../components/DonationFormDemo'
 import { SampleBadge } from '../home/PrestigeSections'
@@ -54,6 +57,34 @@ export default function GivePage() {
           </div>
         </div>
       </section>
+
+      {/* What a gift produces */}
+      <InfluenceStat number={survey.donors.lead.number} headline={survey.donors.lead.headline} source={surveySource}>
+        {survey.donors.lead.detail}
+      </InfluenceStat>
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-2xl mb-10">
+            <Tag>What Your Gift Produces</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-4">One Week, Measured</h2>
+            <p className="text-gray-600 leading-relaxed">
+              At the end of the 2026 session we asked every citizen what the week had done for him. This is what they said.
+            </p>
+          </div>
+          <SurveyStats stats={survey.donors.stats} className="mb-12" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {surveyQuotes.donors.map((q, i) => (
+              <blockquote key={i} className="border-t-2 border-gold pt-6">
+                <p className="font-serif italic text-navy text-lg leading-relaxed">&ldquo;{q.quote}&rdquo;</p>
+                <footer className="text-xs text-gray-500 mt-3">{q.name}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+      <InfluenceStat number={survey.donors.bus.number} headline={survey.donors.bus.headline} source={surveySource}>
+        {survey.donors.bus.detail} Your gift keeps those buses running.
+      </InfluenceStat>
 
       {/* Donation Form Placeholder */}
       <section className="py-24 bg-white">

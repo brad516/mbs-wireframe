@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import Tag from '../components/Tag'
 import InfluenceStat from '../components/InfluenceStat'
+import SurveyStats from '../components/SurveyStats'
+import { survey, surveySource, surveyQuotes } from '../data/survey2026'
 import { CoreValues } from '../components/Mission'
 import StickyBar from '../components/StickyBar'
 import HeroBackground from '../components/HeroBackground'
@@ -397,6 +399,11 @@ function StudentOutcomes() {
           <h2 className="font-serif font-bold text-white text-3xl mb-3">What They Come Back With</h2>
           <p className="text-white/60">The transformation is consistent, year after year. Here&rsquo;s what educators report seeing in their students after Boys State.</p>
         </div>
+        <SurveyStats stats={survey.educators.stats} className="mb-8 [&>p]:text-white/50" />
+        <blockquote className="max-w-3xl mx-auto text-center mb-12">
+          <p className="font-serif italic text-white text-lg leading-relaxed">&ldquo;{surveyQuotes.educators[0].quote}&rdquo;</p>
+          <footer className="text-xs text-white/50 mt-3">{surveyQuotes.educators[0].name}, {surveyQuotes.educators[0].detail.toLowerCase()}</footer>
+        </blockquote>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             { title: 'Confidence', desc: 'The kind that comes from standing up in front of 100 people and earning their vote.' },
@@ -638,12 +645,8 @@ export default function EducatorsPage() {
     <>
       <EducatorHero />
       <SessionSpotlight />
-      <InfluenceStat
-        number="43%"
-        headline="of 2026 citizens came because a school counselor or educator encouraged them."
-        source="Source: 2026 Missouri Boys State citizen survey."
-      >
-        For more than four in ten, the week began with one adult at school saying &ldquo;you should do this.&rdquo; Most students will not put themselves forward. They are waiting to be asked.
+      <InfluenceStat number={survey.educators.lead.number} headline={survey.educators.lead.headline} source={surveySource}>
+        {survey.educators.lead.detail}
       </InfluenceStat>
       <WhyNominate />
       <WhyItMattersForYourSchool />

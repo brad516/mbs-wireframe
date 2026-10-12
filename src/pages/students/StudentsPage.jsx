@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
+import InfluenceStat from '../../components/InfluenceStat'
+import SurveyStats from '../../components/SurveyStats'
+import { survey, surveySource, surveyQuotes } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import HeroBackground from '../../components/HeroBackground'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
@@ -35,11 +38,7 @@ const schoolHighlights = [
   { name: 'Campaigning', desc: 'Run campaigns, build coalitions, and win elections.', icon: '\u{1F4E3}' },
 ]
 
-const testimonials = [
-  { quote: "Boys State taught me that leadership isn’t about titles — it’s about showing up and making things happen.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
-  { quote: "I went in knowing nobody and left with 30 guys I’ll be friends with for life. And I got elected county sheriff.", name: 'Student Name', detail: '2024 Citizen, City of [Name]' },
-  { quote: "My college interviewer asked me about Boys State more than anything else on my application. It was the thing that set me apart.", name: 'Student Name', detail: '2023 Citizen, Boys Nation Senator' },
-]
+const testimonials = surveyQuotes.students.slice(0, 3)
 
 const subPages = [
   { to: '/students/what-is-boys-state', title: 'What Is Boys State?', desc: 'Deep dive into the program and what makes it unlike anything else.', color: 'border-t-red' },
@@ -419,6 +418,7 @@ function StudentVoices() {
           <Tag>In Their Own Words</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-3">Hear From Recent Citizens</h2>
         </div>
+        <SurveyStats stats={survey.students.stats} className="mb-12" />
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div key={i} className="bg-cream border border-gray-200 rounded-xl overflow-hidden">
@@ -558,6 +558,9 @@ export default function StudentsPage() {
     <>
       <StudentHero />
       <QuickExplainer />
+      <InfluenceStat number={survey.students.lead.number} headline={survey.students.lead.headline} source={surveySource}>
+        {survey.students.lead.detail}
+      </InfluenceStat>
       <WeekCarousel />
       <SchoolsPreview />
       <Speakers />

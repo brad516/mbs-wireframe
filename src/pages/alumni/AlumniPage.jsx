@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import InfluenceStat from '../../components/InfluenceStat'
+import { survey, surveySource } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
 
@@ -43,6 +45,10 @@ export default function AlumniPage() {
           </div>
         </div>
       </section>
+
+      <InfluenceStat number={survey.alumni.lead.number} headline={survey.alumni.lead.headline} source={surveySource}>
+        {survey.alumni.lead.detail}
+      </InfluenceStat>
 
       {/* Alumni Spotlights */}
       <section className="py-24 bg-white">

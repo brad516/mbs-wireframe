@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
+import { survey } from '../../data/survey2026'
 
 // Everything marked with <SampleBadge /> is placeholder copy for layout review:
 // the names, figures and quotes are invented and must be replaced before launch.
@@ -47,7 +48,7 @@ export function AudienceRouter() {
 
 /* ── Outcomes ─────────────────────────────────────── */
 export const outcomes = [
-  { number: '94%', label: 'say the week changed how they lead' },
+  survey.home,
   { number: '3', label: 'college credit hours earned on site' },
   { number: '$185,000', label: 'in scholarships awarded each year' },
   { number: '1 in 6', label: 'alumni go on to public office or military service' },
