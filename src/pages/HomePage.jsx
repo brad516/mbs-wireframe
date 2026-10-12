@@ -4,6 +4,7 @@ import SponsorLogo from '../components/SponsorLogo'
 import { MissionVision, CoreValues } from '../components/Mission'
 import HeroBackground from '../components/HeroBackground'
 import CountUp from '../components/CountUp'
+import { survey } from '../data/survey2026'
 import { AudienceRouter, Selection, DistinguishedAlumni, Endorsements, SampleBadge, outcomes, givingLevels } from './home/PrestigeSections'
 import { getPhoto } from '../lib/photos'
 import Tag from '../components/Tag'
@@ -432,33 +433,82 @@ function AlumniImpact() {
    AUDIENCE PATHWAYS
    ══════════════════════════════════════════════════ */
 const paths = [
-  { to: '/students', icon: '\u{1F393}', title: 'Student', desc: 'Discover what Boys State is, what the week looks like, and how to get nominated.', color: 'border-t-red' },
-  { to: '/parents', icon: '\u{1F468}‍\u{1F469}‍\u{1F466}', title: 'Parent', desc: 'Everything you need to know about safety, sponsorship, outcomes, and the nomination process.', color: 'border-t-[#2b82c9]' },
-  { to: '/educators', icon: '\u{1F3EB}', title: 'Educator', desc: 'Tools, resources, and a nomination toolkit to help you send your best students.', color: 'border-t-[#1aaa7a]' },
-  { to: '/alumni', icon: '⭐', title: 'Alumni', desc: 'Reconnect, give back, and stay involved with the program that shaped you.', color: 'border-t-gold' },
+  {
+    to: '/students', who: 'Students', slot: 'hero.students', position: 'object-[center_30%]', wide: true,
+    thought: 'I got nominated. Is this really worth a week of my summer?',
+    answer: `${survey.parents.stats[3].number} of last year’s citizens said it was.`,
+    cta: 'See what the week is like',
+  },
+  {
+    to: '/parents', who: 'Parents', slot: 'hero.parents', position: 'object-[center_25%]', wide: true,
+    thought: 'My son was asked to go. Who is looking after him?',
+    answer: `${survey.parents.stats[0].number} of citizens told us the staff cared about them.`,
+    cta: 'Meet the people in charge',
+  },
+  {
+    to: '/educators', who: 'Educators', slot: 'hero.educators', position: 'object-center',
+    thought: 'I know a junior who should be there.',
+    answer: 'More than half of citizens came because someone at school said so.',
+    cta: 'Nominate him',
+  },
+  {
+    to: '/alumni', who: 'Alumni', slot: 'hero.alumni', position: 'object-[center_15%]',
+    thought: 'I went. I still think about that week.',
+    answer: 'Four in ten citizens came because an alum told them to.',
+    cta: 'Come back',
+  },
+  {
+    to: '/give', who: 'Donors', slot: 'hero.give', position: 'object-[center_18%]',
+    thought: 'What does $500 actually do?',
+    answer: 'It sends one young man for the whole week.',
+    cta: 'See what it buys',
+  },
 ]
 
 function AudiencePaths() {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-xl mx-auto mb-12">
-          <Tag>Find Your Path</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl">I Am A...</h2>
+        <div className="max-w-xl mb-10">
+          <Tag>Start Here</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl lg:text-4xl">Which one sounds like you?</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {paths.map((p) => (
-            <Link
-              key={p.to}
-              to={p.to}
-              className={`bg-white border border-gray-200 ${p.color} border-t-4 rounded-xl p-8 text-center hover:-translate-y-1 hover:shadow-lg transition-all`}
-            >
-              <div className="text-4xl mb-4">{p.icon}</div>
-              <h3 className="font-serif font-bold text-navy text-xl mb-2">{p.title}</h3>
-              <p className="text-sm text-gray-500">{p.desc}</p>
-              <span className="inline-block mt-4 text-sm font-bold text-navy">Explore &rarr;</span>
-            </Link>
-          ))}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4">
+          {paths.map((p) => {
+            const photo = getPhoto(p.slot)
+            return (
+              <Link
+                key={p.to}
+                to={p.to}
+                className={`group relative flex flex-col justify-end overflow-hidden rounded-xl bg-navy p-7 min-h-[22rem] ${p.wide ? 'lg:col-span-3 lg:min-h-[26rem]' : 'lg:col-span-2 last:sm:col-span-2'}`}
+              >
+                {photo && (
+                  <img
+                    src={photo.src}
+                    srcSet={photo.srcSet}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    width={photo.width}
+                    height={photo.height}
+                    alt=""
+                    loading="lazy"
+                    className={`absolute inset-0 w-full h-full object-cover ${p.position} transition-transform duration-700 ease-out motion-safe:group-hover:scale-105`}
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/70 to-navy-dark/10" />
+                <div className="relative">
+                  <span className="block text-[11px] font-bold tracking-[0.18em] uppercase text-gold-light mb-3">{p.who}</span>
+                  <h3 className={`font-serif font-bold text-white leading-snug mb-3 ${p.wide ? 'text-2xl lg:text-3xl max-w-md' : 'text-2xl'}`}>
+                    &ldquo;{p.thought}&rdquo;
+                  </h3>
+                  <p className="text-white/80 text-sm leading-relaxed mb-4">{p.answer}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-white border-b border-gold-light pb-0.5">
+                    {p.cta}
+                    <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </span>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
     </section>
