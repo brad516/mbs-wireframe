@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../../components/PageHero'
+import TrustSubNav from '../../../components/TrustSubNav'
 import Tag from '../../../components/Tag'
 import { funds, lehrSpeakers } from '../../../data/trust'
 
@@ -23,6 +24,7 @@ export default function LehrSpeakersPage() {
         title="The George W. Lehr Memorial Speakers Chair"
         description="One nationally known speaker at every session since 1989, paid for by the Trust."
       />
+      <TrustSubNav />
 
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6">

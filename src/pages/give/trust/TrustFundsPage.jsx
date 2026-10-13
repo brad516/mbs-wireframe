@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../../components/PageHero'
+import TrustSubNav from '../../../components/TrustSubNav'
 import Tag from '../../../components/Tag'
-import { trust, funds, scholarships, majorGifts } from '../../../data/trust'
+import { trust, funds, majorGifts } from '../../../data/trust'
 
 export default function TrustFundsPage() {
   return (
@@ -11,6 +12,7 @@ export default function TrustFundsPage() {
         title="The Four Funds"
         description="Where a gift to the Trust goes, what it pays for, and who each fund is named for."
       />
+      <TrustSubNav />
 
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-6 space-y-6">
@@ -33,25 +35,8 @@ export default function TrustFundsPage() {
         </div>
       </section>
 
-      {/* Scholarships */}
-      <section className="py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <Tag>Scholarships</Tag>
-          <h2 className="font-serif font-bold text-navy text-3xl mb-8">What the Scholarship Fund awards</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {scholarships.map((s) => (
-              <div key={s.title} className="bg-cream border border-gray-200 rounded-xl p-7">
-                <h3 className="font-serif font-bold text-navy text-lg mb-1">{s.title}</h3>
-                <span className="text-sm font-bold text-red block mb-3">{s.amount}</span>
-                <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Major gifts */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <Tag>Major Gifts</Tag>
           <h2 className="font-serif font-bold text-navy text-3xl mb-4">With thanks</h2>

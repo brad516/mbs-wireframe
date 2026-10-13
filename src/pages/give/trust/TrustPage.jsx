@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../../components/PageHero'
+import TrustSubNav from '../../../components/TrustSubNav'
 import Tag from '../../../components/Tag'
 import InfluenceStat from '../../../components/InfluenceStat'
 import { trust, funds, lehrSpeakers } from '../../../data/trust'
@@ -16,6 +17,7 @@ export default function TrustPage() {
         title="The Fund That Keeps Boys State Here"
         description={trust.summary}
       />
+      <TrustSubNav />
 
       {/* Why it exists */}
       <section className="py-24">

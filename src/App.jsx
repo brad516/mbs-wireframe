@@ -33,6 +33,7 @@ import TrustPage from './pages/give/trust/TrustPage'
 import TrustFundsPage from './pages/give/trust/TrustFundsPage'
 import LehrSpeakersPage from './pages/give/trust/LehrSpeakersPage'
 import TrusteesPage from './pages/give/trust/TrusteesPage'
+import TrustScholarshipsPage from './pages/give/trust/TrustScholarshipsPage'
 import NewsPage from './pages/news/NewsPage'
 import PressPage from './pages/news/PressPage'
 import EventsPage from './pages/events/EventsPage'
@@ -92,6 +93,7 @@ export default function App() {
           <Route path="/give/memorial" element={<MemorialGiftsPage />} />
           <Route path="/give/trust" element={<TrustPage />} />
           <Route path="/give/trust/funds" element={<TrustFundsPage />} />
+          <Route path="/give/trust/scholarships" element={<TrustScholarshipsPage />} />
           <Route path="/give/trust/speakers" element={<LehrSpeakersPage />} />
           <Route path="/give/trust/trustees" element={<TrusteesPage />} />
           <Route path="/news" element={<NewsPage />} />

@@ -57,18 +57,21 @@ export const funds = [
     kind: 'Restricted',
     hook: 'Help the Citizen of the Week pay for college.',
     desc: 'Funds the Wayne S. Gregory scholarship for the Citizen of the Week and scholarships for the volunteer staff who run the session.',
-    link: { to: '/students/college-credit', label: 'See the scholarships citizens can earn' },
+    link: { to: '/give/trust/scholarships', label: 'See what the fund awards' },
   },
 ]
 
 export const scholarships = [
   {
     title: 'Wayne S. Gregory Citizen of the Week Scholarship',
+    who: 'For citizens · since 1993',
+    namedFor: 'Wayne S. Gregory, a 40/8 member and chairman of the Boys State Commission.',
     amount: '[amount to confirm]',
     desc: 'A renewable college scholarship for the citizen named Citizen of the Week, chosen for scholarship, citizenship and leadership. Awarded since 1993 and endowed by the Springfield Kickapoo Voiture 40/8.',
   },
   {
     title: 'Volunteer Staff Scholarships',
+    who: 'For volunteer staff',
     amount: '[amount to confirm]',
     desc: 'College scholarships for members of the volunteer staff, awarded by the Dean of Counselors and his senior staff for leadership and service.',
   },

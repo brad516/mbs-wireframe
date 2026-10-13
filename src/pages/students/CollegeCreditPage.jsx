@@ -61,7 +61,7 @@ export default function CollegeCreditPage() {
             ))}
           </div>
           <p className="text-sm text-gray-500 text-center mt-8">
-            The Gregory and staff scholarships are funded by the <Link to="/give/trust" className="font-bold text-navy hover:text-red">Missouri Boys State Memorial Trust</Link>.
+            The Gregory and staff scholarships are funded by the Missouri Boys State Memorial Trust. <Link to="/give/trust/scholarships" className="font-bold text-navy hover:text-red">More about them &rarr;</Link>
           </p>
         </div>
       </section>

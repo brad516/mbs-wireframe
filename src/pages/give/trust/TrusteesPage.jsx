@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../../components/PageHero'
+import TrustSubNav from '../../../components/TrustSubNav'
 import Tag from '../../../components/Tag'
 import { trust, trustees } from '../../../data/trust'
 
@@ -13,6 +14,7 @@ export default function TrusteesPage() {
         title="Board of Trustees"
         description="The volunteers who look after the endowment and decide what it pays for."
       />
+      <TrustSubNav />
 
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6">

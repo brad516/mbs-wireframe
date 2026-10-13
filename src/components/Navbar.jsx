@@ -51,6 +51,7 @@ const navItems = [
             { label: 'Program Structure', to: '/about/program-structure' },
             { label: 'The American Legion', to: '/about/american-legion' },
             { label: 'Financials & Transparency', to: '/about/financials' },
+            { label: 'The Memorial Trust', to: '/give/trust' },
             { label: 'Staff & Board', to: '/about/staff' },
           ],
         },
@@ -104,6 +105,7 @@ const navItems = [
           links: [
             { label: 'About the Trust', to: '/give/trust' },
             { label: 'The Four Funds', to: '/give/trust/funds' },
+            { label: 'Scholarships', to: '/give/trust/scholarships' },
             { label: 'Lehr Speakers Chair', to: '/give/trust/speakers' },
             { label: 'Trustees', to: '/give/trust/trustees' },
           ],
@@ -167,6 +169,7 @@ const mobileItems = [
       { label: 'Program Structure', to: '/about/program-structure' },
       { label: 'The American Legion', to: '/about/american-legion' },
       { label: 'Financials', to: '/about/financials' },
+      { label: 'The Memorial Trust', to: '/give/trust' },
       { label: 'Staff & Board', to: '/about/staff' },
     ],
   },

@@ -27,6 +27,8 @@ const sections = [
       { to: '/about/american-legion', label: 'The American Legion' },
       { to: '/about/staff', label: 'Staff & Board' },
       { to: '/about/financials', label: 'Financials' },
+      // One page, two doors: the Trust lives under Give and is linked from here.
+      { to: '/give/trust', label: 'Memorial Trust' },
     ],
   },
   {
