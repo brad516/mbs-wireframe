@@ -48,6 +48,7 @@ const sections = [
       { to: '/give/matching', label: 'Matching Gifts' },
       { to: '/give/planned', label: 'Planned Giving' },
       { to: '/give/memorial', label: 'Memorial & Honor Gifts' },
+      { to: '/give/trust', label: 'Memorial Trust' },
     ],
   },
   {
@@ -83,8 +84,9 @@ export default function SectionNav() {
         <span className="hidden md:block shrink-0 text-[11px] font-bold tracking-[0.15em] uppercase text-gold">{section.label}</span>
         <ul className="flex items-center gap-1 overflow-x-auto -mx-2 px-2">
           {section.pages.map((page) => {
-            // An event's own page still counts as being under Events.
-            const active = pathname === page.to || (page.to === '/events' && pathname.startsWith('/events/'))
+            // An event's own page still counts as being under Events, and a
+            // Trust page under Memorial Trust.
+            const active = pathname === page.to || (['/events', '/give/trust'].includes(page.to) && pathname.startsWith(`${page.to}/`))
             return (
               <li key={page.to} className="shrink-0">
                 <Link

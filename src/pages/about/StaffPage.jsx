@@ -1,5 +1,7 @@
 import PageHero from '../../components/PageHero'
+import { Link } from 'react-router-dom'
 import Tag from '../../components/Tag'
+import { trustees } from '../../data/trust'
 
 const staff = [
   { name: 'Executive Director Name', title: 'Executive Director', bio: 'Leads the overall direction and strategy of Missouri Boys State. MBS alumnus, Class of 19XX.' },
@@ -69,6 +71,28 @@ export default function StaffPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Memorial Trust */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <Tag>The Memorial Trust</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-4">A second board looks after the endowment</h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              The Missouri Boys State Memorial Trust is a separate organization with its own trustees. They manage the endowment that pays for speakers, scholarships and sponsorships.
+            </p>
+            <Link to="/give/trust/trustees" className="text-sm font-bold text-red hover:text-red-dark transition">See all {trustees.length} trustees &rarr;</Link>
+          </div>
+          <ul className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-200">
+            {trustees.filter((t) => t.group === 'Officers').map((t) => (
+              <li key={t.name} className="flex justify-between gap-4 px-6 py-4 text-sm">
+                <span className="font-bold text-navy">{t.name}</span>
+                <span className="text-gray-600">{t.role}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

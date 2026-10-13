@@ -14,6 +14,7 @@ const eventData = {
     details: 'Join us for our annual trivia fundraiser! Assemble a team of up to 8 players and compete for prizes while helping sponsor future MBS citizens. The evening includes dinner, a silent auction, and plenty of fun. All proceeds directly fund citizen sponsorships for the 2027 session.',
     price: '$30 per person / $200 per table of 8',
     cta: 'Get Tickets',
+    host: { name: 'The Missouri Boys State Memorial Trust', to: '/give/trust' },
   },
   golf: {
     tag: 'Fundraiser',
@@ -76,6 +77,12 @@ export default function EventDetailPage() {
                   <span className="font-bold text-navy block">Cost</span>
                   <span className="text-gray-600">{event.price}</span>
                 </div>
+                {event.host && (
+                  <div>
+                    <span className="font-bold text-navy block">Hosted by</span>
+                    <Link to={event.host.to} className="text-red font-bold hover:text-red-dark">{event.host.name}</Link>
+                  </div>
+                )}
               </div>
               <button className="mt-6 w-full bg-red hover:bg-red-dark text-white font-bold text-sm py-3 rounded-lg transition">
                 {event.cta}

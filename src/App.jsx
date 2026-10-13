@@ -29,6 +29,10 @@ import CorporatePage from './pages/give/CorporatePage'
 import PlannedGivingPage from './pages/give/PlannedGivingPage'
 import MatchingGiftsPage from './pages/give/MatchingGiftsPage'
 import MemorialGiftsPage from './pages/give/MemorialGiftsPage'
+import TrustPage from './pages/give/trust/TrustPage'
+import TrustFundsPage from './pages/give/trust/TrustFundsPage'
+import LehrSpeakersPage from './pages/give/trust/LehrSpeakersPage'
+import TrusteesPage from './pages/give/trust/TrusteesPage'
 import NewsPage from './pages/news/NewsPage'
 import PressPage from './pages/news/PressPage'
 import EventsPage from './pages/events/EventsPage'
@@ -86,6 +90,10 @@ export default function App() {
           <Route path="/give/planned" element={<PlannedGivingPage />} />
           <Route path="/give/matching" element={<MatchingGiftsPage />} />
           <Route path="/give/memorial" element={<MemorialGiftsPage />} />
+          <Route path="/give/trust" element={<TrustPage />} />
+          <Route path="/give/trust/funds" element={<TrustFundsPage />} />
+          <Route path="/give/trust/speakers" element={<LehrSpeakersPage />} />
+          <Route path="/give/trust/trustees" element={<TrusteesPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/press" element={<PressPage />} />
           <Route path="/events" element={<EventsPage />} />

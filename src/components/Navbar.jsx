@@ -99,6 +99,15 @@ const navItems = [
             { label: 'Memorial & Honor Gifts', to: '/give/memorial' },
           ],
         },
+        {
+          heading: 'The Memorial Trust',
+          links: [
+            { label: 'About the Trust', to: '/give/trust' },
+            { label: 'The Four Funds', to: '/give/trust/funds' },
+            { label: 'Lehr Speakers Chair', to: '/give/trust/speakers' },
+            { label: 'Trustees', to: '/give/trust/trustees' },
+          ],
+        },
       ],
     },
   },
@@ -180,6 +189,7 @@ const mobileItems = [
       { label: 'Planned Giving', to: '/give/planned' },
       { label: 'Matching Gifts', to: '/give/matching' },
       { label: 'Memorial & Honor Gifts', to: '/give/memorial' },
+      { label: 'The Memorial Trust', to: '/give/trust' },
     ],
   },
   {

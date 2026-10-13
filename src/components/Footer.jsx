@@ -16,6 +16,7 @@ const cols = [
     links: [
       { label: 'Alumni', to: '/alumni' },
       { label: 'Give / Donate', to: '/give' },
+      { label: 'Memorial Trust', to: '/give/trust' },
       { label: 'Events', to: '/events' },
       { label: 'Session Archives', to: '/sessions' },
     ],
@@ -114,7 +115,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-600">&copy; 2026 Missouri Boys State. A program of The American Legion, Department of Missouri.</p>
+          <p className="text-xs text-gray-600">&copy; 2026 Missouri Boys State. A program of The American Legion, Department of Missouri. The Missouri Boys State Memorial Trust, Inc. is a separate 501(c)(3).</p>
           <div className="flex gap-5">
             <Link to="/privacy" className="text-xs text-gray-600 hover:text-navy">Privacy Policy</Link>
             <Link to="/terms" className="text-xs text-gray-600 hover:text-navy">Terms of Use</Link>

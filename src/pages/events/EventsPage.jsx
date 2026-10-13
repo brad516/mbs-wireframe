@@ -5,7 +5,7 @@ import { casinoNight } from '../../data/casinoNight'
 
 const upcoming = [
   { month: 'OCT', day: '9', title: 'MBS Casino Night: Betting on Democracy', loc: 'UMKC Bloch School Atrium, Kansas City', desc: 'Tables, an open bar and a toast to the next class of Boys State. Proceeds go straight to the program.', slug: 'casino-night', cta: 'Get Tickets' },
-  { month: 'APR', day: '17', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. All proceeds sponsor future MBS citizens.', slug: 'trivia', cta: 'Get Tickets' },
+  { month: 'APR', day: '17', title: 'Spring Trivia Night', loc: 'The Coliseum, St. Louis', desc: 'Annual fundraiser trivia night. Teams of 8, prizes, and silent auction. Hosted by the Memorial Trust.', slug: 'trivia', cta: 'Get Tickets' },
   { month: 'MAY', day: '8', title: 'Annual Golf Tournament', loc: 'Old Warson Country Club', desc: 'Four-person scramble format. Includes lunch, prizes, and networking with MBS alumni and supporters.', slug: 'golf', cta: 'Register' },
   { month: 'JUN', day: '19', title: '2027 Boys State Session', loc: 'Lindenwood University, St. Charles', desc: 'The main event. 1,600 citizens convene for a week of leadership, government, and brotherhood.', slug: null, cta: 'Learn More' },
   { month: 'OCT', day: 'TBD', title: 'Alumni Homecoming Weekend', loc: 'Lindenwood University, St. Charles', desc: 'Alumni from all years gather for a weekend of reconnection, tours, and celebration.', slug: null, cta: 'Coming Soon' },

@@ -63,6 +63,25 @@ export default function FinancialsPage() {
         </div>
       </section>
 
+      {/* Two organizations */}
+      <section className="py-24 bg-cream border-y border-gray-200">
+        <div className="max-w-5xl mx-auto px-6">
+          <Tag>Two Organizations, One Mission</Tag>
+          <h2 className="font-serif font-bold text-navy text-3xl mb-8">Who holds what</h2>
+          <div className="grid md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 rounded-xl overflow-hidden">
+            <div className="bg-white p-8">
+              <h3 className="font-serif font-bold text-navy text-xl mb-2">Missouri Boys State</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">Runs the session. Annual gifts, event proceeds and American Legion sponsorships pay for that year&rsquo;s citizens: housing, meals, materials and staff.</p>
+            </div>
+            <div className="bg-white p-8">
+              <h3 className="font-serif font-bold text-navy text-xl mb-2">The Memorial Trust</h3>
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">Holds the endowment. Founded in 1982, with its own trustees. Its earnings pay for the Lehr speaker, scholarships and sponsorships where local support has declined.</p>
+              <Link to="/give/trust" className="text-sm font-bold text-red hover:text-red-dark transition">How the Memorial Trust works &rarr;</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Annual Report Download */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -72,7 +91,7 @@ export default function FinancialsPage() {
           <button className="bg-navy hover:bg-navy-light text-white font-bold text-sm px-7 py-3 rounded-lg transition">
             Download 2025 Annual Report (PDF)
           </button>
-          <p className="text-xs text-gray-500 mt-3">Missouri Boys State is a 501(c)(3) nonprofit. EIN: XX-XXXXXXX</p>
+          <p className="text-xs text-gray-500 mt-3">Missouri Boys State is a 501(c)(3) nonprofit. EIN: XX-XXXXXXX<br />The Missouri Boys State Memorial Trust, Inc. is a separate 501(c)(3). EIN: XX-XXXXXXX</p>
         </div>
       </section>
 

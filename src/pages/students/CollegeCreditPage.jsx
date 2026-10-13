@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
+import { scholarships as trustScholarships } from '../../data/trust'
 
 const scholarships = [
   { title: 'Samsung American Legion Scholarship', desc: 'National scholarship available to Boys State and Boys Nation citizens for college tuition.', amount: 'Up to $10,000' },
   { title: 'Partner University Scholarships', desc: 'Several Missouri universities offer scholarships specifically for Boys State alumni.', amount: 'Varies by institution' },
-  { title: 'MBS Memorial Trust College Scholarships', desc: 'Merit-based college scholarships funded by the Missouri Boys State Memorial Trust and generous donors.', amount: 'Varies' },
+  ...trustScholarships,
   { title: 'Boys Nation Scholarships', desc: 'Additional scholarship opportunities for citizens selected to represent Missouri at Boys Nation in Washington, D.C.', amount: 'Varies' },
 ]
 
@@ -59,6 +60,9 @@ export default function CollegeCreditPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-gray-500 text-center mt-8">
+            The Gregory and staff scholarships are funded by the <Link to="/give/trust" className="font-bold text-navy hover:text-red">Missouri Boys State Memorial Trust</Link>.
+          </p>
         </div>
       </section>
 

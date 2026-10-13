@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero'
+import { trust } from '../data/trust'
 import Tag from '../components/Tag'
 import MediaPlaceholder from '../components/MediaPlaceholder'
 
@@ -63,6 +65,16 @@ export default function ContactPage() {
               <MediaPlaceholder label="Map — Warrensburg, MO / Lindenwood University, St. Charles" size="tall" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Memorial Trust */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm text-gray-600">
+            <strong className="text-navy">Question about the endowment or a gift to the Memorial Trust?</strong> Write to <a href={`mailto:${trust.email}`} className="font-bold text-navy hover:text-red">{trust.email}</a>.
+          </p>
+          <Link to="/give/trust" className="text-sm font-bold text-red hover:text-red-dark transition">About the Memorial Trust &rarr;</Link>
         </div>
       </section>
 

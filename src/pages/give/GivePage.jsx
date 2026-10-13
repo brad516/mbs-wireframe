@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import PageHero from '../../components/PageHero'
 import Tag from '../../components/Tag'
 import InfluenceStat from '../../components/InfluenceStat'
@@ -7,6 +7,7 @@ import { survey, surveySource, surveyQuotes } from '../../data/survey2026'
 import { CoreValues } from '../../components/Mission'
 import DonationFormDemo from '../../components/DonationFormDemo'
 import { SampleBadge } from '../home/PrestigeSections'
+import { trust, funds } from '../../data/trust'
 
 const levels = [
   { name: 'Friend', amount: '$50', desc: 'Contributes toward sponsoring a future citizen', color: 'border-t-navy' },
@@ -22,6 +23,9 @@ const otherWays = [
 ]
 
 export default function GivePage() {
+  const [params] = useSearchParams()
+  const fund = params.get('fund')
+
   return (
     <>
       <PageHero
@@ -87,14 +91,36 @@ export default function GivePage() {
       </InfluenceStat>
 
       {/* Donation Form Placeholder */}
-      <section className="py-24 bg-white">
+      <section id="donate" className="py-24 bg-white scroll-mt-28">
         <div className="max-w-2xl mx-auto px-6">
           <Tag>Make a Gift</Tag>
           <div className="flex items-end justify-between gap-4 mb-8">
             <h2 className="font-serif font-bold text-navy text-3xl">Donate Online</h2>
             <SampleBadge />
           </div>
-          <DonationFormDemo />
+          <DonationFormDemo key={fund ?? 'mbs'} defaultFund={fund} />
+        </div>
+      </section>
+
+      {/* The Memorial Trust */}
+      <section className="py-24 bg-cream border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <Tag>The Memorial Trust</Tag>
+            <h2 className="font-serif font-bold text-navy text-3xl mb-4">&ldquo;What if I want my gift to outlast me?&rdquo;</h2>
+            <p className="text-gray-600 leading-relaxed mb-6">{trust.summary} A gift there is invested, and what it earns pays for speakers, scholarships and sponsorships every year.</p>
+            <Link to="/give/trust" className="text-sm font-bold text-red hover:text-red-dark transition">How the Memorial Trust works &rarr;</Link>
+          </div>
+          <ul className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-200">
+            {funds.map((f) => (
+              <li key={f.slug}>
+                <Link to={`/give/trust/funds#${f.slug}`} className="flex justify-between items-center gap-4 px-6 py-4 hover:bg-cream transition">
+                  <span className="font-serif font-bold text-navy">{f.name}</span>
+                  <span className="text-xs text-gray-500 text-right shrink-0">{f.short}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

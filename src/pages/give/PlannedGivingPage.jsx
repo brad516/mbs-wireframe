@@ -88,6 +88,18 @@ export default function PlannedGivingPage() {
         </div>
       </section>
 
+      {/* The Memorial Trust */}
+      <section className="py-16 bg-cream border-y border-gray-200">
+        <div className="max-w-3xl mx-auto px-6">
+          <Tag>The Memorial Trust</Tag>
+          <h2 className="font-serif font-bold text-navy text-2xl mb-3">A planned gift can go to the endowment</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            The Missouri Boys State Memorial Trust holds the program&rsquo;s endowment. A bequest or other planned gift can be directed to one of its four funds, where the principal is kept and its earnings support the program every year.
+          </p>
+          <Link to="/give/trust/funds" className="text-sm font-bold text-red hover:text-red-dark transition">See the four funds &rarr;</Link>
+        </div>
+      </section>
+
       {/* Legacy Society */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">

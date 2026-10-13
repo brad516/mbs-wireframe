@@ -3,6 +3,7 @@ import PageHero from '../../components/PageHero'
 import SessionSubNav from '../../components/SessionSubNav'
 import Tag from '../../components/Tag'
 import MediaPlaceholder from '../../components/MediaPlaceholder'
+import { lehrSpeakerFor } from '../../data/trust'
 
 const speakersByYear = {
   '2025': [
@@ -27,6 +28,7 @@ const defaultSpeakers = [
 export default function SessionSpeakersPage() {
   const { year } = useParams()
   const speakers = speakersByYear[year] || defaultSpeakers
+  const lehr = lehrSpeakerFor(year)
 
   return (
     <>
@@ -39,6 +41,16 @@ export default function SessionSpeakersPage() {
 
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
+          {lehr && (
+            <div className="bg-navy rounded-xl p-8 lg:p-10 mb-8 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-gold-light">George W. Lehr Memorial Speaker</span>
+                <h2 className="font-serif font-bold text-white text-3xl mt-2">{lehr.name}</h2>
+                <p className="text-white/70 text-sm mt-2">The {year} keynote, brought to the session by the Memorial Trust.</p>
+              </div>
+              <Link to="/give/trust/speakers" className="text-sm font-bold text-gold-light hover:text-white transition">Every Lehr speaker since 1989 &rarr;</Link>
+            </div>
+          )}
           <div className="grid sm:grid-cols-2 gap-6">
             {speakers.map((s, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-xl overflow-hidden flex">
